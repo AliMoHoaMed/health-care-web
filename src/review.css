@@ -1,0 +1,146 @@
+.feedback-card {
+    color: dodgerblue;
+    display: inline-block;
+    font-size: 15px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 100px 0 0 40px;
+    width: 350px;
+    height: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.name {
+    padding-top: 25px;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.time {
+    padding-top: 25px;
+    padding-left: 35px;
+    display: inline-block;
+}
+
+.avatar {
+    margin-left: -25px;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.booking-card-container{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin: auto;
+}
+
+.booking-card-1{
+   display: flex;
+   background-color: rgb(217, 224, 243);
+   border-radius: 20px;
+   
+   
+}
+
+
+.booking-card-text-1{
+   width: 70%;
+   padding: 20px;
+}
+
+.booking-card-text-1 p {
+    font-size: 25px;
+}
+.tables{
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+.tables .table1 , .table2 , .table3,.table4{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 20px;
+   
+}
+.hos-name{
+    background-color: rgb(187, 187, 187);
+    color: white;
+    border: 1px solid rgb(9, 9, 66);
+    border-radius: 10px;
+
+}
+.table1 .hospital-name , .table2 .hospital-name , .table3 .hospital-name,.table4 .hospital-name {
+    text-align: center;  
+    width: 250px;
+}
+.tim{
+    background-color: rgb(255, 255, 255);
+    width: 230px;
+    border: 1px solid rgb(9, 9, 66);
+    border-radius: 10px;
+    position: relative;
+    left: 70px;
+    text-align: center; 
+}
+.table1 .time,.table2 .time,.table3 .time,.table4 .time{
+    width: 230px;
+}
+.da{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 50px;
+    border-radius: 10px;
+    margin-left: 80px;
+    text-align: center; 
+    border: 1px solid rgb(9, 9, 66);
+}
+.table1 .day , .table2 .day , .table3 .day,.table4 .day{
+    width: 120px;
+    
+   
+
+}
+.table1 .btn , .table2 .btn , .table3 .btn,.table4 .btn{
+    background: #d93434;
+    background-image: -webkit-linear-gradient(top, #d93434, #693b3b);
+    background-image: -moz-linear-gradient(top, #d93434, #693b3b);
+    background-image: -ms-linear-gradient(top, #d93434, #693b3b);
+    background-image: -o-linear-gradient(top, #d93434, #693b3b);
+    background-image: linear-gradient(to bottom, #d93434, #693b3b);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width: 20%;
+    position: relative;
+    left: 100px;
+
+}
+.table1 .btn:hover , .table2 .btn:hover , .table3 .btn:hover,.table4 .btn:hover{
+    background: #ff5252;
+    background-image: -webkit-linear-gradient(top, #ff5252, #d93434);
+    background-image: -moz-linear-gradient(top, #ff5252, #d93434);
+    background-image: -ms-linear-gradient(top, #ff5252, #d93434);
+    background-image: -o-linear-gradient(top, #ff5252, #d93434);
+    background-image: linear-gradient(to bottom, #ff5252, #d93434);
+    text-decoration: none;
+
+}
+
+
+.k
+{text-align: center;}

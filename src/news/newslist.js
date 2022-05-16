@@ -1,0 +1,50 @@
+import React, { useEffect, useState } from 'react'
+import axios, { Axios } from 'axios';
+import Nesiteam from './nesiteam';
+
+const Newslist = () => {
+    const [articles , setArticles] = useState({});
+  
+  useEffect(() =>{
+      const getArticles = async () => {
+          const res = await axios.get('https://newsapi.org/v2/top-headlines?country=eg&category=health&apiKey=3928ce4c1cf64869a9d22cf7795f1d02');
+ setArticles(res.data.articles);
+ console.log(res);
+   };
+getArticles();
+  
+  },[]
+  ) ;
+  
+  let rets = Array.from(articles)
+  
+  
+    return (
+
+<body className='mmm'>
+  <h2 className='eswd'>Welcome to Health care  </h2>
+<div className='k'>
+  
+  <img  src='Health Care.png'  />
+
+<h1 className='eswd'> New Health News :    </h1>
+
+    </div>
+
+
+    <div className='grid-container ' >
+       
+{rets.map(({id, title , description, url , urlToImage})=>(
+
+<div className='grid-item'>
+<Nesiteam title={title} description={description} url={url} urlToImage={urlToImage}/></div>
+))}
+        
+        </div>
+
+</body>
+
+  );
+};
+
+export default Newslist

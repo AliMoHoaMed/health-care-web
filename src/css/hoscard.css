@@ -1,0 +1,32 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid black;*/
+    width: 85%;
+    margin: auto;
+}
+
+.card-1{
+   display: flex;
+   background-color: rgb(217, 224, 243);
+   border-radius: 20px;
+}
+
+.card-image-1{
+   width: 30%;
+  /*border:1px solid black;*/
+}
+
+.card-image-1 img{
+   width: 100%;
+   min-height: 100%;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+
+.card-text-1{
+   width: 70%;
+  /* border:1px solid black;*/
+   padding: 10px;
+}
+

@@ -1,0 +1,81 @@
+import { BrowserRouter,Switch,NavLink,Route } from 'react-router-dom';
+import Home from './Home';
+import Login from './login';
+import Userprofile from './userprofile';
+import Signup from './signup';
+import Choose from './choose';
+import Doctorpages from './doctorpages';
+import Doctors from './doctors';
+import Doccard from './doccard';
+import Hospitalpage from './hospitalpage';
+import Hospitalscard from './hospitalscard';
+import Hospitals from './hospitalss';
+import Search from './search';
+import Test from './test';
+import Newslist from './news/newslist';
+import './App.css';
+import Usersearch from './usersearch';
+import Bgrb from './hospitalsD/bgrb';
+
+import DocLogin from './doclogin';
+import Docprofile from './docprofile';
+import Booking from './booking';
+import Ssignup from './signn_up';
+import User_profile from './userr_profile';
+import Logg from './logg';
+import Hoome from './hoome';
+import Labs from './labss';
+import Labspage from './labspage';
+
+function App() {
+  return (
+    <div >
+    <BrowserRouter>
+    <div>
+      <ul>
+   <li className='k'>  <img className='ll' src='Health Care.png' /> </li>
+   <li><NavLink activeClassName='active'to={'/choose'}> choose<small>  </small> </NavLink></li>
+<li><NavLink activeClassName='active'to={'/userr_profile'}> userprofile<small>  </small> </NavLink></li>
+<li><NavLink activeClassName='active' to={'/logg'}>login <small></small></NavLink></li>
+<li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
+   </ul>
+    </div>
+  <Switch>
+
+<Route exact path={'/'} component={Newslist}  /> 
+ <Route  path={'/hoome'} component={Hoome}  />
+<Route  path={'/login'} component={Login}  />
+<Route  path={'/doclogin'} component={DocLogin}  />
+<Route  path={'/docprofile'} component={Docprofile}  />
+<Route  path={'/userprofile'} component={Userprofile}  />
+<Route  path={'/signup'} component={Signup}  />
+<Route  path={'/signn_up'} component={Ssignup}  />
+<Route  path={'/logg'} component={Logg}  />
+<Route  path={'/search'} component={Search} />
+<Route  path={'/hospitalsD/bgrb'} component={Bgrb} />
+<Route  path={'/userr_profile'} component={User_profile} />
+<Route  path={'/labss'} component={Labs} />
+<Route  path={'/choose'} component={Choose} />
+
+<Route  path='/doctors' component={Doctors} />
+<Route  path={'/doctorpages/:id'} component={Doctorpages}  />
+
+<Route  path={'/booking/:_id'} component={Booking}  />
+<Route  path={'/doccard'} component={Doccard}  />
+
+<Route  path='/hospitalss' component={Hospitals} />
+<Route  path={'/labspage/:_id'} component={Labspage}  />
+<Route  path={'/hospitalpage/:_id'} component={Hospitalpage}  />
+<Route  path={'/hospitalscard'} component={Hospitalscard}  />
+
+
+
+
+  </Switch>
+    
+    </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

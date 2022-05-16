@@ -1,0 +1,52 @@
+
+  .demo {
+    color: black;
+    background-color: rgb(216, 231, 255);
+    font-size: 18px;
+    width: 360px;
+    height: 35px;
+    padding-left: 80px;
+    padding-top: 14px;
+    margin-top: 20px;
+    margin-left: 527px;
+    border-radius: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  
+  img.c {
+    margin-left: 173px;
+    width: 293px;
+    height: 140px;
+    border-radius: 13px;
+  }
+  
+  p.k {
+    margin-left: 150px;
+  }
+  
+  .demoII {
+    color: black;
+    background-color: rgb(216, 231, 255);
+    font-size: 18px;
+    width: 650px;
+    height: 350px;
+    padding: 10px 0px 0px 7px;
+    margin-top: -20px;
+    margin-left: 420px;
+    border-radius: 13px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  
+  span.ll {
+    background-color: rgb(216, 231, 255);
+    display: inline-block;
+    font-size: 15px;
+    width: 300px;
+    height: 150px;
+    margin-left: 142.5px;
+    padding-left: 7px;
+    padding-top: 3px;
+    border-radius: 13px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  

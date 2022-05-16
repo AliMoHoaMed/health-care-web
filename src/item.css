@@ -1,0 +1,94 @@
+div.newscomp{
+    border-radius: 20px;
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 500px;
+    border: 50px;
+    align-items: center;
+   text-align: center;
+   background-color: rgba(169, 214, 207, 0.342);
+   padding: 20px;
+    }
+
+    img.n{
+      text-align: center;
+width:350px ;
+border-radius: 40px;
+border-color: blue;
+    }
+
+    body.mmm{
+        background-color: #a4e3e6;
+     
+        }
+
+        .grid-container {
+          display: grid;
+          
+          grid-template-columns: auto auto auto ;
+        border-radius: 20px ;
+        border: #6c98a8;
+          padding: 10px;
+        }
+        
+.grid-item {
+  border: 20px cadetblue; 
+  padding: 20px;
+}
+        
+          
+.navbarm{
+    background-color: #6c98a8;
+}
+
+
+div.card{
+    font-family: 'Times New Roman', Times, serif;
+      
+      align-content: center;
+     
+    }
+    div.cardc{
+      border: 2px solid rgb(85, 155, 247);
+      border-radius: 12px;
+      text-align: center;
+      padding: auto;
+      width: 300px;
+   
+    
+    }
+    div.cardinf{
+      border: 2px solid rgb(133, 156, 187);
+     padding: 25px;
+      border-radius: 12px;
+      width: max-content;
+     background-color: rgba(255, 255, 255, 0.295);
+    color: rgb(0, 0, 0);
+    }
+    td.h{
+      border-radius: 12px;
+      border: 2px solid rgb(21, 22, 22);
+    }
+    div.center {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    padding: 10px;
+    }
+    
+    .avatar{
+      border-radius: 50%;
+      border: 2px solid rgb(22, 90, 185);
+      background-color: rgb(228, 240, 255);
+    }
+    h2.info{
+      text-align: center;
+    }
+
+    
+    div.ll{
+      text-align: center;
+      background-color: rgb(255, 255, 255);
+    }

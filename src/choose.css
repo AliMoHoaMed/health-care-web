@@ -1,0 +1,97 @@
+body.m {
+   
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+}
+
+.txt {
+    margin-left: 770px;
+    margin-top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: floralwhite;
+}
+
+.hospitals {
+    margin-left: 500px;
+    margin-top: 68px;
+}
+
+.hospital {
+    border-radius: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+.hospital:hover {
+    opacity: 0.5;
+}
+
+/* .hospbtn {
+    margin-top: -180px;
+    margin-left: -55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 65px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .hospbtn:hover {
+    background-color: teal;
+  } */
+
+.clinics {
+    margin-left: 1000px;
+    margin-top: -252.5px;
+}
+
+.clinic {
+    border-radius: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+.clinic:hover {
+    opacity: 0.7;
+}
+
+.labs {
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+.lab {
+    border-radius: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+.lab:hover {
+    opacity: 0.7;
+}
+
+.doctors {
+    margin-left: 1000px;
+    margin-top: -252.5px;
+}
+
+.doctor {
+    border-radius: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+.doctor:hover {
+    opacity: 0.7;
+}
