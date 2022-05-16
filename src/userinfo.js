@@ -9,6 +9,9 @@ const Userinfo = () => {
     const [loading ,setloading] =useState(false);
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
+
+
+    
     const [userarea,setuserarea] =useState([]);
   
     const [useravatar,setuseravatar] =useState([]);
