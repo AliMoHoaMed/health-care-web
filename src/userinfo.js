@@ -10,7 +10,7 @@ const Userinfo = () => {
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
     const [userarea,setuserarea] =useState([]);
-    const [useriddd,setuseriddd] =useState([]);
+  
     const [useravatar,setuseravatar] =useState([]);
 
     const us=getuser('user');
