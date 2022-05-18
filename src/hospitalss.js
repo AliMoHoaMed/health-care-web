@@ -11,10 +11,10 @@ const [choossestatespec,setchooossestatespec] =useState('');
 const [hospitals,sethospitals] = useState([]);
 const [hosbitalss,sethospitalss]= useState([]);
 const [searchtitle,setsearchtitle]=useState('');
-const us=getuser('user.AreaId');
-const usarea=us.AreaId;
-const [areaaid,setareaid]= useState(usarea);
+
+const [areaaid,setareaid]= useState([]);
 const [aareaaid,setaareaid]= useState([]);
+const [userareaaid,setuserareaaid]= useState([]);
 useEffect((e)=>{
   const loadposts=async() => {
     setloading(true);
@@ -25,37 +25,47 @@ useEffect((e)=>{
      setarea(area.data);
 
      setaareaid(choossestatespec)
-     const ress = await axios.get('https://health-care-app-final.herokuapp.com/branchesHC/search/filter?area='+areaaid)
+     const ress = await axios.get('https://health-care-app-final.herokuapp.com/branchesHC/search/filter?area='+ areaaid || userareaaid)
      console.log(ress.data); sethospitalss(ress.data);
 
 
  setloading(false);
   }
   loadposts();
-},[areaaid]);
+},[areaaid,userareaaid]);
 
 function handlearea(e) {
       
   setareaid( e.target.value);
 
+}
 
+function handleuserarea(){
+   const us=getuser('user.AreaId');
+const usarea=us.AreaId;
+setareaid(usarea);
+  console.log(userareaaid);
+ 
 }
 
 
   return (
     <div>
       <div className='k'> 
-      <div className='bb'>
-      <input type='text' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
-    <h2>search filter</h2>   
-    <select value={choossestatespec}
+      <div className='hello'>
+     
+    <h3 >search  : <input type='text' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>  </h3>   
+    
+    by using filter :<select value={choossestatespec}
   onChange={handlearea} >
   {
   areaa.map(({ _id,name})=>(
     
-<option key={_id} value={_id} >{name}   </option>
+<option className='buttton' key={_id} value={_id} >{name}   </option>
  ))}</select>
- </div>
+
+
+ </div><button onClick={handleuserarea}  className='buttton' > Get My Zone </button> 
  </div>
 
     

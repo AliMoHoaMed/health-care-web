@@ -9,9 +9,6 @@ const Userinfo = () => {
     const [loading ,setloading] =useState(false);
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
-
-
-    
     const [userarea,setuserarea] =useState([]);
   
     const [useravatar,setuseravatar] =useState([]);
@@ -19,7 +16,8 @@ const Userinfo = () => {
     const us=getuser('user');
     const authAxios =axios.create({
       headers : {
-       'Authorization': `Bearer ${tok}`
+       'Authorization': `Bearer ${tok}`,
+       "Access-Control-Allow-Origin" : " * "
         
       }
     })
@@ -61,21 +59,36 @@ const Userinfo = () => {
  
 
     <div>
-<div className='bady'>
+<div >
 
 
 
-{userdata.map(({_id,firstName,email , AreaId,governorateId ,LastName}) => 
+{userdata.map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
 (
-<div key={_id} >
-<h3>name : </h3>
-<a> {firstName}</a>
+<div key={_id} className='editProfile' >
+  <div className='dataa'>
+  <br/>
+<h1 > User Name :  {firstName}  &nbsp; {LastName} 
+<br/> 
+ </h1>
+
 <br/>
-<h3>area</h3> 
-<a> {AreaId.name} </a>
-<h3> gov: </h3>
-<a> {AreaId.governorateId.name} </a>
+
+<h2>Area : {AreaId.name} 
 <br/>
+ gov:{AreaId.governorateId.name} </h2> 
+<br/>
+<h3>  email :{email} </h3>
+<a>  </a>
+<img  src={"data:image/png;base64," + avatar} width="250" height="250" />
+<h3> profile pic </h3>
+<br/>
+<form onSubmit={handleSubmit}> 
+<input type="file"  onChange={handlepic}  />
+
+<input type="submit"   />
+</form>
+</div>
   </div>
 ))}
 
@@ -83,25 +96,6 @@ const Userinfo = () => {
 
 
 
-
-
-
-<br/> 
-<div class="user-name"><h1> user info : </h1>
-<h1>name :{us.firstName}</h1>
-<h1>name :{us.LastName}</h1>
-<img  src={"data:image/png;base64," + us.avatar} width="250" height="250" />
-<h1>{us.AreaId.name
-} </h1>
-<h3>number : {us.phoneNumber} </h3>
-<h2>email:{us.email } </h2>
-
-<form onSubmit={handleSubmit}> 
-<input type="file"  onChange={handlepic}  />
-
-<input type="submit"   />
-</form>
-
 </div>
 </div>
 
@@ -109,7 +103,7 @@ const Userinfo = () => {
 
 
 
-    </div>
+  
     </>
   )
 }

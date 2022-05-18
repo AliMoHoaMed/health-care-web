@@ -12,35 +12,44 @@ const [choossestatespec,setchooossestatespec] =useState('');
 const [hospitals,sethospitals] = useState([]);
 const [hosbitalss,sethospitalss]= useState([]);
 const [searchtitle,setsearchtitle]=useState('');
-const us=getuser('user');
-const usarea=us.AreaId;
-const [areaaid,setareaid]= useState(usarea);
-const [aareaaid,setaareaid]= useState([]);
 
+const [areaaid,setareaid]= useState('');
+const [aareaaid,setaareaid]= useState([]);
+const [userareaaid,setuserareaaid]= useState([]);
 
 useEffect((e)=>{
   const loadposts=async() => {
     setloading(true);
     const res = await axios.get('https://health-care-app-final.herokuapp.com/hospitals')
  sethospitals(res.data);
-console.log(usarea);
+
  const area = await axios.get('https://health-care-app-final.herokuapp.com/Area')
      setarea(area.data);
 
      setaareaid(choossestatespec)
-     const ress = await axios.get('https://health-care-app-final.herokuapp.com/branchesXL/search/filter?area='+areaaid)
+     const ress = await axios.get('https://health-care-app-final.herokuapp.com/branchesXL/search/filter?area='+areaaid || userareaaid)
      console.log(ress.data); sethospitalss(ress.data);
 
 
  setloading(false);
   }
   loadposts();
-},[areaaid]);
+},[areaaid , userareaaid]);
 
 function handlearea(e) {
       
   setareaid( e.target.value);
 
+
+}
+
+
+
+function handleuserarea(){
+  const us=getuser('user.AreaId');
+const usarea=us.AreaId;
+setareaid(usarea);
+ console.log(userareaaid);
 
 }
 
@@ -59,6 +68,7 @@ function handlearea(e) {
 <option key={_id} value={_id} >{name}   </option>
  ))}</select>
  </div>
+ <button onClick={handleuserarea}  className='buttton' > Get My Zone </button>
  </div>
 
     

@@ -39,6 +39,7 @@
   
 li {
   float: right;
+  font-style: italic;
 }
 li.k{
   float: left;

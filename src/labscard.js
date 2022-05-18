@@ -14,8 +14,8 @@ const Labscard = ({_id,name,areaId,labId}) => {
        <div class="card-text-1">
            <h2>  {name}</h2>
            <a href={'/labspage/'+_id}> <h3> go to page </h3></a>
-           <p> <i class="fas fa-map-marker-alt"></i> {areaId.name}</p>
-           <p> <i class="fas fa-map-marker-alt"></i> {labId.name}</p>
+           <p> <i class="fas fa-map-marker-alt"> </i> </p>
+           <p> <i class="fas fa-map-marker-alt"> </i> </p>
        </div>  
      </div>
  </div>   

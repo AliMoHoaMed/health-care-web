@@ -22,15 +22,17 @@ getArticles();
     return (
 
 <body className='mmm'>
-  <h2 className='eswd'>Welcome to Health care  </h2>
-<div className='k'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"/>
+<div className='k'><div className='hello'>
+  <h1 className='font-effect-outline'>Welcome to  </h1>
+
   
   <img  src='Health Care.png'  />
 
-<h1 className='eswd'> New Health News :    </h1>
 
+</div>
     </div>
-
+<h1 className='font-effect-outline'> New Health News :    </h1>
 
     <div className='grid-container ' >
        

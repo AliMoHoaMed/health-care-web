@@ -8,16 +8,10 @@ import { gettokken, getuser } from './utlis/Common';
 import './docpage.css'
 import Revieew from './review';
 const user =getuser();
-
-
-
-
   const Doctorpages = (props) => {
-
-
-
   const [loading ,setloading] =useState(false);
   const [revieww,setrevew]=useState([]);
+  const [userrev,setuserrev]=useState([]);
   const [arr,setarr]=useState([]);
 const [ ratee,setrate]=useState([]);
 const [ ratevalue,setratevalue]=useState([]);
@@ -27,7 +21,7 @@ const  doctoridd =props.match.params.id;
 const tok = sessionStorage.getItem('token') ; 
 const us=getuser('user');
 const usid=us;
-const [arrr,setarrr]=useState([]);
+
 
 
 
@@ -40,11 +34,11 @@ const [arrr,setarrr]=useState([]);
     setloading(true);
     const res = await axios.get('https://health-care-app-final.herokuapp.com/doctors/rate/'+props.match.params.id)
    setrevew(res.data);
-
+    console.log(res.data)
    const ress = await axios.get('https://health-care-app-final.herokuapp.com/doctors/AvalibleTime/'+props.match.params.id)
    setarr(ress.data);
    const resss = await axios.get('https://health-care-app-final.herokuapp.com/doctors/AvalibleTime/'+props.match.params.id)
-   setarrr(resss.data.branchId);
+   
    setloading(false);
     }
     loadposts();
@@ -139,13 +133,16 @@ type='text'
 <br/>
 {revieww.map(({_id,Review,ratingValue ,userId})=>(
 <span key={_id} >   <div class="feedback-card">
-      <span class="name"> <b> {userId.email} </b></span>
+      <span class="name">  </span>
       <br/>
       <span class="time">Rating :  {ratingValue} star</span>
          <br/>
           <br/>
       {Review}
           </div></span>)) }
+
+      
+
 
 
 <br/> 
