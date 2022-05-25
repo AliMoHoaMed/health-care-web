@@ -12,7 +12,7 @@ const Nesiteam = ({id, title,description,url,urlToImage}) => {
     <h2> 
        {title} </h2>
       </a>
-<h3><p>{description} </p></h3>
+
 
 
 
