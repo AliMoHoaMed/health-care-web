@@ -47,7 +47,7 @@ const Ssignup = () => {
        setgovv(resgov.data);
        const resinc = await axios.get('https://health-care-app-final.herokuapp.com/insuranceTypes')
        setincurancetype(resinc.data);
-
+       console.log(base64code)
        setloading(false);
         }
         loadposts();
@@ -59,9 +59,11 @@ const onhaga =(e) => {
   const file =files[0];
   getbase64(file)
 }
+
 const onLoad = (filestring) => {
   console.log(filestring);
   setbasecode65(filestring);
+ 
 }
 
 
@@ -90,7 +92,7 @@ reader.onload =() => {
     const handleSubmit=(e) => {
         e.preventDefault();
        
-        const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea } ;
+        const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea , avatar : base64code } ;
       axios.post('https://health-care-app-final.herokuapp.com/users/signUp',dataaa
       ).then(ress=>{console.log("ress",ress)
       }
@@ -230,7 +232,7 @@ reader.onload =() => {
   </label>
 </div>
 
-
+<img  src={ base64code} width="250" height="250" />
 
 
 <div class="inputContainer">

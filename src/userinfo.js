@@ -10,10 +10,12 @@ const Userinfo = () => {
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
     const [userdiagnose,setuserdiagnose] =useState([]);
-  
+    const [ base64code , setbasecode65]=useState([]);
     const [useravatar,setuseravatar] =useState([]);
 
     const us=getuser('user');
+const userpic=us.avatar ;
+console.log(userpic);
     const authAxios =axios.create({
       headers : {
        'Authorization': `Bearer ${tok}`,
@@ -21,6 +23,28 @@ const Userinfo = () => {
         
       }
     })
+
+    const onhaga =(e) => {
+      const files = e.target.files;
+      const file =files[0];
+      getbase64(file)
+    }
+    const onLoad = (filestring) => {
+      console.log(filestring);
+      setbasecode65(filestring);
+    }
+    
+    
+    const getbase64 =(file) => {
+    let reader =new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload =() => {
+      onLoad(reader.result)
+    }
+    
+    }
+
+
 
 
     useEffect(()=>{
@@ -41,7 +65,7 @@ const Userinfo = () => {
 
         const handleSubmit=(e) => {
           e.preventDefault();
-          const dataaa = { avatar :useravatar } ;
+          const dataaa = { avatar : base64code } ;
         authAxios.post('https://health-care-app-final.herokuapp.com/users/avatar',dataaa
         ).then(ress=>{console.log("ress",ress)
         }
@@ -83,7 +107,7 @@ const Userinfo = () => {
 <br/>
 <h3>  email :{email} </h3>
 <a>  </a>
-<img  src={"data:image/png;base64," + avatar} width="250" height="250" />
+<img  src={avatar} width="250" height="250" />
 <h3> profile pic </h3>
 <br/>
 <form onSubmit={handleSubmit}> 
