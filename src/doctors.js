@@ -70,14 +70,17 @@ function handletitle(e) {
 </h2>
 
     </div>
+
+<div className='grid-container'>
+
     {loading ?( <h4> loaaading .....</h4>):( 
 (doctors.filter((value)=>{ 
 if(searchtitle ===''){return doctors}
 else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
   return value ;}})
   .map(({_id,firstName, Title,avatar,specialtiesId})=>(
-    <div className='grid-container' key={_id}>
-    <div className='grid-item'>
+    <div className='grid-item' key={_id}>
+    <div >
    
     <div>
 
@@ -117,7 +120,7 @@ else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase()))
 </div>
 
     </div></div></div>
- )) ))} 
+ )) ))} </div>
     </div>
   );
 }

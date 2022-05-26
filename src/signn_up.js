@@ -101,7 +101,7 @@ reader.onload =() => {
 
     return (
         <>
-<body>
+<body className='signup'>
     <div class="signupFrm">
         <form onSubmit={handleSubmit} class="form">
 <h1 class="title">Sign Up</h1>

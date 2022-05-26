@@ -2,6 +2,13 @@
     text-align: center;
   }
   
+
+body{
+background-color: rgb(200, 225, 240);
+
+}
+
+
   .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -34,7 +41,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(40, 121, 153);
   }
   
 li {

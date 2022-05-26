@@ -3,6 +3,7 @@ div.newscomp{
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     width: 500px;
+    height: 500 px;
     border: 50px;
     align-items: center;
    text-align: center;
@@ -13,16 +14,12 @@ div.newscomp{
     img.n{
       text-align: center;
 width:350px ;
+height: 350 px ;
 border-radius: 40px;
 border-color: blue;
     }
-
-    body.mmm{
-        background-color: #a4e3e6;
-     
-        }
-
-        .grid-container {
+    
+    .grid-container {
           display: grid;
           
           grid-template-columns: auto auto auto ;

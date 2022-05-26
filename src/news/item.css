@@ -3,6 +3,7 @@ div.newscomp{
     border-color: blue;
     color: rgb(0, 113, 128);
     width: 500px;
+    height: 500 px;
     border: 50px;
     align-items: center;
    text-align: center;
@@ -12,13 +13,14 @@ div.newscomp{
 
     img.n{
       text-align: center;
+      height: 350px;
 width:350px ;
 border-radius: 40px;
 border-color: blue;
     }
 
     body.mmm{
-        background-color: #a4e3e6;
+       background-color: #6c98a8;
      color: aliceblue;
         }
 
@@ -54,6 +56,7 @@ div.card{
       text-align: center;
       padding: auto;
       width: 300px;
+      height: 300px;
     background-color: rgb(205, 231, 255);
     
     }

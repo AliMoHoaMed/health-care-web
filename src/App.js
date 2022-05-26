@@ -26,6 +26,8 @@ import Logg from './logg';
 import Hoome from './hoome';
 import Labs from './labss';
 import Labspage from './labspage';
+import Diagnose from './Diagnose';
+import Doctordiagnose from './doctordiagnose';
 
 function App() {
   return (
@@ -67,9 +69,9 @@ function App() {
 <Route  path={'/labspage/:_id'} component={Labspage}  />
 <Route  path={'/hospitalpage/:_id'} component={Hospitalpage}  />
 <Route  path={'/hospitalscard'} component={Hospitalscard}  />
+<Route  path={'/Diagnose'} component={Diagnose}  />
 
-
-
+<Route  path={'/doctordiagnose/:_id'} component={Doctordiagnose}  />
 
   </Switch>
     

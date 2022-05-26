@@ -9,7 +9,7 @@ const Userinfo = () => {
     const [loading ,setloading] =useState(false);
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
-    const [userarea,setuserarea] =useState([]);
+    const [userdiagnose,setuserdiagnose] =useState([]);
   
     const [useravatar,setuseravatar] =useState([]);
 
@@ -26,10 +26,13 @@ const Userinfo = () => {
     useEffect(()=>{
         const loadposts=async() => {
           setloading(true);
-        
           const ress = await authAxios.get('https://health-care-app-final.herokuapp.com/users/userprofile')
           setuserdata(ress.data);
-      
+          const rec = await authAxios.get('https://health-care-app-final.herokuapp.com/users/diagnosis')
+          setuserdiagnose(rec.data);
+          console.log(rec.data);
+
+
           }
           loadposts();
         },[]);
@@ -93,7 +96,19 @@ const Userinfo = () => {
 ))}
 
 
+<div>
 
+{userdiagnose.map(({_id,Diagnosis,medicines,doctorId})=>(
+<div key={_id}>
+<h1>doctor name {doctorId.firstName} </h1>
+<h2> diagnose : {Diagnosis} </h2>
+<h3> {medicines} </h3>
+
+</div> 
+
+)  )  }
+
+</div>
 
 
 </div>

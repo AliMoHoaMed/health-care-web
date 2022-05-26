@@ -62,14 +62,14 @@ import'./css/hospage.css' ;
 <br/>
 <h1> Doctors : </h1>
 
-
+   <div className='grid-container'>
 {doctorz.map(({_id, firstName , Title,avatar})=>(
-    <div className='grid-container'>
+ 
     <div className='grid-item'>
-   <Doccard id={_id} name={firstName} username={Title} avatar={avatar} /></div></div>))}
+   <Doccard _id={_id} name={firstName} username={Title} avatar={avatar} /></div>))}
 
 
-
+</div>
 </body>
 
 

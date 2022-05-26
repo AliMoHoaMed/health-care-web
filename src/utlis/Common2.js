@@ -4,7 +4,7 @@ export const getdoctor =() =>{
     else return null;
     }
     
-    export const gettokken =() =>{
+    export const gettokkenn =() =>{
         return sessionStorage.getItem("token") || null;
     
     }

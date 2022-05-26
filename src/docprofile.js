@@ -7,23 +7,22 @@ const Docprofile = (props) => {
 const doctor =getdoctor();
 
 
+
+
+
+console.log(doctor);
     const handlelogout =() =>{
         removedoctorsession();
         props.history.push('/doclogin');
     }
  
     return (
-    <div>
-    <div class="sidebar">
+    <div>  
+    <div >
     
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        
-        <img src={doctor.avatar} alt="Avatar" class="avatar"/>
+     
+        <img  src={"data:image/jpg;base64," + doctor.avatar} width="250" height="250" />
+     
     
         <br />   
         <br />
@@ -38,8 +37,7 @@ const doctor =getdoctor();
           <br/>
              <hr/>
              <br/>
-           
-      <a href="#history"><i class="fa fa-fw fa-history"></i> History</a>
+      <a href="/Diagnose"><i class="fa fa-fw fa-history"></i> diagnose</a>
       <br/>
       <a href="#editProfile"><i class="fa fa-fw fa-edit"></i> Edit Profile</a>
       <br/>
@@ -53,7 +51,7 @@ const doctor =getdoctor();
       <input type="button" value="logout"
 onClick={handlelogout}/> 
     </div>
-    
+ 
     </div>
   )
 }
