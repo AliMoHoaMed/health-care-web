@@ -75,7 +75,11 @@ import'./css/hospage.css' ;
 <div class="demoII">
  <h3>lab type  :  </h3>
 {labstype.map(({_id,type })=>(
-<h3 key={_id}> {type} </h3>
+<div key={_id}>
+  <h3>{type} </h3>
+  <a href={'/labstypepage/'+_id} >   check info and booking    </a>
+  
+   </div>
 
 
 ))}

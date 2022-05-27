@@ -28,6 +28,8 @@ import Labs from './labss';
 import Labspage from './labspage';
 import Diagnose from './Diagnose';
 import Doctordiagnose from './doctordiagnose';
+import Labstypepage from './labstypepage';
+import Bookingforlabs from './booking_for_labs';
 
 function App() {
   return (
@@ -63,6 +65,7 @@ function App() {
 <Route  path={'/doctorpages/:id'} component={Doctorpages}  />
 
 <Route  path={'/booking/:_id'} component={Booking}  />
+<Route  path={'/booking_for_labs/:_id'} component={Bookingforlabs}  />
 <Route  path={'/doccard'} component={Doccard}  />
 
 <Route  path='/hospitalss' component={Hospitals} />
@@ -70,7 +73,7 @@ function App() {
 <Route  path={'/hospitalpage/:_id'} component={Hospitalpage}  />
 <Route  path={'/hospitalscard'} component={Hospitalscard}  />
 <Route  path={'/Diagnose'} component={Diagnose}  />
-
+<Route  path={'/labstypepage/:_id'} component={Labstypepage}  />
 <Route  path={'/doctordiagnose/:_id'} component={Doctordiagnose}  />
 
   </Switch>
