@@ -75,9 +75,7 @@ console.log(userpic);
 
 
 
-          function handlepic(e) {
-            setuseravatar( e.target.value);
-          }
+         
     
 
 
@@ -90,34 +88,33 @@ console.log(userpic);
 
 
 
-{userdata.map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
+
+
+ <div class="card-container">
+ {userdata.map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
 (
-<div key={_id} className='editProfile' >
-  <div className='dataa'>
-  <br/>
-<h1 > User Name :  {firstName}  &nbsp; {LastName} 
-<br/> 
- </h1>
 
-<br/>
 
-<h2>Area : {AreaId.name} 
-<br/>
- gov:{AreaId.governorateId.name} </h2> 
-<br/>
-<h3>  email :{email} </h3>
-<a>  </a>
-<img  src={avatar} width="250" height="250" />
-<h3> profile pic </h3>
-<br/>
-<form onSubmit={handleSubmit}> 
-<input type="file"  onChange={handlepic}  />
 
-<input type="submit"   />
-</form>
-</div>
-  </div>
-))}
+     <div class="ucard-1" key={_id}>
+         <div class="ucard-image-1">
+             <img  src={avatar} alt="image"  /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         </div>
+         
+       <div class="ucard-text-1">
+           <h2> {firstName}  &nbsp; {LastName} </h2>
+           <p><label class="uega">Email</label> {email}</p>
+           <p><label class="uega">Gove</label> {AreaId.governorateId.name}</p>
+           <p><label class="uega">Area </label>{AreaId.name}   </p>
+           <p><label class="uega">phone </label>{phoneNumber}   </p>
+           
+       </div>  
+     </div>))}
+ </div>   
+
+
+ 
+
 
 
 <div>

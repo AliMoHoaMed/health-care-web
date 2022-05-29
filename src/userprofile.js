@@ -60,10 +60,9 @@ console.log();
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
+     
         
-        <img  alt="Avatar" class="avatar"/>
+        <img src={us.avatar} alt="Avatar" class="avatar"/>
     
      
     

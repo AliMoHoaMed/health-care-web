@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import'./css/userbooking.css' ;
 import { gettokken, getuser, removeusersession } from './utlis/Common'
 const Userbook = () => {
 
@@ -38,38 +39,43 @@ const usid=us;
 
   return (
     <div>
-      <div >
+      <div className='grid-containerr'>
+
+      {userbookin.map(({_id , info,wattingTime,cost,vezeeta ,drAvailTimeId,doctorId}) => 
+(
+        <div key={_id} className='grid-itemr'>
+ <div class="bcard-container" >
+     <div class="bcard-1">
+
+       <div class="bcard-text-1">
+       
+           <p><label class="ega">Doctor Name</label> mohga </p>
+           <p><label class="ega">Waiting Time</label>{wattingTime}</p>
+
+           <div class="tables">
+            <div class="table1">
+
+                <div ><p class="time"><label class="ega">Time </label>{drAvailTimeId.timeFrom}   &nbsp; to  &nbsp; {drAvailTimeId.timeTo}</p></div>
+
+                <div ><p class="day"><label class="ega">Price </label>  {drAvailTimeId.vezeeta} </p></div>
+            </div>
+            </div>
+       </div>  
+     </div>
+ </div>   
+</div>
+))}
+
 <div >
 
 
-{userbookin.map(({_id , info,wattingTime,cost,vezeeta ,drAvailTimeId}) => 
-(
-<div key={_id} div className='editProfile'>
-  <div className='dataa'>
-  wattingTime  : 
-<a> {wattingTime}</a>
-<br/>
-<br/>
-<br/>
-<br/>
-from  :  
-<a> {drAvailTimeId.timeFrom} </a>
-<br/>
-<br/>
- to :
-<a> {drAvailTimeId.timeTo} </a>
-<br/>
-<br/>
-<br/>
-<h3> price : {drAvailTimeId.vezeeta}</h3>
-
-<a> {cost}</a>
-</div>
-  </div>
-))}
 </div>
 
 </div>
+
+
+
+
 
 
 
