@@ -31,6 +31,7 @@ const Logg = () => {
           <figcaption>
             <h3>Lab Login</h3>
           </figcaption>
+          <a href="/Lablogin"></a>
         </figure>
       </div>
     </div>

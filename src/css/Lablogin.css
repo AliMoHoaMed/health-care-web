@@ -4,12 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "Poppins", sans-serif;
 }
 
 
-
-.container {
+.containerf {
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -17,7 +16,7 @@
   overflow: hidden;
 }
 
-.forms-container {
+.forms-containerf {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -25,7 +24,7 @@
   left: 0;
 }
 
-.signin-signup {
+.signin-signupf {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -40,7 +39,7 @@
 
 
 
-.sign-in-form {
+.sign-in-formf {
   z-index: 2;
   display: flex;
   align-items: center;
@@ -53,13 +52,13 @@
   grid-row: 1 / 2;
 }
 
-.title {
+.titlef {
   font-size: 2.2rem;
   color: #444;
   margin-bottom: 10px;
 }
 
-.input-field {
+.input-fieldf {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
@@ -72,7 +71,7 @@
   position: relative;
 }
 
-.input-field i {
+.input-fieldf i {
   text-align: center;
   line-height: 55px;
   color: #acacac;
@@ -80,7 +79,7 @@
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-fieldf input {
   background: none;
   outline: none;
   border: none;
@@ -90,44 +89,17 @@
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-fieldf input::placeholder {
   color: #aaa;
   font-weight: 500;
 }
 
-.social-text {
-  padding: 0.7rem 0;
-  font-size: 1rem;
-}
 
-.social-media {
-  display: flex;
-  justify-content: center;
-}
 
-.social-icon {
-  height: 46px;
-  width: 46px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0.45rem;
-  color: #333;
-  border-radius: 50%;
-  border: 1px solid #333;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s;
-}
 
-.social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
-}
-
-.btn {
+.btnf {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #2242a0;
   border: none;
   outline: none;
   height: 49px;
@@ -142,10 +114,10 @@
 
 }
 
-.btn:hover {
-  background-color: #4d84e2;
+.btnf:hover {
+  background-color: rgb(5, 35, 126);
 }
-.panels-container {
+.panels-containerf {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -156,7 +128,7 @@
 }
 
 
-.container:before {
+.containerf:before {
   content: "";
   position: absolute;
   height: 2000px;
@@ -164,21 +136,20 @@
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background: #2242a0;
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
 }
 
-.image {
-  width: 130%;
-  height: 140%;
+.imagef {
+  width: 110%;
   position: relative;
+  top: 10%;
   left: 10%;
- 
 }
 
-.panel {
+.panelf {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -187,39 +158,37 @@
   z-index: 6;
 }
 
-.left-panel {
+.left-panelf {
   pointer-events: all;
   padding: 3rem 17% 2rem 12%;
 }
 
-.right-panel {
+.right-panelf {
   pointer-events: none;
   padding: 3rem 12% 2rem 17%;
 }
 
-.panel .content {
+.panelf .content {
   color: #fff;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
 
-.panel h1 {
+.panelf h3 {
   font-weight: 600;
   line-height: 1;
-  font-size: 3rem;
-  position: relative;
-  top: -70px;
+  font-size: 1.5rem;
 }
 
-.panel p {
+.panelf p {
   font-size: 0.95rem;
   padding: 0.7rem 0;
 }
 
 
 
-.right-panel .image,
-.right-panel .content {
+.right-panelf .image,
+.right-panelf .content {
   transform: translateX(800px);
 }
 
@@ -239,12 +208,12 @@
 
  
 
-  .panels-container {
+  .panels-containerf {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
   }
 
-  .panel {
+  .panelf {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -252,21 +221,21 @@
     grid-column: 1 / 2;
   }
 
-  .right-panel {
+  .right-panelf {
     grid-row: 3 / 4;
   }
 
-  .left-panel {
+  .left-panelf {
     grid-row: 1 / 2;
   }
 
-  .image {
+  .imagef {
     width: 100px;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
   }
 
-.container:before {
+.containerf:before {
     width: 1500px;
     height: 1500px;
     transform: translateX(-50%);
@@ -277,33 +246,33 @@
     transition: 2s ease-in-out;
   }}
 
-.logo{
+.logof{
   position: relative;
   top: -8%;
   left: -95%;
-  width: 110px;
+  width: 100px;
   height: 90px;
 }
-.health-care{
+.health-caref{
   width: 495px;
   position: relative;
   top: -3%;
 }
 
-.color{
+.colorf{
   width: 150px;
   background-color: #ffffff;
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #5995fd;
+  color: #2242a0;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
 }
-.color:hover {
+.colorf:hover {
   background-color: #fbf8f8;
   color: #5995fd;
 }

@@ -31,6 +31,7 @@ import Diagnose from './Diagnose';
 import Doctordiagnose from './doctordiagnose';
 import Labstypepage from './labstypepage';
 import Bookingforlabs from './booking_for_labs';
+import Lablogin from './Lablogin';
 
 function App() {
   return (
@@ -67,7 +68,7 @@ function App() {
 <Route  path={'/userr_profile'} component={User_profile} />
 <Route  path={'/labss'} component={Labs} />
 <Route  path={'/choose'} component={Choose} />
-
+<Route  path={'/Lablogin'} component={Lablogin}  />
 <Route  path='/doctors' component={Doctors} />
 <Route  path={'/doctorpages/:id'} component={Doctorpages}  />
 

@@ -35,7 +35,7 @@ return (
   <div className="forms-container">    
     <div className="signin-signup">
 
-      <form action="#" className="sign-in-form" ><h1> Doctor Login   </h1>
+      <form action="#" className="sign-in-form" >
         <img className="health-care" src="img/Health care.png"/> 
 
         <div className="input-field">
@@ -59,13 +59,14 @@ onClick={handlelogin} className="btn solid" />
       
   <div className="panels-container">
     <div className="panel left-panel">
+
       <img className="logo" src="img/logo.png"/> 
       <div className="content">
-     
+      <h1> Doctor Login   </h1>
 
         
      
-      <img src="img/doctor.svg" className="image" alt="" />
+      <img src="img/medical.svg" className="image" alt="" />
     </div>
     
       
