@@ -74,10 +74,8 @@ setuserid(useridd._id);
     
     <label> visa id  </label> 
     <input type='text'
-            
             name='firstname'
             value={visaaid}
-    
             onChange={(e)=>setvisaaid(e.target.value)}/>
     <br/>
     <input type='submit' />

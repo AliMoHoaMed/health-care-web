@@ -14,6 +14,7 @@ import Search from './search';
 import Test from './test';
 import Newslist from './news/newslist';
 import './App.css';
+import './navapp.css';
 import Usersearch from './usersearch';
 import Bgrb from './hospitalsD/bgrb';
 
@@ -36,13 +37,19 @@ function App() {
     <div >
     <BrowserRouter>
     <div>
+      <nav className="nnavbar">
+      <img class="nlogo" src="Health Care.png"/> 
+      <input type="checkbox" id="click" />
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
       <ul>
-   <li className='k'>  <img className='ll' src='Health Care.png' /> </li>
-   <li><NavLink activeClassName='active'to={'/choose'}> choose<small>  </small> </NavLink></li>
+   <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
+  <li><NavLink activeClassName='active' to={'/logg'}>login <small></small></NavLink></li>
 <li><NavLink activeClassName='active'to={'/userr_profile'}> userprofile<small>  </small> </NavLink></li>
-<li><NavLink activeClassName='active' to={'/logg'}>login <small></small></NavLink></li>
-<li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
-   </ul>
+
+ <li><NavLink activeClassName='active'to={'/choose'}> choose<small>  </small> </NavLink></li>
+   </ul></nav>
     </div>
   <Switch>
 
