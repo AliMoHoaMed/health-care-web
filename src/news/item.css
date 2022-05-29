@@ -99,3 +99,52 @@ div.card{
 
       color: rgb(255, 255, 255);
     }
+    .searchbar{
+      margin-left: 19%;
+      padding-top: 64px;
+  }
+  
+  .searchInput{
+      width: 70%;
+      padding: 20px 24px;
+    
+      transition: transform 250ms ease-in-out;
+      font-size: 14px;
+      line-height: 18px;
+      border: 1px solid;
+      border-radius: 50px;
+      color: #575756;
+    
+  }
+  
+  .searchInput::placeholder{
+      color: color(#575756 a(0.8));
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+  }
+  
+  .searchInput:hover {
+      background-color: whitesmoke;
+      padding: 14px 0;
+      outline: 0;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #575756;
+      /* border-top: 1px solid #575756;
+      border-left: 1px solid #575756;
+      border-right: 1px solid #575756; */
+      border-radius: 0;
+      background-position: 100% center;
+  }
+  
+  .searchInput:focus{
+      padding: 14px 0;
+      outline: 0;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #575756;
+      /* border-top: 1px solid #575756;
+      border-left: 1px solid #575756;
+      border-right: 1px solid #575756; */
+      border-radius: 0;
+      background-position: 100% center;
+  }
+  

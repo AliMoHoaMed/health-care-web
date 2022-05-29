@@ -212,12 +212,14 @@ reader.onload =() => {
   <input type="date"
         required
         name='birthdate'
-    
+    className='inputtt'
         value={userdate}
         onChange={(e)=>setuserdate(e.target.value)} />
 </div>
-
+<br/>
+<br/>
 <div class="inputContainer">
+
   <label  class="label">Gender</label>
  
   <select required name="gen" id="genders">

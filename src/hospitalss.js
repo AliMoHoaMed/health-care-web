@@ -54,8 +54,10 @@ setareaid(usarea);
       <div className='k'> 
       <div className='hello'>
      
-    <h3 >search  : <input type='text' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>  </h3>   
-    
+      <label><h1>Search</h1>
+      <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
+      </label>
+      <br/>
     by using filter :<select value={choossestatespec}
   onChange={handlearea} >
   {

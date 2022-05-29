@@ -45,9 +45,10 @@ function handletitle(e) {
   return (
     <div >
       <div className='k'> 
-      <div className='bb'>
-      <input type='text' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
-    <h3>Search</h3></div>
+      <div className='bb'> <label><h1>Search</h1>
+      <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
+      </label>
+    </div>
     
     
     <select value={choossestatespec}

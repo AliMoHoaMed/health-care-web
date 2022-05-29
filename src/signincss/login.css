@@ -171,9 +171,9 @@
 }
 
 .image {
-  width: 130%;
-  height: 140%;
+  width: 110%;
   position: relative;
+  top: 10%;
   left: 10%;
  
 }
