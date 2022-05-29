@@ -25,6 +25,14 @@ const Logg = () => {
         <a href="/login"></a>
       </figure>
     </div>
+    <div class="img3">
+        <figure class="containner">
+         <img src="img(7).jpg"  height = "400" width = "500"/> 
+          <figcaption>
+            <h3>Lab Login</h3>
+          </figcaption>
+        </figure>
+      </div>
     </div>
     </div> 
   
