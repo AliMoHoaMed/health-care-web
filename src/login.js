@@ -51,17 +51,8 @@ onChange={e => Setpassword(e.target.value)}/>
         </div>
         <input type="submit" value={loading ? "loading .." :   'login' } disabled={loading}
 onClick={handlelogin} className="btn solid" />
-        <p className="social-text">Or Sign in with social platforms</p>
-        <div className="social-media">
-          <a href="#" className="social-icon">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-  
-          <a href="#" className="social-icon">
-            <i className="fab fa-google"></i>
-          </a>
 
-        </div>
+        
       </form>
      </div>
     </div>

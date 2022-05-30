@@ -1,8 +1,11 @@
 body.m {
-   
+
     background-repeat: no-repeat;
-    background-size: 100%;
+    background: 100%;
     background-position-y: -100px;
+    position: relative;
+    left: -100px;
+    top: 1px;
 }
 
 .txt {
@@ -29,31 +32,10 @@ body.m {
     opacity: 0.5;
 }
 
-/* .hospbtn {
-    margin-top: -180px;
-    margin-left: -55px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 65px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .hospbtn:hover {
-    background-color: teal;
-  } */
-
 .clinics {
     margin-left: 1000px;
-    margin-top: -252.5px;
+    margin-top: -275px;
+    
 }
 
 .clinic {
@@ -83,7 +65,7 @@ body.m {
 
 .doctors {
     margin-left: 1000px;
-    margin-top: -252.5px;
+    margin-top: -278px;
 }
 
 .doctor {
@@ -95,3 +77,119 @@ body.m {
 .doctor:hover {
     opacity: 0.7;
 }
+.containerd {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    max-width: 400px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    border-radius: 5%;
+    
+  
+  } */
+  
+  .containerd * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    
+  }
+  
+  .containerd h3 {
+    background-color: #05445E;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+  
+  .containerd:before,
+  .containerd:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    
+    background-color: #F1FAFC;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+  .containerd:before {
+    -webkit-transform: skew(45deg) translateX(-155%);
+    transform: skew(45deg) translateX(-155%);
+  }
+  
+  .containerd:after {
+    -webkit-transform: skew(45deg) translateX(155%);
+    transform: skew(45deg) translateX(155%);
+  }
+  
+  .containerd img {
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+    
+  }
+  
+  .containerd figcaption {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    -webkit-box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px #595959;
+  }
+  
+  .containerd a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  
+  .containerd:hover > img,
+  .containerd.hover > img {
+    opacity: 0.5;
+  }
+  
+  .containerd:hover:before,
+  .containerd.hover:before {
+    -webkit-transform: skew(45deg) translateX(-55%);
+    transform: skew(45deg) translateX(-55%);
+  }
+  
+  .containerd:hover:after,
+  .containerd.hover:after {
+    -webkit-transform: skew(45deg) translateX(55%);
+    transform: skew(45deg) translateX(55%);
+  }
+  
+  .containerd:hover figcaption,
+  .containerd.hover figcaption {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  } 
+  

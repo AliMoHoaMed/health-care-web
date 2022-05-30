@@ -51,7 +51,7 @@ onChange={e => Setpassword(e.target.value)}/>
         </div>
         <input type="submit" value={loading ? "loading .." :   'login' } disabled={loading}
 onClick={handlelogin} className="btn solid" />
-        <p className="social-text">Or Sign in with social platforms</p>
+       
       
       </form>
      </div>

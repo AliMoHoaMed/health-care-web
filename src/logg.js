@@ -5,7 +5,7 @@ const Logg = () => {
 
   return (
     <div>
-        <div class="bg"></div>
+        
     <div class="containner-main">
       <div class="img1">
         <figure class="containner">

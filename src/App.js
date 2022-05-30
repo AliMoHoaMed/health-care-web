@@ -46,10 +46,10 @@ function App() {
          </label>
       <ul>
    <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
-  <li><NavLink activeClassName='active' to={'/logg'}>login <small></small></NavLink></li>
-<li><NavLink activeClassName='active'to={'/userr_profile'}> userprofile<small>  </small> </NavLink></li>
+  <li><NavLink activeClassName='active' to={'/logg'}>Login <small></small></NavLink></li>
+<li><NavLink activeClassName='active'to={'/userr_profile'}> User profile<small>  </small> </NavLink></li>
 
- <li><NavLink activeClassName='active'to={'/choose'}> choose<small>  </small> </NavLink></li>
+ <li><NavLink activeClassName='active'to={'/choose'}> Choose<small>  </small> </NavLink></li>
    </ul></nav>
     </div>
   <Switch>

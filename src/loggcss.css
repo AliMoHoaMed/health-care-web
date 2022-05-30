@@ -12,15 +12,17 @@
 }
 .containner-main{
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: center;
 }
 .img1,.img2, .img3{
   position: relative;
-  top: 230px;
+  top: 100px;
+  left: 0px;
   padding: 30px 30px;
+  
  
 }
 
@@ -49,7 +51,7 @@
   position: relative;
   text-align: center;
   width: 100%;
-  border-radius: 20%;
+  border-radius: 15%;
 
 } */
 
@@ -61,7 +63,7 @@
 }
 
 .containner h3 {
-  background-color: #3748a7;
+  background-color: #05445E;
   border: 2px solid #fff;
   color: #fff;
   font-size: 1em;
@@ -81,7 +83,7 @@
   right: 0;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
-  background-color: #e0e5fc;
+  background-color: #F1FAFC;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;
   content: '';

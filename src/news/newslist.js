@@ -32,7 +32,7 @@ getArticles();
 
 </div>
     </div>
-<h1 className='font-effect-outline'> New Health News :    </h1>
+
 
     <div className='grid-container ' >
        

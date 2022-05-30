@@ -29,7 +29,7 @@ const Lablogin = () => {
         <div class="panel left-panelf">
           <img class="logof" src="img/logo.png"/> 
           <div class="contentf">
-          
+          <h1> Laboratory login </h1>
 
           <img src="img/lab.svg" class="image" alt="" />
         </div>

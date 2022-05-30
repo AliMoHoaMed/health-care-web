@@ -91,7 +91,7 @@ console.log(userpic);
 
 
  <div class="card-container">
- {userdata.map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
+ {[userdata].map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
 (
 
 
