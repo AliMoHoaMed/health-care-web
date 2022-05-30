@@ -47,6 +47,7 @@ function App() {
       <ul>
    <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
   <li><NavLink activeClassName='active' to={'/logg'}>login <small></small></NavLink></li>
+  
 <li><NavLink activeClassName='active'to={'/userr_profile'}> userprofile<small>  </small> </NavLink></li>
 
  <li><NavLink activeClassName='active'to={'/choose'}> choose<small>  </small> </NavLink></li>
@@ -68,14 +69,14 @@ function App() {
 <Route  path={'/userr_profile'} component={User_profile} />
 <Route  path={'/labss'} component={Labs} />
 <Route  path={'/choose'} component={Choose} />
-<Route  path={'/Lablogin'} component={Lablogin}  />
+
 <Route  path='/doctors' component={Doctors} />
 <Route  path={'/doctorpages/:id'} component={Doctorpages}  />
 
 <Route  path={'/booking/:_id'} component={Booking}  />
 <Route  path={'/booking_for_labs/:_id'} component={Bookingforlabs}  />
 <Route  path={'/doccard'} component={Doccard}  />
-
+<Route  path={'/Lablogin'} component={Lablogin}  />
 <Route  path='/hospitalss' component={Hospitals} />
 <Route  path={'/labspage/:_id'} component={Labspage}  />
 <Route  path={'/hospitalpage/:_id'} component={Hospitalpage}  />

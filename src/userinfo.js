@@ -11,11 +11,11 @@ const Userinfo = () => {
     const [userdata,setuserdata] = useState([]);
     const [userdiagnose,setuserdiagnose] =useState([]);
     const [ base64code , setbasecode65]=useState([]);
-    const [useravatar,setuseravatar] =useState([]);
-
+    const [userareaa,setuserarea] =useState([]);
+    const [usergov,setusergov] =useState([]);
     const us=getuser('user');
-const userpic=us.avatar ;
-console.log(userpic);
+   const userpic=us.avatar ;
+  
     const authAxios =axios.create({
       headers : {
        'Authorization': `Bearer ${tok}`,
@@ -52,6 +52,9 @@ console.log(userpic);
           setloading(true);
           const ress = await authAxios.get('https://health-care-app-final.herokuapp.com/users/userprofile')
           setuserdata(ress.data);
+          setuserarea(ress.data.AreaId);
+          setusergov(ress.data.AreaId.governorateId);
+          console.log(ress.data);
           const rec = await authAxios.get('https://health-care-app-final.herokuapp.com/users/diagnosis')
           setuserdiagnose(rec.data);
           console.log(rec.data);
@@ -91,7 +94,7 @@ console.log(userpic);
 
 
  <div class="card-container">
- {userdata.map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
+ {[userdata].map(({_id,firstName,LastName,email,avatar ,phoneNumber }) => 
 (
 
 
@@ -104,8 +107,8 @@ console.log(userpic);
        <div class="ucard-text-1">
            <h2> {firstName}  &nbsp; {LastName} </h2>
            <p><label class="uega">Email</label> {email}</p>
-           <p><label class="uega">Gove</label> {AreaId.governorateId.name}</p>
-           <p><label class="uega">Area </label>{AreaId.name}   </p>
+           <p><label class="uega">Gove</label> {[userareaa].map(({_id,name})=>(<a key={_id}>{name} </a> ) )}</p>
+           <p><label class="uega">Area </label> {[usergov].map(({_id,name})=>(<a key={_id}>{name} </a> ) )} </p>
            <p><label class="uega">phone </label>{phoneNumber}   </p>
            
        </div>  
