@@ -9,11 +9,12 @@ const Userbook = () => {
     const [loading ,setloading] =useState(false);
     const tok = sessionStorage.getItem('token') ; 
     const [userdata,setuserdata] = useState([]);
+    const [doctorofbooking,setdodctorrr] = useState([]);
     
 const us=getuser('user');
 const usid=us;
 
-    const [useriddd,setuseriddd] =useState([]);
+    const [doctorarrival,setdoctorarrival] =useState([]);
     const [userbookin,setuserbooking] = useState([]);
     const authAxios =axios.create({
       headers : {
@@ -28,8 +29,11 @@ const usid=us;
           setloading(true);
           const res = await authAxios.get('https://health-care-app-final.herokuapp.com/book/all' )
           setuserbooking(res.data);
-          console.log(res.data)
-      
+          
+          setdoctorarrival(res.data.drAvailTimeId);
+          setdodctorrr(res.data.drAvailTimeId.doctorId);
+          console.log(res.data);
+ 
        
           }
           loadposts();
@@ -41,7 +45,7 @@ const usid=us;
     <div>
       <div className='grid-containerr'>
 
-      {userbookin.map(({_id , info,wattingTime,cost,vezeeta ,drAvailTimeId,doctorId}) => 
+      {userbookin.map(({_id , info,wattingTime,drAvailTimeId}) => 
 (
         <div key={_id} className='grid-itemr'>
  <div class="bcard-container" >
@@ -49,17 +53,17 @@ const usid=us;
 
        <div class="bcard-text-1">
        
-           <p><label class="ega">Doctor Name</label> mohga </p>
+           <p><label class="ega">Doctor Name</label>mohga </p>
            <p><label class="ega">Waiting Time</label>{wattingTime}</p>
 
            <div class="tables">
-            <div class="table1">
+           <div ><p class="day"><label class="ega">Price </label> 200   </p></div>
 
-                <div ><p class="time"><label class="ega">Time </label>{drAvailTimeId.timeFrom}   &nbsp; to  &nbsp; {drAvailTimeId.timeTo}</p></div>
-
-                <div ><p class="day"><label class="ega">Price </label>  {drAvailTimeId.vezeeta} </p></div>
-            </div>
-            </div>
+<div class="table1" ><div ><p class="time"><label class="ega">Time </label> 10  pm </p></div>
+            </div>      
+            </div> 
+          
+    
        </div>  
      </div>
  </div>   
