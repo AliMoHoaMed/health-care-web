@@ -116,7 +116,7 @@ hr {
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: hsl(0, 0%, 0%);
 }
 
 .user-name {
@@ -193,7 +193,9 @@ font-family: "Sofia", sans-serif;
 
 .ucard-1{
  display: flex;
- background-color: #e9e9ee;
+ background-image: url("3966878 (1).jpg");
+ background-image: 100%;
+ color: azure;
  /*border-radius: 20px;*/
  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
 }

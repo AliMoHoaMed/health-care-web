@@ -32,8 +32,34 @@ import Doctordiagnose from './doctordiagnose';
 import Labstypepage from './labstypepage';
 import Bookingforlabs from './booking_for_labs';
 import Lablogin from './Lablogin';
-
+import { useEffect } from 'react';
+import { useState } from 'react';
 function App() {
+const [loading ,setloading] =useState(false);
+  const [show ,setshow] =useState(false);
+  const tok = sessionStorage.getItem('token') ; 
+ 
+
+  useEffect(()=>{
+    const loadposts=async() => {
+      setloading(true);
+      
+  if (tok !== null) {
+   setshow(true);
+   console.log(tok);
+  }
+   setloading(false);
+    }
+    loadposts();
+  },[]);
+
+
+
+
+
+
+  
+
   return (
     <div >
     <BrowserRouter>
@@ -47,8 +73,9 @@ function App() {
       <ul>
    <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
   <li><NavLink activeClassName='active' to={'/logg'}>Login <small></small></NavLink></li>
+{show?
 <li><NavLink activeClassName='active'to={'/userr_profile'}> User profile<small>  </small> </NavLink></li>
-
+    :null}
  <li><NavLink activeClassName='active'to={'/choose'}> Choose<small>  </small> </NavLink></li>
    </ul></nav>
     </div>

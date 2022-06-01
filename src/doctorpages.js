@@ -109,24 +109,23 @@ const usid=us;
 
 <h1> Reviews </h1>
 
-<form className='revvv' onSubmit={handleSubmit} >
-<label  > write your opinion on the doctor </label>
-<br/>
-<textarea 
-type='text'
-        name='review'
-        value={ratee}
-        onChange={(e)=>setrate(e.target.value)} 
-/> 
-<br/>
-<label  > choose review  </label>
-<br/>
-<input type='number' name='rate value' value={ratevalue}  onChange={(e)=>setratevalue(e.target.value)}/> 
-<br/>
+<form class="revRateCard" action=" "  onSubmit={handleSubmit}>
+        <textarea id="w3review" 
+        class="inputReview" name="w3review" rows="15" cols="65"  value={ratee}
+        onChange={(e)=>setrate(e.target.value)}  />
+        <input class="submittingg" type="submit" value="Submit" />  
+        
+            <select class="rateSelect" value={ratevalue}  onChange={(e)=>setratevalue(e.target.value)} >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            
 
-<div class="row">
-<button type="submit"  className="buttton" > post review  </button>
-</div>
+
+
 
 
 </form>

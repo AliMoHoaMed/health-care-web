@@ -27,9 +27,7 @@ const authAxios =axios.create({
 useEffect(()=>{
   const loadposts=async() => {
     setloading(true);
-    const res = await authAxios.get('https://health-care-app-final.herokuapp.com/book/all' )
-   setuserbooking(res.data);
-   console.log(res.data)
+  
    const ress = await authAxios.get('https://health-care-app-final.herokuapp.com/users/userprofile')
    setuserdata(ress.data);
    setuseriddd( ress.data._id)

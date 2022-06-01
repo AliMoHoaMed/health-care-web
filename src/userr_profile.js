@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { gettokken, getuser, removeusersession } from './utlis/Common'
 import Userinfo from './userinfo';
 import Userbook from './userbooking';
+
+import User_patch from './user_patch';
 const User_profile = (props) => {
   const tok = sessionStorage.getItem('token') ; 
 
@@ -55,10 +57,10 @@ console.log();
   <div>
 
 
-<nav class="topnav">    <br/> <br/>  <br/> <br/>  <h2>{usarea}</h2>    <h1>{us.firstName}</h1> 
+<nav class="topnav">    <br/>   
 
 
-  <img src={"data:image/jpg;base64," + us.avatar} alt="Avatar" class="avatar"/>
+  <img src={ us.avatar} alt="Avatar" class="avatar"/> <h1>{us.firstName}</h1> 
     <div class="user-name">
        
       </div>
@@ -68,9 +70,12 @@ console.log();
 
 
         <a href="#history"><i class="fa fa-fw fa-history"></i>History</a>
-        <a href="#editProfile">Edit Profile</a>
-        <Link to="/userr_profile/userinfo" >userinfo  </Link>
-        <Link to="/userr_profile/userbooking" >booking  </Link>
+        
+        
+        <Link to="/userr_profile/user_patch" >Edit Profile  </Link>
+        <Link to="/userr_profile/userinfo" >Userinfo  </Link>
+
+        <Link to="/userr_profile/userbooking" >Booking  </Link>
         <a href="#logout" onClick={handlelogout}>Logout</a>
       <div class="vl"></div>
     </nav>
@@ -84,6 +89,7 @@ console.log();
 
 <Route path='/userr_profile/userinfo' component={Userinfo} /> 
 <Route path='/userr_profile/userbooking' component={Userbook} /> 
+<Route path='/userr_profile/user_patch' component={User_patch} /> 
 </div>
 
 

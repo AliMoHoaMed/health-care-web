@@ -23,29 +23,28 @@ const usid=us;
       }
     })
 
-
     useEffect(()=>{
         const loadposts=async() => {
-          setloading(true);
+         
           const res = await authAxios.get('https://health-care-app-final.herokuapp.com/book/all' )
           setuserbooking(res.data);
           
           setdoctorarrival(res.data.drAvailTimeId);
-          setdodctorrr(res.data.drAvailTimeId.doctorId);
+     
           console.log(res.data);
- 
+          
+          console.log(res.data.wattingTime);
        
           }
           loadposts();
         },[]);
-      
 
 
   return (
     <div>
       <div className='grid-containerr'>
 
-      {userbookin.map(({_id , info,wattingTime,drAvailTimeId}) => 
+      {[userbookin].map(({_id,wattingTime,info,drAvailTimeId}) => 
 (
         <div key={_id} className='grid-itemr'>
  <div class="bcard-container" >
@@ -53,21 +52,25 @@ const usid=us;
 
        <div class="bcard-text-1">
        
-           <p><label class="ega">Doctor Name</label>mohga </p>
+           <p><label class="ega">Doctor Name</label>  {drAvailTimeId}</p>
            <p><label class="ega">Waiting Time</label>{wattingTime}</p>
 
            <div class="tables">
-           <div ><p class="day"><label class="ega">Price </label> 200   </p></div>
+           
 
-<div class="table1" ><div ><p class="time"><label class="ega">Time </label> 10  pm </p></div>
-            </div>      
-            </div> 
-          
-    
+    <div ><p class="time"><label class="ega">Time </label> to  </p></div>
+
+<div ><p class="day"><label class="ega">Price </label> {info}  </p></div>
+
+                 </div> 
+           
+            </div>
+        <h1> </h1>
+
        </div>  
      </div>
  </div>   
-</div>
+
 ))}
 
 <div >
