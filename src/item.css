@@ -137,3 +137,12 @@ div.card{
       background-position: 100% center;
   }
   
+  
+.bgimg {
+  background-image: url('blue-blurry-clip-art-keynote.jpg');
+  min-height: 100%;
+  max-height: 500%;
+  background-position: center;
+  background-size: cover;
+}
+  

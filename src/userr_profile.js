@@ -86,7 +86,7 @@ console.log();
 
 <div>  
 
-
+<Route path='/' component={Userinfo} /> 
 <Route path='/userr_profile/userinfo' component={Userinfo} /> 
 <Route path='/userr_profile/userbooking' component={Userbook} /> 
 <Route path='/userr_profile/user_patch' component={User_patch} /> 

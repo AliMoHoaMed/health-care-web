@@ -23,7 +23,9 @@ getArticles();
 
 <body className='mmm'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"/>
-<div className='k'><div className='hello'>
+<div className='k'>
+  
+  <div className='bgimg' >
   <h1 className='font-effect-outline'>Welcome to  </h1>
 
   
