@@ -139,6 +139,8 @@ div.card{
       -moz-animation: fadeIn ease 5s;
       -o-animation: fadeIn ease 5s;
       -ms-animation: fadeIn ease 5s;
+      position: relative;
+    top: 160px
     
   }
   @keyframes fadeIn {
@@ -166,15 +168,24 @@ div.card{
     100% {opacity:1;}
   }
 
+  .font-effect-outline{
+    font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 160px
+  }
 
-  .hello {
-    background: linear-gradient(-45deg, #053d57, #5C97B8, #D1A58A, #DCDBD8);
+
+  .hellooo {
+    background: linear-gradient(-45deg, #008089f5, #113f77, #8dd35e, #1040ff);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    height: 400px;
+    height: 800px;
     padding: 20px;
     margin: 20px auto;
     box-shadow: 0 1px 5px 0 rgb(105, 105, 112);
+    position: relative;
+    top: -20px;
   }
   
   @keyframes gradient {
