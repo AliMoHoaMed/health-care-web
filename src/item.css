@@ -1,14 +1,16 @@
 div.newscomp{
     border-radius: 20px;
-    border-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    border-color: blue;
+    color: rgb(0, 113, 128);
     width: 500px;
-    height: 500 px;
+    height: 500px;
     border: 50px;
     align-items: center;
    text-align: center;
-   background-color: rgba(13, 95, 83, 0.205);
+   background-color: #f1fafc93;
    padding: 20px;
+   position: relative;
+   left :10px;
     }
 
     img.n{
@@ -92,25 +94,22 @@ div.card{
     .searchbar{
       margin-left: 19%;
       padding-top: 64px;
+     
   }
   
   .searchInput{
-      width: 70%;
+      width: 75%;
       padding: 20px 24px;
-      transition: transform 250ms ease-in-out;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 20px;
+      line-height: 15px;
       border: 1px solid;
       border-radius: 50px;
-      color: #575756;
-      
+      color: #000000;
+     
+   
   }
   
-  .searchInput::placeholder{
-      color: color(#575756 a(0.8));
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-  }
+
   
   .searchInput:hover {
       background-color: whitesmoke;
@@ -118,9 +117,6 @@ div.card{
       outline: 0;
       border: 1px solid transparent;
       border-bottom: 1px solid #575756;
-      /* border-top: 1px solid #575756;
-      border-left: 1px solid #575756;
-      border-right: 1px solid #575756; */
       border-radius: 0;
       background-position: 100% center;
   }
@@ -136,6 +132,7 @@ div.card{
       border-radius: 0;
       background-position: 100% center;
   }
+<<<<<<< HEAD
   
   
 .bgimg {
@@ -145,4 +142,66 @@ div.card{
   background-position: center;
   background-size: cover;
 }
+=======
+  .fade-in {
+   
+      animation: fadeIn ease 5s;
+      -webkit-animation: fadeIn ease 5s;
+      -moz-animation: fadeIn ease 5s;
+      -o-animation: fadeIn ease 5s;
+      -ms-animation: fadeIn ease 5s;
+    
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+  .hello {
+    background: linear-gradient(-45deg, #053d57, #5C97B8, #D1A58A, #DCDBD8);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 1px 5px 0 rgb(105, 105, 112);
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+ 
+  
+  
+  
+>>>>>>> 509893e316e4b2ae3ca17c4d3f079f3f40eed075
   

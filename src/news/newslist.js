@@ -27,11 +27,7 @@ getArticles();
   
   <div className='bgimg' >
   <h1 className='font-effect-outline'>Welcome to  </h1>
-
-  
-  <img  src='Health Care.png'  />
-
-
+  <img className='fade-in' src='Health Care.png'  />
 </div>
     </div>
 
