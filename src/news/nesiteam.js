@@ -5,14 +5,14 @@ const Nesiteam = ({id, title,description,url,urlToImage}) => {
 
 
     <div className='newscomp'>
-        <img className='n' src={urlToImage} />
+        <img src={urlToImage} className='n' />
 
-  
-       <a href={url}>
+ 
+       <a href={url} className='newslink'>
     <h2> 
        {title} </h2>
       </a>
-
+     
 
 
 
