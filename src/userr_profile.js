@@ -10,6 +10,7 @@ import Userinfo from './userinfo';
 import Userbook from './userbooking';
 
 import User_patch from './user_patch';
+import Userhistory from './userhistory';
 const User_profile = (props) => {
   const tok = sessionStorage.getItem('token') ; 
 
@@ -69,8 +70,8 @@ console.log();
 
 
 
-        <a href="#history"><i class="fa fa-fw fa-history"></i>History</a>
-        
+       
+        <Link to="/userr_profile/userhistory" >History </Link>
         
         <Link to="/userr_profile/user_patch" >Edit Profile  </Link>
         <Link to="/userr_profile/userinfo" >Userinfo  </Link>
@@ -86,7 +87,8 @@ console.log();
 
 <div>  
 
-<Route path='/' component={Userinfo} /> 
+
+<Route path='/userr_profile/userhistory' component={Userhistory} /> 
 <Route path='/userr_profile/userinfo' component={Userinfo} /> 
 <Route path='/userr_profile/userbooking' component={Userbook} /> 
 <Route path='/userr_profile/user_patch' component={User_patch} /> 

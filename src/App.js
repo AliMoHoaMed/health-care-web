@@ -34,6 +34,10 @@ import Bookingforlabs from './booking_for_labs';
 import Lablogin from './Lablogin';
 import { useEffect } from 'react';
 import { useState } from 'react';
+
+import Labprofile from './labprofile';
+import Diagnoselabs from './Diagnoselabs';
+import Labsdiagnose from './labsdiagnose';
 function App() {
 const [loading ,setloading] =useState(false);
   const [show ,setshow] =useState(false);
@@ -110,6 +114,10 @@ const [loading ,setloading] =useState(false);
 <Route  path={'/Diagnose'} component={Diagnose}  />
 <Route  path={'/labstypepage/:_id'} component={Labstypepage}  />
 <Route  path={'/doctordiagnose/:_id'} component={Doctordiagnose}  />
+<Route  path={'/labprofile'} component={Labprofile}  />
+<Route  path={'/labsdiagnose/:_id'} component={Labsdiagnose}  />
+<Route  path={'/Diagnoselabs'} component={Diagnoselabs}  />
+
 
   </Switch>
     

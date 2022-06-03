@@ -132,17 +132,6 @@ div.card{
       border-radius: 0;
       background-position: 100% center;
   }
-<<<<<<< HEAD
-  
-  
-.bgimg {
-  background-image: url('blue-blurry-clip-art-keynote.jpg');
-  min-height: 100%;
-  max-height: 500%;
-  background-position: center;
-  background-size: cover;
-}
-=======
   .fade-in {
    
       animation: fadeIn ease 5s;
@@ -203,5 +192,4 @@ div.card{
   
   
   
->>>>>>> 509893e316e4b2ae3ca17c4d3f079f3f40eed075
   

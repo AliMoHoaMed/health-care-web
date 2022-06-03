@@ -3,7 +3,7 @@ import  { useState } from "react";
 import'./css/Lablogin.css' ;
 import axios from 'axios';
 import { setlabsession } from "./utlis/Common3";
-const Lablogin = () => {
+const Lablogin = (props) => {
 
   const [username,Setusername] = useState('')
   const [password,Setpassword] = useState('')
@@ -19,7 +19,7 @@ const Lablogin = () => {
       Setloading(false);
       setlabsession(response.data.token,response.data.labs);
       console.log(response);
-   
+      props.history.push('/labprofile');
   
   }).catch(error =>{
   console.log('error >>>',error);
