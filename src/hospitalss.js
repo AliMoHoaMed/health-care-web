@@ -53,8 +53,8 @@ setareaid(usarea);
     <div>
       <div className='k'> 
       <div className='hello'>
-     
-      <label><h1>Search</h1>
+     <br/>
+      <label> <h1>Search</h1>
       <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
       </label>
       <br/>
