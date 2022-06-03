@@ -25,11 +25,7 @@ getArticles();
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"/>
 <div className='k'><div className='hello'>
   <h1 className='font-effect-outline'>Welcome to  </h1>
-
-  
-  <img  src='Health Care.png'  />
-
-
+  <img className='fade-in' src='Health Care.png'  />
 </div>
     </div>
 
