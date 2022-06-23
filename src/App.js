@@ -38,20 +38,40 @@ import { useState } from 'react';
 import Labprofile from './labprofile';
 import Diagnoselabs from './Diagnoselabs';
 import Labsdiagnose from './labsdiagnose';
+import { gettokken } from './utlis/Common';
+import { gettokkenn } from './utlis/Common2';
+import { ggettokken } from './utlis/Common3';
 function App() {
 const [loading ,setloading] =useState(false);
   const [show ,setshow] =useState(false);
-  const tok = sessionStorage.getItem('token') ; 
+  const [showw ,setshoww] =useState(false);
+  const [showww ,setshowww] =useState(false);
+ const usertok = gettokken('token');
+ const doctortok = gettokkenn('token');
+ const labtok=ggettokken('token');
  
 
-  useEffect(()=>{
+  useEffect((e)=>{
     const loadposts=async() => {
       setloading(true);
-      
-  if (tok !== null) {
+     
+  if (usertok !== null) {
    setshow(true);
-   console.log(tok);
+   console.log(usertok);
   }
+
+  if (doctortok !== null) {
+    setshoww(true);
+    console.log(doctortok);
+   }
+
+   if (labtok !== null) {
+    setshowww(true);
+    console.log(labtok);
+   }
+
+
+
    setloading(false);
     }
     loadposts();
@@ -80,6 +100,15 @@ const [loading ,setloading] =useState(false);
 {show?
 <li><NavLink activeClassName='active'to={'/userr_profile'}> User profile<small>  </small> </NavLink></li>
     :null}
+{showw?
+<li><NavLink activeClassName='active'to={'/docprofile'}> Doctor profile<small>  </small> </NavLink></li>
+    :null}
+    {showww?
+<li><NavLink activeClassName='active'to={'/labprofile'}> Labs profile<small>  </small> </NavLink></li>
+    :null}
+
+
+
  <li><NavLink activeClassName='active'to={'/choose'}> Choose<small>  </small> </NavLink></li>
    </ul></nav>
     </div>

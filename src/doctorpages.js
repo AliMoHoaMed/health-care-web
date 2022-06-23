@@ -37,6 +37,7 @@ const usid=us;
     console.log(res.data)
    const ress = await axios.get('https://health-care-app-final.herokuapp.com/doctors/AvalibleTime/'+props.match.params.id)
    setarr(ress.data);
+   console.log(ress.data);
    const resss = await axios.get('https://health-care-app-final.herokuapp.com/doctors/AvalibleTime/'+props.match.params.id)
    
    setloading(false);
@@ -82,25 +83,31 @@ const usid=us;
  </div>
 <br/>
 <br/>
-<table className='tablle'>
-<tr> <th>time </th> <th>price</th> <th>clinic / hospital  </th>   <th>location </th> </tr>
+<div class="abooking-card-container">
+    <h1>information</h1>
+     <div class="abooking-card-1">
+       <div class="abooking-card-text-1">
 {arr.map(({_id,date,timeFrom,timeTo,vezeeta,branchId ,areaId})=>(
 
-<tr key={_id}>
-             
-               <th className="time">{timeFrom}  &nbsp; to  &nbsp; {timeTo}</th>
-             
-               <th className="day">{vezeeta}</th>
-            
-   <th> {branchId.name}</th>
-   <th> {branchId.areaId.name}</th> 
-   <a href={'/booking/'+ _id}> 
+         
+         
+  <div class="atables" key={_id}>
+ <div class="atable1">
+     <div class="ahos-name"><h3 class="ahospital-name">{branchId.name}</h3> {branchId.areaId.name}</div>
+     <div class="atim"><h3 class="atime">{timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
+     <div class="ada"><h3 class="aday">{vezeeta}</h3></div>
+     <a class="abtn" href={'/booking/'+ _id}> Register</a>
+ </div>
+ </div>
+        
+ 
 
-             <button className="buttton">Register</button>
-         </a>
-         </tr>
-))}
- </table>
+
+
+
+
+))}</div>
+ </div></div>
   </div>
 
 

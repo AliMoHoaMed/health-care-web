@@ -133,3 +133,130 @@ border-radius: 30px;
     padding: 0 10px;
     margin-top: -48px;
 }
+
+
+
+
+
+
+
+
+.abooking-card-container{
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  margin: auto;
+}
+
+.abooking-card-1{
+ display: flex;
+ background: rgb(240,242,242);
+ background: linear-gradient(63deg, rgba(240,242,242,1) 0%, rgba(222,222,222,1) 100%);
+ border-radius: 20px;
+ 
+}
+
+
+.abooking-card-text-1{
+ width: 70%;
+ padding: 20px;
+}
+
+.abooking-card-text-1 p {
+  font-size: 25px;
+}
+.atables{
+  display: flex;
+  flex-direction: column;
+  
+  
+
+}
+
+.atables .atable1 , .table2 , .table3,.table4{
+ display: flex;
+ justify-content: space-between;
+ padding-top: 20px;
+ 
+}
+.ahos-name{
+  background-color: #b0b8b9;
+  color: #000000;
+  border: 1px solid rgb(9, 9, 66);
+  border-radius: 10px;
+
+}
+.atable1 .ahospital-name , .atable2 .ahospital-name , .atable3 .ahospital-name,.atable4 .ahospital-name {
+  text-align: center;  
+  width: 250px;
+}
+.atim{
+  background-color: rgb(255, 255, 255);
+  width: 230px;
+  border: 1px solid rgb(9, 9, 66);
+  border-radius: 10px;
+  position: relative;
+  left: 70px;
+  text-align: center; 
+}
+.atable1 .atime,.atable2 .atime,.atable3 .atime,.atable4 .atime{
+  width: 230px;
+}
+.ada{
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 50px;
+  border-radius: 10px;
+  margin-left: 80px;
+  text-align: center; 
+  border: 1px solid rgb(9, 9, 66);
+}
+.atable1 .aday , .atable2 .aday , .atable3 .aday,.atable4 .aday{
+  width: 120px;
+  
+ 
+
+}
+.atable1 .abtn , .atable2 .abtn , .atable3 .abtn,.atable4 .abtn{
+  background: #F8AFA6;
+  background-image: -webkit-linear-gradient(top, #F8AFA6, #693b3b);
+  background-image: -moz-linear-gradient(top, #F8AFA6, #693b3b);
+  background-image: -ms-linear-gradient(top, #F8AFA6, #693b3b);
+  background-image: -o-linear-gradient(top, #F8AFA6, #693b3b);
+  background-image: linear-gradient(to bottom, #F8AFA6, #693b3b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 20%;
+  position: relative;
+  left: 100px;
+
+}
+.atable1 .abtn:hover , .atable2 .abtn:hover , .atable3 .abtn:hover,.atable4 .btn:hover{
+  background: #ff5252;
+  background-image: -webkit-linear-gradient(top, #F8AFA6, #c79c85);
+  background-image: -moz-linear-gradient(top, #F8AFA6, #c79c85);
+  background-image: -ms-linear-gradient(top, #F8AFA6, #c79c85);
+  background-image: -o-linear-gradient(top, #F8AFA6, #c79c85);
+  background-image: linear-gradient(to bottom, #F8AFA6, #c79c85);
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
