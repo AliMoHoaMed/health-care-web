@@ -119,3 +119,17 @@ input[type="checkbox"]{
   font-size: 40px;
   font-weight: 700;
 }
+
+.tessTT{
+  height: 100px;
+  width: 100%;
+  background-color: dodgerblue;
+}
+
+.AppLoggoo{
+  color: azure;
+  font-family: "Unica One", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+
+}

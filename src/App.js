@@ -90,7 +90,9 @@ const [loading ,setloading] =useState(false);
     <BrowserRouter>
     <div>
       <nav className="nnavbar">
-      <img class="nlogo" src="Health Care.png"/> 
+      <div class="AppLoggoo">
+        HEALTHCARE
+    </div>
       <input type="checkbox" id="click" />
          <label for="click" class="menu-btn">
          <i class="fas fa-bars"></i>
