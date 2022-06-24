@@ -163,7 +163,8 @@ div.card{
     -o-animation: fadeIn ease 5s;
     -ms-animation: fadeIn ease 5s;
     position: relative;
-    top: 160px
+    top: 210px;
+    width: 650px;
     
   }
   @keyframes fadeIn {
@@ -193,7 +194,7 @@ div.card{
 
   .font-effect-outline{
     font-size: 60px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI';
     position: relative;
     top: 180px
   }
@@ -208,7 +209,10 @@ div.card{
     box-shadow: 0 1px 5px 0 rgb(105, 105, 112);
     position: relative;
     top: -20px;
+   
   }
+
+  
   
   @keyframes gradient {
     0% {

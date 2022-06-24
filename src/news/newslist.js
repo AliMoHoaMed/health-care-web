@@ -26,8 +26,8 @@ getArticles();
 <div className='k'>
   
   <div className='hellooo'>
-  <h1 className='font-effect-outline'>Welcome to  </h1>
-  <img className='fade-in' src='Health Care.png'  /> </div>
+  <h1 className='font-effect-outline' >Welcome to  </h1>
+  <img className='fade-in' src='helathcare logo2.png'  /> </div>
 </div>
     
 
