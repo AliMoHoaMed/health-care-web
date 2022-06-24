@@ -2,7 +2,7 @@ import React from 'react'
 import { gettokkenn } from './utlis/Common2';
 import axios from 'axios';
 import { useState , useEffect } from 'react';
-
+import './booking.css';
 const Diagnose = () => {
   const [searchtitle,setsearchtitle]=useState('');
   const [loading ,setloading] =useState(false);
@@ -54,8 +54,9 @@ const Diagnose = () => {
     
     <div>
    <form onSubmit={handleuser}>
-   <input type='text' placeholder='search..' onChange={(e)=> setuseremail(e.target.value)}/>
-   <input type="submit" /> 
+   <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setuseremail(e.target.value)}/>
+   <br/>
+   <input type="submit" className='buttton'/> 
  
    
 
@@ -65,14 +66,38 @@ const Diagnose = () => {
 
 <div>
 {userss.map(({_id,firstName,LastName,email})=>(
-<div key={_id}>
-<h2> {email} </h2>
-<h1> {firstName} </h1>
+<div class="CardContentss" key={_id}>
+<div class="CardDaataa">
+email :  {email} 
+<br/>
+        <br/>
+        <br/>
+        <br/>
+name : {firstName} 
+
+<br/>
+        <br/>
+        <br/>
+        <br/>
+      
 <a href={'/doctordiagnose/'+_id}> go to page</a>
+
+</div>
+
+
 </div>
 ))}
 </div>
 : null}
+
+
+
+<div>
+
+
+</div>
+
+
     </div>
   
   )

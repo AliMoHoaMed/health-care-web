@@ -135,3 +135,206 @@ width: 500px;
 height: 500px;
 
 }
+
+
+
+
+.PayCashh {
+  margin: 250px;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 65px;
+  font-weight: lighter;
+  text-decoration: none;
+  transition: .3s;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17C3B2;
+ }
+ 
+ .PayCashh::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(360deg);
+  background: #17C3B2;
+  transition: .7s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .PayCashh:hover::before {
+  border-radius: 25px;
+  width: 99.9%;
+ }
+ 
+ .PayCashh:hover {
+  color: azure;
+ }
+
+
+ .PayVisa{
+ margin-left: -70px;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 65px;
+  font-weight: lighter;
+  text-decoration: none;
+  transition: .3s;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17C3B2;
+ }
+
+ .PayVisa::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(360deg);
+  background: #17C3B2;
+  transition: .7s ease;
+  display: block;
+  z-index: -1;
+ }
+
+ .PayVisa:hover::before {
+  border-radius: 25px;
+  width: 99.9%;
+ }
+
+ .PayVisa:hover {
+  color: azure;
+ }
+ 
+
+
+
+ .CardContentss {
+  background-color: #72A0C1;
+  width: 650px;
+  height: 355px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 180px;
+  margin-left: 420px;
+
+}
+
+.CardDaataa {
+  color: white;
+  margin-left: 15px;
+  padding-top: 70px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+.diagnosInputCard {
+  background-color: #6495ED;
+  width: 800px;
+  height: 430px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 315px;
+  margin-left: 490px;
+
+}
+
+.dattAAA {
+  color: white;
+  margin-left: 50px;
+  margin-top: -250px;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.daattttaaa {
+  color: white;
+  margin-left: 53px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.editANDGo {
+  float: right;
+  padding: 10px;
+  margin-right: 30px;
+  margin-top: -40px;
+  font-size: 25px;
+  width: 200px;
+  height: 30px;
+  background: #aab1b6;
+  border: 1px solid #aab1b6;
+  border-radius: 30px;
+  text-shadow: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.editButtonTOGo {
+  color: black;
+  text-decoration: none;
+}
+
+.editButtonTOGo:hover {
+  color: #fff;
+  border-radius: 20px;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.inputEditDiagnos {
+  padding: 8px;
+  margin-left: 80px;
+  margin-top: 20px;
+  border-radius: 4px;
+  resize: none;
+  border: 0.001px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.inputEditMedicine {
+  padding: 8px;
+  margin-left: 80px;
+  margin-top: 20px;
+  border-radius: 4px;
+  resize: none;
+  border: 0.001px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
