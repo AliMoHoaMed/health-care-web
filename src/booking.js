@@ -117,15 +117,11 @@ function handleshowoffline (){
 
         <div class="bcards">
             
-          <a> 
-           
-        </a>
+       
                <button onClick={handleshow}> online  </button> 
            <button onClick={handleshowoffline}> offline</button>
             
-          
-               
-      
+        
            
          
         </div>

@@ -74,6 +74,8 @@ const usid=us;
 <div className='carddd' >
 
 <img  src={"data:image/jpg;base64," + doctors.avatar} width="250" height="250" />
+
+
  <br/>
  <h2 className='info'> doctor name : {doctors.firstName}</h2> 
  <br/>
