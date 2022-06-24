@@ -61,11 +61,7 @@ const tok = ggettokken('token');
         <div class="user-name">
          {labdata.name}
          <br/>
-{[labsarea].map((areaa)=> (<div key={areaa._id}>
-<a>{areaa.name} </a>
 
-
-</div>))}
 <br/>
 <h1>types : </h1>
 {labtypes.map((types)=> (<div key={types._id}>

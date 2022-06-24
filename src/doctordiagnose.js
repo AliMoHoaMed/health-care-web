@@ -2,7 +2,7 @@ import React from 'react'
 import { gettokkenn } from './utlis/Common2';
 import axios from 'axios';
 import { useState , useEffect } from 'react';
-
+import './booking.css';
 const Doctordiagnose = (props) => {
 const useridddd =props.match.params._id
 const [loading ,setloading] =useState(false);
@@ -53,27 +53,44 @@ useEffect((e)=>{
 
 <form onSubmit={handleSubmit}>  
 
-<label> diagnose  </label> 
-<input type='text'
 
-        name='firstname'
+<div class="diagnosInputCard">
+      <div class="dattAAA">
+      Type Diagnosis & Medicine
+       </div>
+       <br/>
+      <div class="daattttaaa">
+          Diagnosis: 
+          <br/>
+          <textarea id="w3review" 
+        class="inputEditDiagnos" name="w3review" rows="1" cols="50"    
         value={diagnosee}
      
-        onChange={(e)=>setdiagnose(e.target.value)}/>
-<br/>
+        onChange={(e)=>setdiagnose(e.target.value)}    />
+        <br/>
+        <br/>
+          Medicine: 
+          <br/>
+          <textarea id="w3review" 
+        class="inputEditMedicine" name="w3review" rows="1" cols="50"   value={medicane}
 
-<label> mediacene  </label> 
-<input type='text'
-        
-        name='firstname'
-        value={medicane}
-
-        onChange={(e)=>setmedicane(e.target.value)}/>
-<br/>
-<input type='submit' />
+        onChange={(e)=>setmedicane(e.target.value)}  />
+      </div>
+     <br/><br/><br/>
+     <div class="editANDGo">
+      <a class="editButtonTOGo" type='submit' > Confirm </a>
+     </div>
+  </div>
 
 </form>
 
+
+
+
+<div> 
+
+
+</div>
 
 
 

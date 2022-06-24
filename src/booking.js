@@ -31,12 +31,12 @@ const useridd=getuser('user')
   
   
     authAxios.post('https://health-care-app-final.herokuapp.com/payments/addPayment',dataaaa
-    ).then(ress=>{console.log("ress",ress); 
+    ).then(ress=>{console.log("ress",ress);  
     
-    setpaymentid(ress.data._id); }
+    setpaymentid(ress.data._id);  alert('everything is great   now click on submit '); }
    
     ).catch(error =>{
-      console.log('error >>>',error);
+      console.log('error >>>',error);   alert('something wrong happened or you are not logged  ');
       })  
     }
     
@@ -61,10 +61,14 @@ function handleshowoffline (){
     
     
       authAxios.post('https://health-care-app-final.herokuapp.com/book',dataaa
-      ).then(ress=>{console.log("ress",ress); setbook(ress.data);
+      ).then(ress=>{console.log("ress",ress); setbook(ress.data); alert('done');
       }
       ).catch(error =>{
         console.log('error >>>',error);
+        alert('something wrong happened or you are not logged  ');
+
+
+
         })  
 
 
@@ -79,10 +83,11 @@ function handleshowoffline (){
       
       
         authAxios.post('https://health-care-app-final.herokuapp.com/book',dataaaa
-        ).then(ress=>{console.log("ress",ress); setbook(ress.data);
+        ).then(ress=>{console.log("ress",ress); setbook(ress.data);  alert('every thing is great now go to on the location with the right time  ');
         }
         ).catch(error =>{
           console.log('error >>>',error);
+          alert('something wrong happened or you are not logged  ');
           })  
   
   
@@ -110,6 +115,10 @@ function handleshowoffline (){
      
      
       
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<a  class="PayCashh" onClick={handleshowoffline}>Cash</a> 
+<a  class="PayVisa" onClick={handleshow}>Visa</a> 
         
 
 
@@ -118,9 +127,7 @@ function handleshowoffline (){
         <div class="bcards">
             
        
-               <button onClick={handleshow}> online  </button> 
-           <button onClick={handleshowoffline}> offline</button>
-            
+              
         
            
          
@@ -197,7 +204,7 @@ function handleshowoffline (){
     <a> {paymentid}</a>
 
 
-        <h1> booking</h1>
+        <h1> after finish click here </h1>
        <form onSubmit={handleSubmit}> 
            <button type="submit" > FINISH   </button>
 
@@ -221,7 +228,7 @@ function handleshowoffline (){
 
 
 {showww ?  <div> <form onSubmit={handleoffline}> 
-           <button type="submit" > click to finish </button>
+           <button  type="submit" > click to finish </button>
             </form></div> : null
  }
    

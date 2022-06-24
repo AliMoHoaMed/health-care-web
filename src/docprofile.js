@@ -30,7 +30,8 @@ console.log(doctor);
     
         <div class="user-name">
             <b>{doctor.email}</b>
-            <b> {doctor.firstName}  </b>
+            <br/>
+            <b> {doctor.firstName}  </b><br/>
             <b>  {doctor.Title}   </b>
 
           </div>
