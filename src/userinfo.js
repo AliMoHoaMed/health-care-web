@@ -107,8 +107,8 @@ const Userinfo = () => {
        <div class="ucard-text-1">
            <h2> {firstName}  &nbsp; {LastName} </h2>
            <p><label class="uega">Email</label> {email}</p>
-           <p><label class="uega">Gove</label> {[userareaa].map(({_id,name})=>(<a key={_id}>{name} </a> ) )}</p>
-           <p><label class="uega">Area </label> {[usergov].map(({_id,name})=>(<a key={_id}>{name} </a> ) )} </p>
+           <p><label class="uega">Area</label> {[userareaa].map(({_id,name})=>(<a key={_id}>{name} </a> ) )}</p>
+           <p><label class="uega"> Gove </label> {[usergov].map(({_id,name})=>(<a key={_id}>{name} </a> ) )} </p>
            <p><label class="uega">phone </label>{phoneNumber}   </p>
            
        </div>  
