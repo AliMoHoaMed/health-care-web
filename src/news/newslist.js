@@ -27,7 +27,7 @@ getArticles();
   
   <div className='hellooo'>
   <h1 className='font-effect-outline' >Welcome to  </h1>
-  <img className='fade-in' src='helathcare logo2.png'  /> </div>
+  <img className='fade-in' src='final logo 2.png'  /> </div>
 </div>
     
 
