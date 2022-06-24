@@ -24,7 +24,7 @@ const Choose = () => {
 
     
     <div class="clinics">
-        <a href="">
+        <a href="/typee">
         <figure class="containerd">
             <img class="clinic" src="lab types img.jpg" alt=""/>
             <figcaption>

@@ -41,6 +41,7 @@ import Labsdiagnose from './labsdiagnose';
 import { gettokken } from './utlis/Common';
 import { gettokkenn } from './utlis/Common2';
 import { ggettokken } from './utlis/Common3';
+import Typee from './typee';
 function App() {
 const [loading ,setloading] =useState(false);
   const [show ,setshow] =useState(false);
@@ -147,7 +148,7 @@ const [loading ,setloading] =useState(false);
 <Route  path={'/labsdiagnose/:_id'} component={Labsdiagnose}  />
 <Route  path={'/Diagnoselabs'} component={Diagnoselabs}  />
 
-
+<Route  path={'/typee'} component={Typee}  />
   </Switch>
     
     </BrowserRouter>
