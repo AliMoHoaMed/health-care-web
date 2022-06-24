@@ -51,9 +51,16 @@ const Userhistory = () => {
 
 {userdignose.map(({_id,Diagnosis,medicines,doctorId})=>(
 <div key={_id}>
-<h1>doctor name {doctorId.firstName} </h1>
-<h2> diagnose : {Diagnosis} </h2>
-<h3> {medicines} </h3>
+
+<div class="CardContentss">
+<div class="CardDaataa">
+<div class="CardDaataa-text">
+<h3> <label class="uh">DR Name</label> {doctorId.firstName} </h3>
+<h3> <label class="uh">Diagnose</label>  {Diagnosis} </h3>
+<h3> <label class="uh">Medicine</label>  {medicines} </h3>
+</div>
+</div>
+    </div>
 
 </div> 
 
@@ -62,13 +69,26 @@ const Userhistory = () => {
 </div>
 
 
-
 <div>
 
 {userresult.map(({_id,branchId,result})=>(
 <div key={_id}>
-<h1>labname: {branchId.name} </h1>
-<img  src={result} alt="image"  />
+<div class="CardContentssss">
+<div class="CardDaataaaa">
+<div class="LabNameText">
+<div class="CardDaataaaa-text">
+<h3> <label class="uh">Lab Name</label>{branchId.name} </h3>
+</div>
+<br/>
+        <br/>
+        <br/>
+        <div class="diagTex">
+    
+            </div>
+<img class="diagImgg" src={result} alt="image"  />
+</div>
+</div>
+</div>
 
 
 </div> 

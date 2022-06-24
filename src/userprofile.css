@@ -250,5 +250,187 @@ border-radius: 14px;
 box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 }
 
+.CardContentss {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+ height: 100%;
+  margin: auto;
+  position: relative;
+  top:50px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.CardDaataa {
+  display: flex;
+  background-color: rgba(237, 235, 235, 0.568);
+  /*border-radius: 20px;*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+border-radius:14px ;
+padding: 1rem;
+margin-bottom: 1rem;
+}
+
+.CardDaataa-text {
+  width: 5%;
+  padding: 10px;
+  position: relative;
+  left:130px;
+}
+
+.CardDaataa-text h3 {
+  color: #000000;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  width: 300px;
+  background:rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px auto;
+  height: 25%;
+  position: relative;
+  left: 10px;
+  border-radius: 14px;
+  box-shadow: 0 1px 5px 0 #05445E;
+   
+}
+
+.uh {
+  color: #ffffff;
+  background:#05445E;
+  padding: 24px;
+  margin: 20px auto;
+  position: relative;
+  left:-20px;
+  border-radius: 14px;
+  box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
+}
+
+.diagImgg{
+  border-radius: 50px;
+  width: 500px;
+  height: auto;
+  margin-top: -24px;
+  margin-left: 120px;
+  position: relative;
+  right: 65px;
+  bottom: 50px;
+  
+}
+
+.LabNameText{
+  margin-top: -30px;
+  position: relative;
+  top: 50px;
+}
+
+.CardContentssss{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(237, 235, 235, 0.568);
+  width: 40%;
+ height: 100%;
+  margin: auto;
+  position: relative;
+  top:50px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius:14px ;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);  
+}
+
+.CardDaataaaa {
+  color: #05445E;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  
+}
+
+.CardDaataaaa-text{
+  width: 5%;
+  padding: 10px;
+}
+.CardDaataaaa-text h3 {
+  color: #000000;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  width: 550px;
+  background:rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px auto;
+  height: 25%;
+  position: relative;
+  left: 10px;
+  border-radius: 14px;
+  box-shadow: 0 1px 5px 0 #05445E;
+   
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(78, 124, 198);
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f2f2f2;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: #ddd;
+  border-radius: 30px;
+  opacity: 0.5;
+}
+
+.sidenav .closebtn:hover{
+  background-color: transparent;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.avataarr {
+  margin-left: 43px;
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.userr-namee {
+  margin-left: 20px;
+  margin-top: 15px;
+  color: white;
+  font-size: 28px;
+}
+
+
+
 
 
