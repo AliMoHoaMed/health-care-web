@@ -3,7 +3,7 @@ import useFetch from './useFetch';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import'./css/userbooking.css' ;
 
 
 const Typee = () => {
@@ -27,22 +27,48 @@ const [loading ,setloading] =useState(false);
     <div>
         
         
-        typee
-        <div>
-
-        {type.map(({id,type})=>(
-        <div key={id}>
-        <a> {type} </a>
- 
-        <a  href={'/labstypepage/'+ id}> go to page</a>
-    
-      </div>
-
-)) }
-
-
-        </div>
         
+
+        <div className='grid-containerr'>
+
+{type.map(({id,type}) => 
+(
+  <div key={id} className='grid-itemr'>
+<div class="bcard-container" >
+<div class="bcard-1">
+
+ <div class="bcard-text-1">
+ 
+     <p>type :  {type}</p>
+     <p><a  href={'/labstypepage/'+ id}> go to page</a></p>
+
+     <div class="tables">
+     
+
+
+           </div> 
+     
+      </div>
+  <h1> </h1>
+
+ </div>  
+</div>
+</div>   
+
+))}
+
+<div >
+
+
+</div>
+
+</div>
+
+
+
+
+
+
         
         </div>
   )
