@@ -22,7 +22,7 @@ import'./css/hospage.css' ;
       const res = await axios.get('https://health-care-app-final.herokuapp.com/branchesHC/doctors/'+props.match.params._id)
    setdoctors(res.data);
   
-  
+  console.log(users);
    setloading(false);
     }
     loadposts();
@@ -51,7 +51,7 @@ import'./css/hospage.css' ;
     <img className='c' src="/2017_3_26_23_13_12_367.jpg" alt="" />  
     <br/>
     <br/>
-    <p className='k'>Address: {users.areaId.name}
+    <p className='k'>Address: 
     
     
 
