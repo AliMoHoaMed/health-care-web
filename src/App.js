@@ -59,7 +59,7 @@ const [loading ,setloading] =useState(false);
  
 const ussss = getuser('user') ; 
 const docuss = getdoctor('doctor') ;
-const labuss = getlab('lab') ;
+
 
 
   useEffect((e)=>{
@@ -79,10 +79,7 @@ const labuss = getlab('lab') ;
     setshoww(true);
     setshowwwlog(false);
     console.log(docuss);}
-   if (labuss !== null) {
-    setshowww(true);
-    setshowwwlog(false);
-    console.log(labuss);}
+   
 
 
 
@@ -124,9 +121,7 @@ const labuss = getlab('lab') ;
 {showw?
 <li><NavLink activeClassName='active'to={'/docprofile'}> Doctor profile<small>  </small> </NavLink></li>
     :null}
-    {showww?
-<li><NavLink activeClassName='active'to={'/labprofile'}> Labs profile<small>  </small> </NavLink></li>
-    :null}
+ 
 
 
 

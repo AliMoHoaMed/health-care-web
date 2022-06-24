@@ -37,7 +37,7 @@ const Diagnose = () => {
     function handleuser(e) {
       
       setsearchtitle( usereemail);
-    e.preventDefault();
+    e.preventDefault(e);
     setshow(true);
     
 
