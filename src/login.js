@@ -5,13 +5,15 @@ import { setusersession } from "./utlis/Common";
 
 const Login=(props) =>{
 
-
+  const [uslog,setuselog] = useState(false)
 
 const [username,Setusername] = useState('')
 const [password,Setpassword] = useState('')
 const [error,Seterror] = useState(null)
 const [loading,Setloading] = useState(false)
  
+const [usss,setusss] = useState('')
+
 const handlelogin = () =>{
 Seterror(null);
 Setloading(true);
@@ -19,9 +21,9 @@ Setloading(true);
 axios.post('https://health-care-app-final.herokuapp.com/users/login'
 , {email : username , password:password }).then(response => {
     Setloading(false);
-    setusersession(response.data.token,response.data.user)
-  props.history.push('/userr_profile')
-
+    setusersession(response.data.token,response.data.user);
+  props.history.push('/userr_profile');
+ 
 }).catch(error =>{
 console.log('error >>>',error);
 })  

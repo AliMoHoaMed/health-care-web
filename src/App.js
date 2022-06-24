@@ -38,9 +38,10 @@ import { useState } from 'react';
 import Labprofile from './labprofile';
 import Diagnoselabs from './Diagnoselabs';
 import Labsdiagnose from './labsdiagnose';
-import { gettokken } from './utlis/Common';
-import { gettokkenn } from './utlis/Common2';
-import { ggettokken } from './utlis/Common3';
+import { gettokken , getuser } from './utlis/Common';
+import { gettokkenn , getdoctor } from './utlis/Common2';
+import { ggettokken , getlab } from './utlis/Common3';
+
 import Typee from './typee';
 function App() {
 const [loading ,setloading] =useState(false);
@@ -51,24 +52,28 @@ const [loading ,setloading] =useState(false);
  const doctortok = gettokkenn('token');
  const labtok=ggettokken('token');
  
+const ussss = getuser('user') ; 
+const docuss = getdoctor('doctor') ;
+const labuss = getlab('lab') ;
+
 
   useEffect((e)=>{
     const loadposts=async() => {
       setloading(true);
-     
-  if (usertok !== null) {
+  
+  if (ussss !== null) {
    setshow(true);
-   console.log(usertok);
+   console.log(ussss);
   }
 
-  if (doctortok !== null) {
+  if (docuss !== null) {
     setshoww(true);
-    console.log(doctortok);
+    console.log(docuss);
    }
 
-   if (labtok !== null) {
+   if (labuss !== null) {
     setshowww(true);
-    console.log(labtok);
+    console.log(labuss);
    }
 
 
