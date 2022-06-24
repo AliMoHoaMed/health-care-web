@@ -48,6 +48,11 @@ const [loading ,setloading] =useState(false);
   const [show ,setshow] =useState(false);
   const [showw ,setshoww] =useState(false);
   const [showww ,setshowww] =useState(false);
+
+  const [showwwlog ,setshowwwlog] =useState(true);
+
+
+
  const usertok = gettokken('token');
  const doctortok = gettokkenn('token');
  const labtok=ggettokken('token');
@@ -61,20 +66,23 @@ const labuss = getlab('lab') ;
     const loadposts=async() => {
       setloading(true);
   
+
+
+
+
+
   if (ussss !== null) {
    setshow(true);
-   console.log(ussss);
-  }
-
+   setshowwwlog(false);
+   console.log(ussss);}
   if (docuss !== null) {
     setshoww(true);
-    console.log(docuss);
-   }
-
+    setshowwwlog(false);
+    console.log(docuss);}
    if (labuss !== null) {
     setshowww(true);
-    console.log(labuss);
-   }
+    setshowwwlog(false);
+    console.log(labuss);}
 
 
 
@@ -104,7 +112,12 @@ const labuss = getlab('lab') ;
          </label>
       <ul>
    <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
-  <li><NavLink activeClassName='active' to={'/logg'}>Login <small></small></NavLink></li>
+
+{showwwlog? <li><NavLink activeClassName='active' to={'/logg'}>Login <small></small></NavLink></li> :null}
+
+ 
+
+
 {show?
 <li><NavLink activeClassName='active'to={'/userr_profile'}> User profile<small>  </small> </NavLink></li>
     :null}
