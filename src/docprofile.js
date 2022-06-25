@@ -53,6 +53,15 @@ console.log(doctor);
 onClick={handlelogout}/> 
     </div>
  
+
+
+
+
+
+
+
+
+ 
     </div>
   )
 }
