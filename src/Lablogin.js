@@ -3,6 +3,8 @@ import  { useState } from "react";
 import'./css/Lablogin.css' ;
 import axios from 'axios';
 import { setlabsession } from "./utlis/Common3";
+import { FaEnvelope } from "react-icons/fa";
+import { MdPassword} from "react-icons/md";
 const Lablogin = (props) => {
 
   const [username,Setusername] = useState('')
@@ -41,12 +43,14 @@ const Lablogin = (props) => {
             <img class="health-caref" src="img/Health care.png"/> 
     
             <div class="input-fieldf">
-              <i class="fas fa-user"></i>
+              <i class="fas fa-user"><FaEnvelope/></i>
               <input type="text"   value={username}
           onChange={e => Setusername(e.target.value)}/>
             </div>
             <div class="input-fieldf">
-              <i class="fas fa-lockf"></i>
+              <i class="fas fa-lockf"><MdPassword /></i>
+
+
               <input type="password"  value={password} 
 onChange={e => Setpassword(e.target.value)}/>
             </div>

@@ -269,15 +269,13 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 .CardContentttss {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 1%;
  height: 100%;
   margin: auto;
   position: relative;
   top:50px;
   padding: 1rem;
   margin-bottom: 1rem;
-  
-
 }
 
 .CardDaataa {
@@ -290,7 +288,7 @@ margin-bottom: 1rem;
 }
 
 .CardDaataa-text {
-  width: 5%;
+  width: 10%;
   padding: 10px;
   position: relative;
   left:130px;
