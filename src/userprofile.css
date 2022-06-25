@@ -38,9 +38,6 @@
 }
 
 
-
-
-
 .sidebar {
  font-size: 13px;
  margin: 0;
@@ -269,7 +266,7 @@ border-radius: 14px;
 box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 }
 
-.CardContentss {
+.CardContentttss {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -279,13 +276,13 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
   top:50px;
   padding: 1rem;
   margin-bottom: 1rem;
+  
 
 }
 
 .CardDaataa {
   display: flex;
   background-color: rgba(237, 235, 235, 0.568);
-  /*border-radius: 20px;*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
 border-radius:14px ;
 padding: 1rem;
@@ -433,6 +430,7 @@ margin-bottom: 1rem;
 .dia-btn :hover {
   background-color: rgb(39, 137, 179);
 }
+
 
 
 

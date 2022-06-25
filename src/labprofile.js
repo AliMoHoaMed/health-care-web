@@ -59,41 +59,24 @@ const tok = ggettokken('token');
         <br />
     
         <div class="user-name">
-         {labdata.name}
+        <h3>Lab Name: {labdata.name} </h3>
          <br/>
 
 <br/>
-<h1>types : </h1>
+
 {[labtypes].map((types)=> (<div key={types._id}>
-<a>{types.type} </a>
+<a><h3>types: {types.type} </h3> </a>
 
 
 </div>))}
-
-
-
-
-
-
-
-
           </div>
-          <br/>
-             <hr/>
-             <br/>
-      <a href="/Diagnoselabs"><i class="fa fa-fw fa-history"></i> diagnose</a>
+         
+      <a href="/Diagnoselabs" class="dia-btn"> diagnose</a>
       <br/>
-      <a href="#editProfile"><i class="fa fa-fw fa-edit"></i> Edit Profile</a>
       <br/>
-      <a href="#doctors"><i class="fa fa-fw fa-user"></i> Doctors</a>
-      <br/>
-      <a href="#chat"><i class="fa fa-fw fa-comments"></i> Chat</a>
-      <br/>
-      <br />   
-       <hr/>
-       <br/>
-      <input type="button" value="logout"
-onClick={handlelogout}/> 
+      <div class="log-dia" >
+      <input type="button" value="logout" class="dia-btn log-dia"
+onClick={handlelogout}/> </div> 
     </div>
  
     </div>
