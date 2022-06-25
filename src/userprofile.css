@@ -16,11 +16,30 @@
 }
 
 .user-name {
-  color: white;
-  font-size: 17px;
-  text-align: center;
-  margin-top: -20px;
+  width: 5%;
+  padding: 10px;
+  color: #000000;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  width: 350px;
+  background:rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px auto;
+  height: 25%;
+  position: relative;
+  left: 650px;
+  bottom: 50px;
+  border-radius: 14px;
+  box-shadow: 0 1px 5px 0 #05445E;
 }
+
+.user-name h3 {
+  color: #000000;
+}
+
+
+
+
 
 .sidebar {
  font-size: 13px;
@@ -370,65 +389,52 @@ margin-bottom: 1rem;
    
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(78, 124, 198);
-  overflow-x: hidden;
-  transition: 0.7s;
-  padding-top: 60px;
+
+
+.docprofile-img {
+  position: relative;
+  left: 180px;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 34.5%;
+  margin: auto;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.dia-btn {
+  background-color: rgba(5,68,94,1);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
   text-decoration: none;
-  font-size: 25px;
-  color: #f2f2f2;
-  display: block;
-  transition: 0.3s;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: relative;
+  left: 805px;
+  bottom: 50px;
+}
+.dia-btn :hover {
+  background-color: rgb(39, 137, 179);
 }
 
-.sidenav a:hover {
-  background-color: #ddd;
-  border-radius: 30px;
-  opacity: 0.5;
-}
 
-.sidenav .closebtn:hover{
-  background-color: transparent;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.avataarr {
-  margin-left: 43px;
-  margin-top: 10px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.userr-namee {
-  margin-left: 20px;
-  margin-top: 15px;
-  color: white;
-  font-size: 28px;
-}
 
 
 
