@@ -62,8 +62,8 @@ const Userhistory = () => {
 </div>
     </div>
 
-</div> 
 
+</div>
 )  )  }
 
 </div>
@@ -73,6 +73,7 @@ const Userhistory = () => {
 
 {userresult.map(({_id,branchId,result})=>(
 <div key={_id}>
+
 <div class="CardContentssss">
 <div class="CardDaataaaa">
 <div class="LabNameText">

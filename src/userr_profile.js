@@ -58,9 +58,7 @@ console.log();
   <div>
 <nav class="topnav">    <br/>   
   <img src={ us.avatar} alt="Avatar" class="avatar"/> <h1>{us.firstName}</h1> 
-    <div class="user-name">
-       
-      </div>
+   
 
         <Link to="/userr_profile/userhistory" >History </Link>
         
