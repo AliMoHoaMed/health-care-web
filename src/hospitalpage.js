@@ -48,10 +48,9 @@ import'./css/hospage.css' ;
 <br/>
 
 <div class="demoII">
-    <img className='c' src="/2017_3_26_23_13_12_367.jpg" alt="" />  
-    <br/>
-    <br/>
-    <p className='k'>Address: 
+    <img className='c' src={"data:image/jpg;base64," + users.image}  alt="" />  
+ 
+    <p className='k'>Address: {users.areaId.name}
     
     
 

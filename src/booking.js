@@ -10,6 +10,7 @@ const useridd=getuser('user')
     const [arrivid,setarrivid]=useState([]);
     const [paymentid,setpaymentid]=useState([]);
     const [visaanaame,setvisaaname]=useState([]);
+    const [expire,setexpire]=useState([]);
     const [visaaid,setvisaaid]=useState([]);
     const [book,setbook]=useState([]);
     const [showw,setshoww]=useState(false);
@@ -27,7 +28,7 @@ const useridd=getuser('user')
      const handlepayment=(e) => {
       e.preventDefault();
      
-      const dataaaa = { VisaName :visaanaame , VisaID : visaaid } ;
+      const dataaaa = { VisaName :visaanaame , VisaID : visaaid , ExpireDate:expire } ;
   
   
     authAxios.post('https://health-care-app-final.herokuapp.com/payments/addPayment',dataaaa
@@ -156,18 +157,18 @@ function handleshowoffline (){
             <div class="ownerr">
                 <h3>Full Name</h3>
                 <div class="input-fieldr">
-                    <input type="text"/>
+                    <input type="text"  name='firstname'
+    value={visaanaame}
+ 
+    onChange={(e)=>setvisaaname(e.target.value)}  />
                 </div>
             </div>
             <div class="cvv">
-                <h3>CVV</h3>
+                <h3>ExpireDate</h3>
                 <div class="input-fieldr">
-                <input type='text'
-    
-    name='firstname'
-    value={visaanaame}
+                <input type='date'  value={expire}
  
-    onChange={(e)=>setvisaaname(e.target.value)}/>
+ onChange={(e)=>setexpire(e.target.value)} />
                 </div>
             </div>
         </div>

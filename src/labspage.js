@@ -12,19 +12,25 @@ import'./css/hospage.css' ;
   const [labss,setlabss]= useState([]);
   const [labstype,setlabstype]= useState([]);
   const [labsarea,setlabsarea]= useState([]);
-
+  const [xraytype,setxraytype]= useState([]);
 
   useEffect(()=>{
     const loadposts=async() => {
       setloading(true);
       const res = await axios.get('https://health-care-app-final.herokuapp.com/branchesXL/'+props.match.params._id)
       setlabss(res.data);
-
-      console.log(res.data)
-      console.log(res.data.labId.typeId)
-      console.log(res.data.areaId)
-      setlabsarea(res.data.areaId)
-      setlabstype(res.data.labId.typeId)
+  
+       console.log(res.data);
+      
+     
+    
+    
+      setlabsarea(res.data.areaId);
+      setlabstype(res.data.labId.typeId )
+      setxraytype(res.data.xrayId.typeId);
+     
+      console.log(res.data.areaId); 
+      console.log(res.data.xrayId.typeId)|| console.log(res.data.labId.typeId);
    setloading(false);
     }
     loadposts();
@@ -64,6 +70,9 @@ import'./css/hospage.css' ;
 </div>
 </div>
 ))}
+
+
+
 <div class="demoII">
  <h3>lab type  :  </h3>
 {labstype.map(({_id,type })=>(
@@ -72,9 +81,25 @@ import'./css/hospage.css' ;
   <a href={'/labstypepage/'+_id} >   check info and booking    </a>
   
    </div>
-
-
 ))}
+
+
+<br/>
+
+</div>
+
+
+<div class="demoII">
+
+{xraytype.map(({_id,type })=>(
+<div key={_id}>
+  <h3>{type} </h3>
+  <a href={'/labstypepage/'+_id} >   check info and booking    </a>
+  
+   </div>
+))}
+
+
 
 
 </div>

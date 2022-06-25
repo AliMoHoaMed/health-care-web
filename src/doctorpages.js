@@ -39,7 +39,7 @@ const usid=us;
    setarr(ress.data);
    console.log(ress.data);
    const resss = await axios.get('https://health-care-app-final.herokuapp.com/doctors/AvalibleTime/'+props.match.params.id)
-   
+   console.log(resss.data)
    setloading(false);
     }
     loadposts();
@@ -96,9 +96,9 @@ const usid=us;
          
   <div class="atables" key={_id}>
  <div class="atable1">
- <div class="ahos-name"><h3 class="ahospital-name">  {branchId.hospitalId.name}</h3> </div>
-     <div class="atim"><h3 class="atime">{timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
-     <div class="ada"><h3 class="aday">{vezeeta}</h3></div>
+ <div class="ahos-name"><h3 class="ahospital-name"> {branchId.name}   </h3> </div>
+     <div class="atim"> <h3 class="atime">from  {timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
+     <div class="ada"> vezeeta<h3 class="aday">{vezeeta}</h3></div>
      <a class="abtn" href={'/booking/'+ _id}> Register</a>
  </div>
  </div>
