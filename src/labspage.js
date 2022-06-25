@@ -57,14 +57,6 @@ import'./css/hospage.css' ;
    
 <h2> location : 
 
-{[labsarea].map(({_id,name,governorateId })=>(
-<h3 key={_id}> {name}  <br/>
-
-
- </h3>
-
-
-))}
 
 
   </h2>
