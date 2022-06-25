@@ -16,7 +16,7 @@ const Choose = () => {
      <figure class="containerd">
     <img class="hospital" src="istockphoto-1131216472-612x612.jpg" alt=""/>
     <figcaption>
-    <h3>Hospitals</h3>
+    <h3>Hospitals and clinics </h3>
     </figcaption>
     </figure>
     </a>

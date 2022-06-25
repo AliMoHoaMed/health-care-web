@@ -160,7 +160,7 @@ insurance
 <div  key={_id} value={_id} >   
 
 <h2> discount :  {Discount}</h2>
-  <h2>hospital name :  {hospitalId.name} </h2>
+  <h2>hospital name :  {hospitalId} </h2>
   <a href={'/hospitalpage/'+hospitalId._id}> <h3> go to page </h3></a>
 
  </div>

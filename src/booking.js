@@ -60,7 +60,7 @@ function handleshowoffline (){
         const dataaa = { drAvailTimeId : props.match.params._id , userId : userid ,paymentId :paymentid } ;
     
     
-      authAxios.post('https://health-care-app-final.herokuapp.com/book',dataaa
+      authAxios.post('https://health-care-app-final.herokuapp.com/bookHC',dataaa
       ).then(ress=>{console.log("ress",ress); setbook(ress.data); alert('done');
       }
       ).catch(error =>{
@@ -82,7 +82,7 @@ function handleshowoffline (){
           const dataaaa = { drAvailTimeId : props.match.params._id , userId : userid  } ;
       
       
-        authAxios.post('https://health-care-app-final.herokuapp.com/book',dataaaa
+        authAxios.post('https://health-care-app-final.herokuapp.com/bookHC',dataaaa
         ).then(ress=>{console.log("ress",ress); setbook(ress.data);  alert('every thing is great now go to on the location with the right time  ');
         }
         ).catch(error =>{

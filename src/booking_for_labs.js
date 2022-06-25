@@ -43,7 +43,7 @@ const useridd=getuser('user')
         const dataaa = { xlAvailTimeid : props.match.params._id , userId : userid , paymentId :paymentid} ;
     
     
-      authAxios.post('https://health-care-app-final.herokuapp.com/book',dataaa
+      authAxios.post('https://health-care-app-final.herokuapp.com/bookXL',dataaa
       ).then(ress=>{console.log("ress",ress); setbook(ress.data) }
      
       ).catch(error =>{

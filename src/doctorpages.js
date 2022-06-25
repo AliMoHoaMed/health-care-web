@@ -55,10 +55,10 @@ const usid=us;
     e.preventDefault();
     const dataaa = {Review : ratee , ratingValue :ratevalue , doctorId: doctoridd ,userId:usid } ;
   authAxios.post('https://health-care-app-final.herokuapp.com/users/rating',dataaa
-  ).then(ress=>{console.log("ress",ress)
+  ).then(ress=>{console.log("ress",ress);alert('your rate is submited');
   }
   ).catch(error =>{
-    console.log('error >>>',error);
+    console.log('error >>>',error);alert('you should be logged in');
     })}
 
   return (
@@ -68,20 +68,21 @@ const usid=us;
       {doctors && !isloading && !errMsg && (
   
   
-  
-  <div className='doc_centre'>
 
+  <div className='doc_centre'>
+  <br/>
 <div className='carddd' >
 
 <img  src={"data:image/jpg;base64," + doctors.avatar} width="250" height="250" />
 
 
  <br/>
- <h2 className='info'> doctor name : {doctors.firstName}</h2> 
+ <h2 className='info'> Doctor name : {doctors.firstName} &nbsp; {doctors.LastName} </h2> 
  <br/>
- <h2 className ='info' >specialest : {doctors.Title}</h2>
+ <h2 className ='info' >Specialest : {doctors.specialtiesId.specialties}</h2>
  <br/>
-
+ <h2 className ='info' >Title : {doctors.titleId.title}</h2>
+ <br/>
  </div>
 <br/>
 <br/>
@@ -95,7 +96,7 @@ const usid=us;
          
   <div class="atables" key={_id}>
  <div class="atable1">
-     <div class="ahos-name"><h3 class="ahospital-name">{branchId.name}</h3> {branchId.areaId.name}</div>
+ <div class="ahos-name"><h3 class="ahospital-name">  {branchId.hospitalId.name}</h3> </div>
      <div class="atim"><h3 class="atime">{timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
      <div class="ada"><h3 class="aday">{vezeeta}</h3></div>
      <a class="abtn" href={'/booking/'+ _id}> Register</a>
@@ -140,14 +141,14 @@ const usid=us;
 </form>
 <br/>
 {revieww.map(({_id,Review,ratingValue ,userId})=>(
-<span key={_id} >   <div class="feedback-card">
-      <span class="name">  </span>
+ <div class="feedback-card"key={_id}>
+      <span class="name">{userId.firstName} &nbsp; {userId.LastName} </span>
       <br/>
       <span class="time">Rating :  {ratingValue} star</span>
          <br/>
           <br/>
       {Review}
-          </div></span>)) }
+          </div>)) }
 
       
 

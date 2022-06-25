@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import './item.css'
 import axios from 'axios';
 import Doccard from './doccard'
+import'./css/hospage.css' ;
 function Doctors() {
 const [loading ,setloading] =useState(false);
 const [doctors,setposts] = useState([]);
@@ -79,48 +80,36 @@ function handletitle(e) {
 if(searchtitle ===''){return doctors}
 else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
   return value ;}})
-  .map(({_id,firstName, Title,avatar,specialtiesId})=>(
-    <div className='grid-item' key={_id}>
-    <div >
+  .map(({_id,firstName, Title,avatar,specialtiesId , LastName})=>(
    
-    <div>
+    <div class="doctorsDataCardd" key={_id}>
+          <img class="DocPhoto"
+          src={"data:image/jpg;base64,"+avatar}
+            alt=""/>
+        <div class="docDaataaa">
+            Name: {firstName}&nbsp;{LastName}
+             <br/>
+             <br/>
+             Major: {specialtiesId.specialties}
 
-<div className="card">
-
-<div className="cardp" >
-
-
-<img  src={"data:image/jpg;base64,"+avatar} width="250" height="250" />
-</div>    
-<div className="cardinf">
-  <h3 > Dr/name :{firstName} </h3>
-  <a href={'/doctorpages/'+_id}> info</a>
-  <a> 
-    {Title}
-  </a>
-  <a> 
-    
-  </a>
-
-<br/>
+        </div>
+        <a href={'/doctorpages/'+_id}> info</a>  
+        <a> {Title} </a>     
+    </div>
 
 
 
 
- <div >
-<table>
-  <tr>
-    <td className="h"> monday 12 pm </td>
-    <br/>
-    <td className="h"> sunday 12 pm </td>
+
+
+
+
+
+ 
+
+
+
   
-   
-  </tr>
-</table></div>
-</div>
-</div>
-
-    </div></div></div>
  )) ))} </div>
     </div>
   );
