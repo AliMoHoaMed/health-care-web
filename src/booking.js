@@ -110,16 +110,27 @@ function handleshowoffline (){
 
       {showwbutton?
       <>
-
+<br/>
+<br/>
+  <br/>
+  <br/>
+  <br/>   
+  <br/>
 <div class="btext1">      Choose Your Appropriate Payment Way
  </div>
      
-     
-      
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>   
+  <br/>
+  <br/>
+    
 
+<div class="bo-cs-vi">
 <a  class="PayCashh" onClick={handleshowoffline}>Cash</a> 
 <a  class="PayVisa" onClick={handleshow}>Visa</a> 
+</div>
         
 
 
@@ -205,9 +216,9 @@ function handleshowoffline (){
     <a> {paymentid}</a>
 
 
-        <h1> after finish click here </h1>
+        <h1 class="af-fi-cl-he"> after finish click here </h1>
        <form onSubmit={handleSubmit}> 
-           <button type="submit" > FINISH   </button>
+           <button type="submit" class="boo-btn vi-bo" > FINISH   </button>
 
 
     

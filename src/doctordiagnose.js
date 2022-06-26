@@ -48,17 +48,20 @@ useEffect((e)=>{
 
 
     <div>
-<h1> name:  {userdataa.firstName} __ {userdataa.LastName} </h1>
+      <br/>
+      <br/>
+<h1 class="mas">  {userdataa.firstName} {userdataa.LastName} </h1>
 
 
 
 <form onSubmit={handleSubmit}>  
 
 
-<div class="diagnosInputCard">
+<div class="diagnosInputCard ">
       <div class="dattAAA">
       Type Diagnosis & Medicine
        </div>
+       <br/>
        <br/>
       <div class="daattttaaa">
           Diagnosis: 
