@@ -29,7 +29,7 @@ border-color: blue;
     .grid-container {
           display: grid;
           position: relative;
-          right: 500px;
+          right: 1px;
           grid-template-columns: auto auto auto ;
         border-radius: 20px ;
         border: #6c98a8;
@@ -229,6 +229,21 @@ div.card{
   .hos-crid-car {
     position: relative;
     left: 80px;
+  }
+
+  .grid-containerrrrrr {
+    display: grid;
+    position: relative;
+    right: 500px;
+    grid-template-columns: auto auto auto ;
+  border-radius: 20px ;
+  border: #6c98a8;
+    padding: 10px;
+  }
+
+  .grid-itemmmmmmm {
+    border: 20px cadetblue; 
+    padding: 20px
   }
   
   

@@ -99,7 +99,7 @@ const usid=us;
  <div class="ahos-name"><h3 class="ahospital-name"> {branchId.name}   </h3> </div>
      <div class="atim"> <h3 class="atime">from  {timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
      <div class="ada"> vezeeta<h3 class="aday">{vezeeta}</h3></div>
-     <a class="abtn" href={'/booking/'+ _id}> Register</a>
+     <a class="boo-btn doc-btn-tn-n" href={'/booking/'+ _id}> Register</a>
  </div>
  </div>
         
@@ -116,8 +116,8 @@ const usid=us;
 
       )
       }
-
-<h1> Reviews </h1>
+<br/>
+<h1 class ="r-t"> Reviews </h1>
 
 <form class="revRateCard" action=" "  onSubmit={handleSubmit}>
         <textarea id="w3review" 
@@ -141,7 +141,7 @@ const usid=us;
 </form>
 <br/>
 {revieww.map(({_id,Review,ratingValue ,userId})=>(
- <div class="feedback-card"key={_id}>
+ <div class="feedback-card " key={_id}>
       <span class="name">{userId.firstName} &nbsp; {userId.LastName} </span>
       <br/>
       <span class="time">Rating :  {ratingValue} star</span>

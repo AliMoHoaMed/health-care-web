@@ -127,8 +127,8 @@ if(searchtitle ==''){return hosbitalss}
 else if(value.name.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
   return value ;}})
   .map(({_id, hospitalId, name , areaId,image})=>(
-    <div className='grid-container'>
-    <div className='grid-item'>
+    <div className='grid-containerrrrrr'>
+    <div className='grid-itemmmmmmm'>
    <Hospitalscard _id={_id} name={name} image={image} />
   
    
