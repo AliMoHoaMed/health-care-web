@@ -52,13 +52,17 @@ import'./css/hospage.css' ;
 <br/>
 
 <div class="demoII">
-<div class="demoii-img">
-    <img  src="/2017_3_26_23_13_12_367.jpg" alt="" />  
-    </div>
-    
-    <div class="demoii-title"></div><h3>{name}</h3></div>
-    <div class="demoii-des"></div>
+    <img className='c' src={"data:image/jpg;base64,"+image} alt="" />  
+    <br/>
+    <br/>
+   
 
+
+<h2> location : {[labsarea].map(({_id,name})=>(<div key={_id}> {name}  </div>))} </h2>
+
+ 
+<br/>
+</div>
 </div>
 ))}
 
@@ -66,14 +70,10 @@ import'./css/hospage.css' ;
 
 
 <div class="demoII">
-<<<<<<< HEAD
- <h3>lab type:  </h3>
-=======
  <h3>lab type  :  </h3>
 
   
 
->>>>>>> e29d748abb6e8ff82bda2dcd7710fb65f894a83f
 {labstype.map(({_id,type })=>(
 <div key={_id}>
   <h3>{type} </h3>
