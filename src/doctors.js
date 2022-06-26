@@ -87,7 +87,7 @@ Title :
 if(searchtitle ===''){return doctors}
 else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
   return value ;}})
-  .map(({_id,firstName, Title,avatar,specialtiesId , LastName})=>(
+  .map(({_id,firstName, Title,avatar,specialtiesId ,titleId, LastName})=>(
   
     <div class="doctorsDataCardd" key={_id}>
           <img class="DocPhoto"
@@ -95,10 +95,12 @@ else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase()))
             alt=""/>
         <div class="docDaataaa">
             Name: {firstName}&nbsp;{LastName}
-            <br/>
+            <br/>    <br/>
              Major: {specialtiesId.specialties} 
-             <br/>
-             <a href={'/doctorpages/'+_id} >Info</a>
+             <br/>    <br/>
+             Title: {titleId.title} <a href={'/doctorpages/'+_id} >Info</a>
+             <br/>     <br/>
+           
              <br/>
   <a> {Title} </a>   
         </div>
