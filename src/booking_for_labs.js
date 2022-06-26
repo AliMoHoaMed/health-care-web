@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { getuser } from './utlis/Common';
-
+import './booking.css';
 const Bookingforlabs = (props) => {
 
 const useridd=getuser('user')
@@ -11,9 +11,12 @@ const useridd=getuser('user')
     const [visaanaame,setvisaaname]=useState([]);
     const [visaaid,setvisaaid]=useState([]);
     const [book,setbook]=useState([]);
+    const [expire,setexpire]=useState([]);
     const [bookdet,setbookdet]=useState([]);
     const tok = sessionStorage.getItem('token') ; 
-
+    const [showw,setshoww]=useState(false);
+    const [showww,setshowww]=useState(false);
+    const [showwbutton,setshowbutton]=useState(true);
     const authAxios =axios.create({
         headers : {
          'Authorization': `Bearer ${tok}`
@@ -24,17 +27,28 @@ const useridd=getuser('user')
         const handlepayment=(e) => {
           e.preventDefault();
          
-          const dataaaa = { VisaName :visaanaame , VisaID : visaaid } ;
+          const dataaaa = { VisaName :visaanaame , VisaID : visaaid ,ExpireDate:expire  } ;
       
       
         authAxios.post('https://health-care-app-final.herokuapp.com/payments/addPayment',dataaaa
         ).then(ress=>{console.log("ress",ress); 
         
-        setpaymentid(ress.data._id); }
+        setpaymentid(ress.data._id); alert('everything is great   now click on submit '); }
        
         ).catch(error =>{
-          console.log('error >>>',error);
+          console.log('error >>>',error);alert('something wrong happened or you are not logged  ');
           })  
+        }
+
+
+        function handleshow (){
+          setshowbutton(false);
+          setshoww(true);
+          
+        }
+        function handleshowoffline (){
+        
+         setshowww(true);setshowbutton(false);
         }
 
     const handleSubmit=(e) => {
@@ -44,11 +58,25 @@ const useridd=getuser('user')
     
     
       authAxios.post('https://health-care-app-final.herokuapp.com/bookXL',dataaa
-      ).then(ress=>{console.log("ress",ress); setbook(ress.data) }
+      ).then(ress=>{console.log("ress",ress); setbook(ress.data) ; alert('done'); }
      
       ).catch(error =>{
-        console.log('error >>>',error);
-        })  
+        console.log('error >>>',error);alert('something wrong happened or you are not logged  ');
+        })   }
+
+        const handleoffline=(e) => {
+          e.preventDefault();
+         
+          const dataaaa = { xlAvailTimeid : props.match.params._id , userId : userid  } ;
+      
+      
+        authAxios.post('https://health-care-app-final.herokuapp.com/bookXL',dataaaa
+        ).then(ress=>{console.log("ress",ress); setbook(ress.data);  alert('every thing is great now go to on the location with the right time  ');
+        }
+        ).catch(error =>{
+          console.log('error >>>',error);
+          alert('something wrong happened or you are not logged  ');
+          })  
 
 
 setuserid(useridd._id);
@@ -59,39 +87,140 @@ setuserid(useridd._id);
 
   return (
 
-
     <div>
-    <form onSubmit={handlepayment}>  
-    
-    <label> visa name  </label> 
-    <input type='text'
-    
-            name='firstname'
-            value={visaanaame}
+
+
+      {showwbutton?
+      <>
+
+<div class="btext1">      Choose Your Appropriate Payment Way
+ </div>
+     
+     
+      
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<a  class="PayCashh" onClick={handleshowoffline}>Cash</a> 
+<a  class="PayVisa" onClick={handleshow}>Visa</a> 
+        
+
+
+   
+
+        <div class="bcards">
+            
+       
+              
+        
+           
          
-            onChange={(e)=>setvisaaname(e.target.value)}/>
-    <br/>
+        </div>
+
+
+      
+      
+      
+      
+      
+      </>
+      
+      :null }
+
+
+
+{showw?
+<>
+ <form onSubmit={handlepayment}>  
     
-    <label> visa id  </label> 
-    <input type='text'
-            name='firstname'
+
+ <div class="containerr">
+        <h1>Confirm Your Payment</h1>
+        <div class="first-rowr">
+            <div class="ownerr">
+                <h3>Full Name</h3>
+                <div class="input-fieldr">
+                    <input type="text"  name='firstname'
+    value={visaanaame}
+ 
+    onChange={(e)=>setvisaaname(e.target.value)}  />
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>ExpireDate</h3>
+                <div class="input-fieldr">
+                <input type='date'  value={expire}
+ 
+ onChange={(e)=>setexpire(e.target.value)} />
+                </div>
+            </div>
+        </div>
+        <div class="second-rowr">
+            <div class="card-numberr">
+                <h3>Card Number</h3>
+                <div class="input-fieldr">
+                <input type='text'
+            name='firstnamer'
             value={visaaid}
             onChange={(e)=>setvisaaid(e.target.value)}/>
-    <br/>
-    <input type='submit' />
-    
-    </form>
+                </div>
+            </div>
+        </div>
+        <div class="third-rowr">
+         
+          
+            <div class="selectionr">
+              
+                <div class="cardsr">
+                     <img src="vi.png" alt=""/>
+                
+                  
+                </div>
+            </div>    
+        </div>     <a className='ar' href=" ">Proceed and Confirm</a>
+          <input type='submit' />
+   
+    </div>
+
+ </form>
+
+   
     <a> {paymentid}</a>
 
 
-
-        <h1> booking</h1>
+        <h1> after finish click here </h1>
        <form onSubmit={handleSubmit}> 
-           
-           <button type="submit" > click here  </button>
+           <button type="submit" > FINISH   </button>
+
+
+    
             </form>
-        
-<div>  
+  </>    :null    }
+
+
+
+
+
+
+
+
+   
+ 
+    
+ 
+
+
+
+{showww ?  <div> <form onSubmit={handleoffline}> 
+           <button  type="submit" > click to finish </button>
+            </form></div> : null
+ }
+   
+
+
+
+
+
+            <div>  
 
 {[book].map(({_id,wattingTime})=>(
 <div key={_id}>
@@ -103,9 +232,11 @@ setuserid(useridd._id);
 </div>
 
 
+
         </div>
 
 
+    
   )
-}
+    }
 export default Bookingforlabs

@@ -26,10 +26,10 @@ import'./css/hospage.css' ;
     
     
       setlabsarea(res.data.areaId);
-      setlabstype(res.data.labId.typeId )
+      setlabstype(res.data.types )
       setxraytype(res.data.xrayId.typeId);
      
-      console.log(res.data.areaId); 
+      console.log(res.data.types); 
       console.log(res.data.xrayId.typeId)|| console.log(res.data.labId.typeId);
    setloading(false);
     }
@@ -42,7 +42,7 @@ import'./css/hospage.css' ;
    <>
 <body>
 
-{[labss].map(({id,name,areaId,labId,typeId })=>(
+{[labss].map(({id,name,areaId,labId,typeId,image })=>(
 
 <div key={id}>
 
@@ -64,8 +64,16 @@ import'./css/hospage.css' ;
 
 
 
+
 <div class="demoII">
+<<<<<<< HEAD
  <h3>lab type:  </h3>
+=======
+ <h3>lab type  :  </h3>
+
+  
+
+>>>>>>> e29d748abb6e8ff82bda2dcd7710fb65f894a83f
 {labstype.map(({_id,type })=>(
 <div key={_id}>
   <h3>{type} </h3>
@@ -73,27 +81,20 @@ import'./css/hospage.css' ;
   
    </div>
 ))}
+  
+   </div>
+
 
 
 <br/>
 
-</div>
 
 
-<div class="demoII">
-
-{xraytype.map(({_id,type })=>(
-<div key={_id}>
-  <h3>{type} </h3>
-  <a href={'/labstypepage/'+_id} >   check info and booking    </a>
-  
-   </div>
-))}
-
-
+<div>  
 
 
 </div>
+
 
 
 </body>

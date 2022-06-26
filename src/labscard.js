@@ -1,7 +1,7 @@
 import React from 'react'
 import './item.css'
 import'./css/hoscard.css' ;
-const Labscard = ({_id,name,areaId,labId}) => {
+const Labscard = ({_id,name,areaId,labId,image}) => {
   return (
     
    
@@ -9,7 +9,7 @@ const Labscard = ({_id,name,areaId,labId}) => {
  <div class="card-container">
      <div class="card-1">
          <div class="card-image-1">
-             <img src="1.jpg" alt="image" />
+         <img src={"data:image/jpg;base64,"+image} alt="image" />
          </div>
        <div class="card-text-1">
            <h2>  {name}</h2>
