@@ -19,9 +19,11 @@ console.log(doctor);
     return (
     <div>  
     <div >
-    
-     <div class="docprofile-img" >
+    <div class="ucard-container">
+      <div class="ucard-1">
+    <div class="ucard-image-1">
         <img  src={"data:image/jpg;base64," + doctor.avatar} width="250" height="250" />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         </div>
      
     
@@ -29,13 +31,14 @@ console.log(doctor);
         <br />
         <br />
     
-        <div class="user-name">
-            <h3>Doctor Email: {doctor.email}</h3>
+        <div class="ucard-text-1">
+            <p><label class="uega">Doctor Email </label> {doctor.email}</p>
             <br/>
-            <h3> Doctor Name: {doctor.firstName}  </h3>
+            <p><label class="uega">Doctor Name </label> {doctor.firstName}  </p>
             <br/>
-            <h3> Doctor Title  {doctor.Title}   </h3>
-
+            <p> <label class="uega">Doctor Title </label> {doctor.Title}   </p>
+            </div>
+          </div>
           </div>
  
             <a href="/Diagnose" class="dia-btn">Diagnose </a>
@@ -43,10 +46,9 @@ console.log(doctor);
       <br/>
       <br/>
       
-  <div class="log-dia" >
-      <input type="button" value="logout" class="dia-btn log-dia" 
-onClick={handlelogout}/> </div>
-    </div>
+<div class="doc-logout">
+      <input type="button" value="logout" class="dia-btn log-dia" onClick={handlelogout}/> 
+      </div> </div>
  
 
 

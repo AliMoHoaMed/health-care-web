@@ -56,10 +56,22 @@ console.log();
  
     return (
   <div>
-<nav class="topnav">    <br/>   
+    
+<div class="dropdown">
+  <button class="dropbtn">User Profile</button>
+  <div class="dropdown-content">
+  <img src={ us.avatar} alt="Avatar" class="avatar"/> 
+  <h3 class="avatar-name">{us.firstName}</h3> 
+  <a href="/userr_profile/userhistory">History</a>
+  <a href="/userr_profile/user_patch" >Edit Profile</a>
+  <a href="/userr_profile/userinfo">User Info</a>
+  <a href="/userr_profile/userbooking">Booking</a>
+  <a href="#logout" onClick={handlelogout}>Logout</a>
+  </div>
+</div>
+{/* <nav class="topnav">    <br/>   
   <img src={ us.avatar} alt="Avatar" class="avatar"/> <h1>{us.firstName}</h1> 
    
-
         <Link to="/userr_profile/userhistory" >History </Link>
         
         <Link to="/userr_profile/user_patch" >Edit Profile  </Link>
@@ -68,7 +80,7 @@ console.log();
         <Link to="/userr_profile/userbooking" >Booking  </Link>
         <a href="#logout" onClick={handlelogout}>Logout</a>
       <div class="vl"></div>
-    </nav>
+    </nav> */}
 
 <div >
  

@@ -93,7 +93,7 @@ const Userinfo = () => {
 
 
 
- <div class="card-container">
+ <div class="ucard-container">
  {[userdata].map(({_id,firstName,LastName,email,avatar , AreaId,governorateId,phoneNumber }) => 
 (
 

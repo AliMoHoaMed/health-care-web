@@ -94,11 +94,14 @@ function handleunssearch(){
       <div className='k'> 
       <div className='hello'>
      <br/>
-      <label> <h1>Search</h1>
+      <label> <p class="hos-ser">Search</p>
+      
       <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
       </label>
       <br/>
-    by using filter :<select value={choossestatespec}
+      <br/>
+   <p class="hos-ser"> By Using Filter </p><select class="using-filter" value={choossestatespec}
+    
   onChange={handlearea} >
   {
   areaa.map(({ _id,name})=>(
@@ -108,6 +111,7 @@ function handleunssearch(){
 
 
 
+<br/>
 
 
  </div><button onClick={handleuserarea}  className='buttton' > Get My Zone </button> 

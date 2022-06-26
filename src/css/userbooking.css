@@ -28,6 +28,8 @@
 .bcard-text-1{
    width: 10%;
    padding: 10px;
+   position: relative;
+   left: 18px;
 }
 
 
@@ -42,15 +44,15 @@
   padding: 20px;
   margin: 20px auto;
   border-radius: 14px;
-  box-shadow: 0 1px 5px 0 rgb(90, 90, 204);
+  box-shadow: 0 1px 5px 0 #05445E;
    
 }
 .ega{
   color: #ffffff;
-  background:#6d8deb;
+  background:#05445E;
   width: 5px;
   height: -5px;
-  padding: 20px;
+  padding: 23px;
   margin: 20px auto;
   position: relative;
   left:-20px;

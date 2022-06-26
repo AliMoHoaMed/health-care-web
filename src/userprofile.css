@@ -13,6 +13,13 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
+  position: relative;
+  left: 75px;
+}
+
+.avatar-name {
+  position: relative;
+  left: 63px;
 }
 
 .user-name {
@@ -203,21 +210,24 @@ font-family: "Sofia", sans-serif;
 .ucard-container{
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
   margin: auto;
+  position: relative;
+  top: 80px;
 }
 
 .ucard-1{
  display: flex;
- background-image: url("3966878 (1).jpg");
- background-image: 100%;
- color: azure;
- /*border-radius: 20px;*/
+ background: rgb(240,242,242);
+background: linear-gradient(4deg, rgba(255, 255, 255, 0.7rgba(228, 227, 227, 0.735)27, 227) 100%);
+ color: rgb(37, 38, 38);
  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+ 
 }
 
 .ucard-image-1{
  width: 40%;
+
 }
 
 .ucard-image-1 img{
@@ -225,13 +235,14 @@ font-family: "Sofia", sans-serif;
  height: 100%;
  min-height: 100%;
  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
- /*border-top-left-radius: 20px;
- border-bottom-left-radius: 20px;*/
 }
 
 .ucard-text-1{
  width: 5%;
  padding: 10px;
+ position: relative;
+ left: 25px;
+ top: 30px;
 }
 
 .ucard-text-1 h2 {
@@ -243,22 +254,22 @@ font-family: "Sofia", sans-serif;
 color: #000000;
 font-family:Arial, Helvetica, sans-serif;
 text-transform: capitalize;
-width: 300px;
+width: 500px;
 background:rgb(255, 255, 255);
 height: -5px;
 padding: 20px;
 margin: 20px auto;
-
+font-size: large;
 border-radius: 14px;
-box-shadow: 0 1px 5px 0 rgb(90, 90, 204);
+box-shadow: 0 1px 5px 0 #05445E;
  
 }
 .uega{
 color: #ffffff;
-background:#6d8deb;
+background:#05445E;
 width: 5px;
 height: -5px;
-padding: 20px;
+padding: 23px;
 margin: 20px auto;
 position: relative;
 left:-20px;
@@ -269,7 +280,7 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 .CardContentttss {
   display: flex;
   flex-direction: column;
-  width: 1%;
+  width: 50%;
  height: 100%;
   margin: auto;
   position: relative;
@@ -285,6 +296,7 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 border-radius:14px ;
 padding: 1rem;
 margin-bottom: 1rem;
+
 }
 
 .CardDaataa-text {
@@ -397,7 +409,7 @@ margin-bottom: 1rem;
 }
 
 .dia-btn {
-  background-color: rgba(5,68,94,1);
+  background-color: #a32847;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -422,13 +434,72 @@ margin-bottom: 1rem;
   -webkit-user-select: none;
   touch-action: manipulation;
   position: relative;
-  left: 805px;
-  bottom: 50px;
+  left: 930px;
+  bottom: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .dia-btn :hover {
   background-color: rgb(39, 137, 179);
 }
 
+.dropbtn {
+  background-color: rgba(5,68,94,1);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(5, 107, 151);
+}
+
+.doc-logout {
+  position: relative;
+  left: 650px;
+  bottom: 65px;
+}
+
+.dia-em {
+  color:#000000;
+  position: relative;
+  bottom: 50px;
+}
+
+.goto-dia {
+  position: relative;
+  top: 50px;
+  left: 80px;
+}
 
 
 

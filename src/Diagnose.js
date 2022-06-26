@@ -54,10 +54,13 @@ const Diagnose = () => {
     
     <div>
    <form onSubmit={handleuser}>
+     <div class="dia-search">
    <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setuseremail(e.target.value)}/>
+   </div>
    <br/>
+   <div class="dia-submit-button"> 
    <input type="submit" className='buttton'/> 
- 
+   </div>
    
 
 </form>
@@ -66,22 +69,20 @@ const Diagnose = () => {
 
 <div>
 {userss.map(({_id,firstName,LastName,email})=>(
-<div class="CardContentss" key={_id}>
+<div class="CardContentttss" key={_id}>
 <div class="CardDaataa">
-email :  {email} 
+<div class="dia-em">email :  {email} 
 <br/>
-        <br/>
-        <br/>
-        <br/>
-name : {firstName} 
+<br/>
+  name : {firstName} </div>
 
 <br/>
         <br/>
         <br/>
         <br/>
-      
+ <div class="goto-dia">    
 <a href={'/doctordiagnose/'+_id}> go to page</a>
-
+</div> 
 </div>
 
 
