@@ -32,9 +32,10 @@ useEffect((e)=>{
      setaareaid(choossestatespec)
      const ress = await axios.get('https://health-care-app-final.herokuapp.com/branchesXL/search/filter?area='+areaaid || userareaaid)
      console.log(ress.data); sethospitalss(ress.data);
-     const spec = await axios.get('https://health-care-app-final.herokuapp.com/specialties')
+     const spec = await axios.get('https://health-care-app-final.herokuapp.com/types')
      setspec(spec.data);
-     const inz = await axios.get('https://health-care-app-final.herokuapp.com/specialties')
+     console.log(spec.data);
+     const inz = await axios.get('https://health-care-app-final.herokuapp.com/insurances')
      setinsu(inz.data);
 
      const ins = await axios.get('https://health-care-app-final.herokuapp.com/xlInsValues/search/filter?specialties='+specid+'&insurance='+insid  )
@@ -134,15 +135,15 @@ else if(value.name.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
 
 {showi ?  <>
 
-specialties
+type required 
  <select value={choossestatespec}
   onChange={handlespecid} >
   {
-  sepcc.map(({ id,specialties})=>(
+  sepcc.map(({ id,type})=>(
     
-<option className='buttton' key={id} value={id} >{specialties}   </option>
+<option className='buttton' key={id} value={id} >{type}   </option>
  ))}</select>
-
+<br/>
 insurance 
 <select value={choossestatespec}
   onChange={handleinsid} >
@@ -154,17 +155,18 @@ insurance
  
  
  {
-  insuhos.map(({_id,Discount,hospitalId,InsuranceId})=>(
+  insuhos.map(({_id,Discount,labId,typeId})=>(
     
 <div  key={_id} >   
-
-<h2> discount :  {Discount}</h2>
-  
- 
+<br/>
+<h2> naem: {labId.name}</h2>
+ <h2> discount :  {Discount}</h2>
+ <h2> type: {typeId.type} </h2>
+ <br/>
 
  </div>
  ))}
-  <a href={'/hospitalpage/'}> <h3> go to page </h3></a>
+
  
  
   </>:null }

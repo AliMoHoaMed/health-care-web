@@ -27,7 +27,7 @@ const Ssignup = () => {
     
     const [insuurancetypeid,setincurancetypeid] =useState('62b716f4ddd9d8bf515bdec1');
     const [insuurancetype,setincurancetype] =useState([]);
-    const [incuranceid,setincuranceid] =useState([]);
+    const [incuranceid,setincuranceid] =useState('');
 
     const [chooseinstype,setinstype] =useState([]);
     const [chosaa,setchoosa] =useState('');
@@ -127,10 +127,10 @@ reader.onload =() => {
        
         const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea ,genderId:usergendre,diseases:userdes, avatar : base64code ,InsuranceId: incuranceid ,insuranceExpireDate:expiredate,insuranceNo:insno } ;
       axios.post('https://health-care-app-final.herokuapp.com/users/signUp',dataaa
-      ).then(ress=>{console.log("ress",ress); alert('sign up is completed ');
+      ).then(ress=>{console.log("ress",ress); alert('sign up is completed now please go to sign in ');
       }
       ).catch(error =>{
-        console.log('error >>>',error);alert('sign up is not completed .. check the photo size or the data is filled ');
+        console.log('error >>>',error);alert('sign up is not completed with insurance .. check the photo size or the data is filled ');
         })  
       }
 
@@ -139,7 +139,8 @@ reader.onload =() => {
        
         const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea ,genderId:usergendre,diseases:userdes, avatar : base64code  } ;
       axios.post('https://health-care-app-final.herokuapp.com/users/signUp',dataaa
-      ).then(ress=>{console.log("ress",ress); alert('sign up is completed ');
+      ).then(ress=>{console.log("ress",ress); alert('sign up is completed now please go to sign in ');
+      
       }
       ).catch(error =>{
         console.log('error >>>',error); console.log(error); alert('sign up is not completed .. check the photo size or the data is filled ');
@@ -329,7 +330,7 @@ reader.onload =() => {
 <br/><br/>
 <div class="inputContainer">
  
-  <input type='number'
+  <input type='text'
         required
         name='firstname'
         value={insno}
@@ -361,8 +362,8 @@ reader.onload =() => {
 
 {show1?<input type="submit" class="submitBtn" value="Sign Up" />:null }
 
-{show2?<input onClick={handleSubmit} class="submitBtn" value="Sign Up with insurance" />:null }
 
+{show2?<input onClick={handleSubmit} class="submitBtn" value="Sign Up with insurance" />:null }
 
 
 <p class="logginn">Already have an account? 

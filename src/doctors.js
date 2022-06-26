@@ -9,6 +9,7 @@ const [doctors,setposts] = useState([]);
 const [searchtitle,setsearchtitle]=useState('');
 const [doctorspec,setdoctorspec] = useState([]);
 const [specc,setspec] = useState([]);
+const [title,settitle] = useState([]);
 const [choossestatespec,setchooossestatespec] =useState('');
 const [choose,setchoose] =useState('');
 const [doctitle,setdoctortitle] = useState([]);
@@ -18,6 +19,10 @@ useEffect(()=>{
     const spe = await axios.get('https://health-care-app-final.herokuapp.com/specialties')
  setspec(spe.data);
 console.log(spe.data);
+const tie = await axios.get('https://health-care-app-final.herokuapp.com/doctors/title')
+settitle(tie.data);
+console.log(tie.data);
+
     const res = await axios.get('https://health-care-app-final.herokuapp.com/doctors/search/filter?specialties='+doctorspec +'& drTitle=' + doctitle)
  setposts(res.data);
  console.log(res.data);
@@ -51,24 +56,26 @@ function handletitle(e) {
       </label>
     </div>
     
-    
+    specialites : 
     <select value={choossestatespec}
   onChange={handlespec} >
   {
   specc.map(({ id,specialties})=>(
 <option  key={id} value={id} >{specialties}   </option>
  ))}</select>
-
+ 
+Title : 
 <select value={choose}
  onChange={(e) => handletitle(e)} >
- 
-<option value={'Advisor'} >  Advisor </option>
-<option value={'front'}>  front </option>
-<option value={'Advisor'} >  Advisor </option>
+  {
+  title.map(({ _id,title})=>(
+<option  key={_id} value={_id} >{title}   </option>
+ ))}
+
  </select>
 <h2>
     <a>{choose} </a>
-<a> {doctitle} </a>
+
 </h2>
 
     </div>
@@ -90,6 +97,7 @@ else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase()))
             Name: {firstName}&nbsp;{LastName}
             <br/>
              Major: {specialtiesId.specialties} 
+             <br/>
              <a href={'/doctorpages/'+_id} >Info</a>
              <br/>
   <a> {Title} </a>   

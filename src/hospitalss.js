@@ -138,6 +138,8 @@ else if(value.name.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
 
 
 {showi ?  <>
+<br/><br/>
+<div className='k'>
 
 specialties
  <select value={choossestatespec}
@@ -156,20 +158,22 @@ insurance
     
 <option className='buttton' key={_id} value={_id} >{name}   </option>
  ))}</select>  
- 
+ </div>
  
  {
-  insuhos.map(({_id,Discount,hospitalId,InsuranceId})=>(
+  insuhos.map(({_id,Discount,hospitalId,specialtiesId})=>(
     
 <div  key={_id} >   
 
-<h2> discount :  {Discount}</h2>
-  
- 
+<br/>
+  <h2> name:  {hospitalId.name}</h2>
+ <h2> discount :  {Discount}</h2>
+ <h2> specialties : {specialtiesId.specialties}  </h2>
+ <br/>
 
  </div>
  ))}
-  <a href={'/hospitalpage/'}> <h3> go to page </h3></a>
+  
  
  
   </>:null }

@@ -26,7 +26,7 @@ axios.post('https://health-care-app-final.herokuapp.com/users/login'
   props.history.push('/userr_profile');
  
 }).catch(error =>{
-console.log('error >>>',error);
+console.log('error >>>',error);alert('email or password is not right');
 })  
 }
 
