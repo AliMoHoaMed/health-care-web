@@ -77,21 +77,27 @@ useEffect((e)=>{
 
 
     <div>
-<h1> name:  {userdataa.firstName} {userdataa.LastName} </h1>
+<h1 class="mas"> {userdataa.firstName} {userdataa.LastName} </h1>
 
 
 <form onSubmit={handleSubmit}>  
 
-<label> diagnose  </label> 
-<label  >Upload the resutl
+<div class="diagnosInputCard dia-lablab ">
+
+<br/>
+       <br/>
+       <div class="daattttaaa">
+          
+<label  >Upload the result
     <input type="file" id="myFile" name="filename"  onChange={onhaga} />
 </label>
 <br/>
 
-
-<br/>
-<input type='submit' />
-
+</div>
+<br/><br/><br/>
+     
+      <a class="boo-btn ddddd-bbbbb" type='submit' > Confirm </a>
+</div>
 </form>
 
 
