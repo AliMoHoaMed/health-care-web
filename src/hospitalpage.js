@@ -21,7 +21,7 @@ import'./css/hospage.css' ;
       setloading(true);
       const res = await axios.get('https://health-care-app-final.herokuapp.com/branchesHC/doctors/'+props.match.params._id)
    setdoctors(res.data);
-  
+  console.log(res.data);
   console.log(users);
    setloading(false);
     }
@@ -58,10 +58,27 @@ import'./css/hospage.css' ;
 <br/>
 
    <div className='grid-container hos-crid-car'>
-{doctorz.map(({_id, firstName , Title,avatar})=>(
+{doctorz.map(({_id, firstName , Title,avatar,LastName,specialtiesId})=>(
  
     <div className='grid-item'>
-   <Doccard _id={_id} name={firstName} username={Title} avatar={avatar} /></div>))}
+<div class="doctorsDataCardd" key={_id}>
+          <img class="DocPhoto"
+          src={"data:image/jpg;base64,"+avatar}
+            alt=""/>
+        <div class="docDaataaa">
+            Name: {firstName}&nbsp;{LastName}
+             <br/>   
+             <br/>
+            <a href={'/doctorpages/'+_id}> info</a>
+             <br/>
+  <a> {Title} </a>   
+        </div>
+      
+        
+    </div>
+
+
+  </div>))}
 
 
 </div>

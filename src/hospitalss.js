@@ -22,7 +22,7 @@ const [specid,setspecid]=useState('');
 const [insu,setinsu]= useState([]);
 const [insid,setinsid]=useState('');
 
-
+const [inshospitals,sethospitalsins]= useState([]);
 const [areaaid,setareaid]= useState([]);
 const [aareaaid,setaareaid]= useState([]);
 const [userareaaid,setuserareaaid]= useState([]);
@@ -47,8 +47,8 @@ useEffect((e)=>{
      const ins = await axios.get('https://health-care-app-final.herokuapp.com/hcInsValues/search/filter?specialties='+specid+'&insurance='+insid  )
      setinsuhos(ins.data);
      console.log(ins.data);
-
-    
+sethospitalsins(ins.data.hospitalId );
+console.log(ins.data.hospitalId);
 
  setloading(false);
   }
@@ -159,17 +159,17 @@ insurance
  
  
  {
-  insuhos.map(({ _id,Discount,hospitalId})=>(
+  insuhos.map(({_id,Discount,hospitalId,InsuranceId})=>(
     
-<div  key={_id} value={_id} >   
+<div  key={_id} >   
 
 <h2> discount :  {Discount}</h2>
-  <h2>hospital name :  {hospitalId} </h2>
-  <a href={'/hospitalpage/'+hospitalId._id}> <h3> go to page </h3></a>
+  
+ 
 
  </div>
  ))}
- 
+  <a href={'/hospitalpage/'}> <h3> go to page </h3></a>
  
  
   </>:null }
