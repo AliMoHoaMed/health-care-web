@@ -81,8 +81,8 @@ if(searchtitle ==''){return hosbitalss}
 else if(value.name.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
   return value ;}})
   .map(({_id, name, labId , areaId , image})=>(
-    <div className='grid-container'>
-    <div className='grid-item'>
+    <div className='grid-containerrrrrr'>
+    <div className='grid-itemmmmmmm'>
    <Labscard _id={_id} name={name} areaId ={areaId} labId={labId} image={image} />
    </div></div>
  )) ))} 
