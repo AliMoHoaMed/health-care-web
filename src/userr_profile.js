@@ -55,10 +55,10 @@ console.log();
     }
  
     return (
-  <div>
-    
+  <div className='vvv'>
+    <br/>
 <div class="dropdown">
-  <button class="dropbtn">User Profile</button>
+  <button class="dropbtn"> <h1>{us.firstName}</h1>   </button>
   <div class="dropdown-content">
   <img src={ us.avatar} alt="Avatar" class="avatar"/> 
   <h3 class="avatar-name">{us.firstName}</h3> 

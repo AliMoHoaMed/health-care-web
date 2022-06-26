@@ -120,19 +120,6 @@ const Userinfo = () => {
 
 
 
-<div>
-
-{userdiagnose.map(({_id,Diagnosis,medicines,doctorId})=>(
-<div key={_id}>
-<h1>doctor name {doctorId.firstName} </h1>
-<h2> diagnose : {Diagnosis} </h2>
-<h3> {medicines} </h3>
-
-</div> 
-
-)  )  }
-
-</div>
 
 
 </div>

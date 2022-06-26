@@ -5,6 +5,8 @@ import { gettokken, getuser, removeusersession } from './utlis/Common'
 const User_patch = () => {
   const [firstttt,setuserfirst] =useState([]);
   const [lasttttt,setuserlasttt] =useState([]);
+  const [areaaid,setareaid] =useState([]);
+  
   const [ base64code , setbasecode65]=useState([]);
   const [useravatar,setuseravatar] =useState([]);
   

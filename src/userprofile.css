@@ -449,6 +449,9 @@ margin-bottom: 1rem;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 40px;
+  border-width: 5px;
+  border-color: #ffffff;
 
 }
 
@@ -502,7 +505,10 @@ margin-bottom: 1rem;
 }
 
 
+.vvv{
 
+  text-align: center;
+}
 
 
 

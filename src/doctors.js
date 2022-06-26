@@ -88,13 +88,14 @@ else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase()))
             alt=""/>
         <div class="docDaataaa">
             Name: {firstName}&nbsp;{LastName}
+             <br/>   
              <br/>
+             Major: {specialtiesId.specialties} <a href={'/doctorpages/'+_id}> info</a>
              <br/>
-             Major: {specialtiesId.specialties}
-
+  <a> {Title} </a>   
         </div>
-        <a href={'/doctorpages/'+_id}> info</a>  
-        <a> {Title} </a>     
+      
+        
     </div>
 
 

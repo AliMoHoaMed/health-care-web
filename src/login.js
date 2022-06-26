@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import'./signincss/login.css' ;
 import axios from "axios";
 import { setusersession } from "./utlis/Common";
-import { FaEnvelope } from "react-icons/fa";
-import { MdPassword} from "react-icons/md";
+
 
 const Login=(props) =>{
 
@@ -43,13 +42,13 @@ return (
         <img className="health-care" src="img/Health care.png"/> 
 
         <div className="input-field">
-           <i><div class="fauser"><FaEnvelope/></div></i>  
+           <i><div class="fauser"></div></i>  
           <input type="text"   value={username}
           onChange={e => Setusername(e.target.value)} />
         </div>
 
         <div className="input-field">
-          <i className="fas fa-lock"><MdPassword /></i> 
+          <i className="fas fa-lock"></i> 
           <input type='password'
 value={password} 
 onChange={e => Setpassword(e.target.value)}/>
