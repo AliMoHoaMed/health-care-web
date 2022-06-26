@@ -50,7 +50,7 @@ const tok = ggettokken('token');
     <div>  
     <div >
     
-     
+    <img  src={"data:image/jpg;base64," + labdata.image} width="250" height="250" />
         
      
     
