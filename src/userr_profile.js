@@ -55,9 +55,8 @@ console.log();
     }
  
     return (
-  <div className='vvv'>
-    <br/>
-<div class="dropdown">
+      <div>
+        <div className='vvv'>  <div class="dropdown">
   <button class="dropbtn"> <h1>{us.firstName}</h1>   </button>
   <div class="dropdown-content">
   <img src={ us.avatar} alt="Avatar" class="avatar"/> 
@@ -68,7 +67,10 @@ console.log();
   <a href="/userr_profile/userbooking">Booking</a>
   <a href="#logout" onClick={handlelogout}>Logout</a>
   </div>
-</div>
+</div> </div>
+  <div >
+    <br/>
+
 {/* <nav class="topnav">    <br/>   
   <img src={ us.avatar} alt="Avatar" class="avatar"/> <h1>{us.firstName}</h1> 
    
@@ -96,7 +98,7 @@ console.log();
 </div>
 
 
-  </div>
+  </div></div>
     )
 }
 
