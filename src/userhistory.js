@@ -78,7 +78,7 @@ const Userhistory = () => {
 <div class="CardDaataaaa">
 <div class="LabNameText">
 <div class="CardDaataaaa-text">
-<h3> <label class="uh">Lab Name</label>{branchId} </h3>
+<h3> <label class="uh">Lab Name</label>{branchId.name} </h3>
 </div>
 <br/>
         <br/>

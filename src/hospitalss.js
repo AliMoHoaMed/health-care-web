@@ -41,7 +41,7 @@ useEffect((e)=>{
     const spec = await axios.get('https://health-care-app-final.herokuapp.com/specialties')
      setspec(spec.data);
 
-     const inz = await axios.get('https://health-care-app-final.herokuapp.com/specialties')
+     const inz = await axios.get('https://health-care-app-final.herokuapp.com/insurances')
      setinsu(inz.data);
 
      const ins = await axios.get('https://health-care-app-final.herokuapp.com/hcInsValues/search/filter?specialties='+specid+'&insurance='+insid  )

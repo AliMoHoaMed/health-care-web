@@ -65,10 +65,10 @@ useEffect((e)=>{
         e.preventDefault();
         const dataaa = {result : base64code , userId:useridddd } ;
       authAxios.post('https://health-care-app-final.herokuapp.com/branchesXL/sendresult',dataaa
-      ).then(ress=>{console.log("ress",ress)
+      ).then(ress=>{console.log("ress",ress); alert('done');
       }
       ).catch(error =>{
-        console.log('error >>>',error);
+        console.log('error >>>',error);alert('something wronge ..change the photo');
         })}
 
 
@@ -96,7 +96,7 @@ useEffect((e)=>{
 </div>
 <br/><br/><br/>
      
-      <a class="boo-btn ddddd-bbbbb" type='submit' > Confirm </a>
+      <button class="boo-btn ddddd-bbbbb" type='submit' > Confirm </button>
 </div>
 </form>
 
