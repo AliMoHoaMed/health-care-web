@@ -64,6 +64,8 @@ const Diagnoselabs = () => {
 
 
 <div>
+  <br/>
+  <br/>
 {userss.map(({_id,firstName,LastName,email})=>(
 <div class="CardContentttss" key={_id}>
 <div class="CardDaataa">
