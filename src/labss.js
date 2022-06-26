@@ -58,11 +58,16 @@ setareaid(usarea);
     <div>
       <div className='k'> 
       <div className='bb'>
-      <label><h1>Search</h1>
+        <br/>
+      <label> <h1 class="hos-ser">Search</h1>
       <input type='text' className='searchInput' placeholder='search..' onChange={(e)=> setsearchtitle(e.target.value)}/>
       </label>
-    <h2>search filter</h2>   
-    <select value={choossestatespec}
+      <br/>
+      <br/>
+      <h1 class="hos-ser"> By Using Filter </h1> 
+      <br/>
+    
+    <select class="using-filter"  value={choossestatespec}
   onChange={handlearea} >
   {
   areaa.map(({ _id,name})=>(

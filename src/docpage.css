@@ -44,7 +44,7 @@ border-color: black;
   }
 
   .buttton {
-    background-color: #4CAF50; /* Green */
+    background-color: #a32847; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -89,6 +89,8 @@ border-radius: 30px;
     width: 450px;
     height: 300px;
     border-radius: 20px;
+    position: relative;
+    left: 615px;
 }
 
 .inputReview{
@@ -247,6 +249,17 @@ border-radius: 30px;
   text-decoration: none;
 
 }
+
+.doc-btn-tn-n {
+  position: relative;
+  left: 85px;
+}
+
+.r-t {
+  text-align: center;
+}
+
+
 
 
 

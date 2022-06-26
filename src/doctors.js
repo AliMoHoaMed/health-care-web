@@ -73,7 +73,7 @@ function handletitle(e) {
 
     </div>
 
-<div className='grid-container'>
+<div className='grid-container da-doc-ba '>
 
     {loading ?( <h4> loaaading .....</h4>):( 
 (doctors.filter((value)=>{ 
@@ -88,9 +88,9 @@ else if(value.firstName.toLowerCase().includes(searchtitle.toLocaleLowerCase()))
             alt=""/>
         <div class="docDaataaa">
             Name: {firstName}&nbsp;{LastName}
-             <br/>   
-             <br/>
-             Major: {specialtiesId.specialties} <a href={'/doctorpages/'+_id}> info</a>
+            <br/>
+             Major: {specialtiesId.specialties} 
+             <a href={'/doctorpages/'+_id} >Info</a>
              <br/>
   <a> {Title} </a>   
         </div>
