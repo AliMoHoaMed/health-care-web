@@ -73,7 +73,9 @@
     width: 100px;
   }
   
-
+.mas {
+  text-align: center;
+}
 
 
 
@@ -262,7 +264,7 @@ height: 500px;
 
 
 .diagnosInputCard {
-  background-color: #6495ED;
+  background-color: #f0f0f0b5;
   width: 800px;
   height: 430px;
   border-top-right-radius: 80px;
@@ -275,16 +277,18 @@ height: 500px;
 }
 
 .dattAAA {
-  color: white;
+  color:#05445E;
   margin-left: 50px;
   margin-top: -250px;
-  font-size: 45px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  position: relative;
+  top: 20px;
 }
 
 .daattttaaa {
-  color: white;
+  color: #05445E;
   margin-left: 53px;
   margin-top: 20px;
   font-size: 30px;
@@ -380,4 +384,10 @@ height: 500px;
   position: relative;
   left: 990px;
   top: 35px;
+}
+
+.ddddd-bbbbb {
+  position: relative;
+  bottom: 60px;
+  left: 600px;
 }
