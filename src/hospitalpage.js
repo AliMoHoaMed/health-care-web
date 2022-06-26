@@ -57,7 +57,7 @@ import'./css/hospage.css' ;
 <br/>
 <br/>
 
-   <div className='grid-container hos-crid-car'>
+   <div className='grid-container da-doc-ba'>
 {doctorz.map(({_id, firstName , Title,avatar,LastName,specialtiesId})=>(
  
     <div className='grid-item'>

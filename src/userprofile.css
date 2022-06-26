@@ -561,6 +561,18 @@ margin-bottom: 1rem;
   width: 850px;
 }
 
+.lab-dia-bt {
+  position:relative;
+  left: 930px;
+  bottom: 350px;
+}
+
+.lab-log-bt-bt {
+  position:relative;
+left: 230px;
+bottom: 384px;
+}
+
 
 
 
