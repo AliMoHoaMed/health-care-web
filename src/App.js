@@ -108,7 +108,7 @@ const docuss = getdoctor('doctor') ;
          <i class="fas fa-bars"></i>
          </label>
       <ul>
-   <li><NavLink activeClassName='active' to="/"> Home <small> </small></NavLink></li>
+   <li><NavLink activeClassName='active' to="/newslist"> Home <small> </small></NavLink></li>
 
 {showwwlog? <li><NavLink activeClassName='active' to={'/logg'}>Login <small></small></NavLink></li> :null}
 
@@ -131,6 +131,7 @@ const docuss = getdoctor('doctor') ;
   <Switch>
 
 <Route exact path={'/'} component={Newslist}  /> 
+<Route exact path={'/newslist'} component={Newslist}  /> 
  <Route  path={'/hoome'} component={Hoome}  />
 <Route  path={'/login'} component={Login}  />
 <Route  path={'/doclogin'} component={DocLogin}  />

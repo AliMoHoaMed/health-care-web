@@ -106,7 +106,7 @@ function handleunssearch(){
   {
   areaa.map(({ _id,name})=>(
     
-<option className='buttton' key={_id} value={_id} >{name}   </option>
+<option  key={_id} value={_id} >{name}   </option>
  ))}</select>
 
 
