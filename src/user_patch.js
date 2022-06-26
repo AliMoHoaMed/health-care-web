@@ -42,11 +42,31 @@ const User_patch = () => {
   const authAxios =axios.create({
     headers : {
      'Authorization': `Bearer ${tok}`
-      
     }
   })
   console.log(us._id);
 
+
+  useEffect((e)=>{
+    const loadposts=async() => {
+      setloading(true);
+      const resarea = await axios.get('https://health-care-app-final.herokuapp.com/Governorate/'+govid)
+   setareaa(resarea.data);
+   const resgov = await axios.get('https://health-care-app-final.herokuapp.com/Governorate')
+   setgovv(resgov.data);
+   const resinc = await axios.get('https://health-care-app-final.herokuapp.com/insuranceTypes')
+   setincurancetype(resinc.data);
+  
+   const insid = await axios.get('https://health-care-app-final.herokuapp.com/insuranceType/'+insuurancetypeid)
+   setinstype(insid.data);
+   console.log(insid.data)
+
+ 
+
+   setloading(false);
+    }
+    loadposts();
+  },[govid , insuurancetypeid]);
 
   const handleSubmit=(e) => {
     e.preventDefault();
@@ -59,6 +79,9 @@ const User_patch = () => {
     })}
 
     
+
+
+
     return (
     <div>
 <form onSubmit={handleSubmit}>   
