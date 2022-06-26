@@ -87,7 +87,7 @@ const usid=us;
 <br/>
 <br/>
 <div class="abooking-card-container">
-    <h1>information</h1>
+    
      <div class="abooking-card-1">
        <div class="abooking-card-text-1">
 {arr.map(({_id,date,timeFrom,timeTo,vezeeta,branchId ,areaId})=>(

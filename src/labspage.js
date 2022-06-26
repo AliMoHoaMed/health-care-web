@@ -45,36 +45,27 @@ import'./css/hospage.css' ;
 {[labss].map(({id,name,areaId,labId,typeId })=>(
 
 <div key={id}>
-<div class="demo" >
-<p> 
-    <h3>{name}</h3>
-    
-    </p>
-</div>
+
 
 <br/>
 <br/>
 <br/>
 
 <div class="demoII">
-    <img className='c' src="/2017_3_26_23_13_12_367.jpg" alt="" />  
-    <br/>
-    <br/>
-   
-<h2> location : 
+<div class="demoii-img">
+    <img  src="/2017_3_26_23_13_12_367.jpg" alt="" />  
+    </div>
+    
+    <div class="demoii-title"></div><h3>{name}</h3></div>
+    <div class="demoii-des"></div>
 
-
-
-  </h2>
-<br/>
-</div>
 </div>
 ))}
 
 
 
 <div class="demoII">
- <h3>lab type  :  </h3>
+ <h3>lab type:  </h3>
 {labstype.map(({_id,type })=>(
 <div key={_id}>
   <h3>{type} </h3>

@@ -25,18 +25,38 @@
   }
   
   .demoII {
-    color: black;
-    background-color: rgb(216, 231, 255);
-    font-size: 18px;
-    width: 650px;
-    height: 350px;
-    padding: 10px 0px 0px 7px;
-    margin-top: -20px;
-    margin-left: 420px;
-    border-radius: 13px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 20%;
+    display: inline-block;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px; 
+    margin: 2%;
+    position: relative;
+    left: 635px;
+    background-color: rgba(255, 255, 255, 0.747);
   }
-  
+
+  .demoii-img img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .demoii-title {
+    text-align: center;
+    padding: 10px;
+  }
+   .demoii-title h1 {
+    font-size: 20px;
+   }
+   
+   .demoii-des {
+    padding: 3px;
+    text-align: center;
+   
+    padding-top: 10px;
+          border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+   }
   span.ll {
     background-color: rgb(216, 231, 255);
     display: inline-block;

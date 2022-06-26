@@ -4,6 +4,8 @@
     /*border: 1px solid black;*/
     width: 100%;
     margin: auto;
+    position: relative;
+    left: 500px
 }
 
 .card-1{

@@ -28,17 +28,21 @@ border-color: blue;
     
     .grid-container {
           display: grid;
-          
+          position: relative;
+          right: 500px;
           grid-template-columns: auto auto auto ;
         border-radius: 20px ;
         border: #6c98a8;
           padding: 10px;
+          
         }
         
 .grid-item {
   border: 20px cadetblue; 
   padding: 20px;
 }
+
+
         
           
 .navbarm{
@@ -222,6 +226,10 @@ div.card{
     height: 30px;
   }
  
+  .hos-crid-car {
+    position: relative;
+    left: 80px;
+  }
   
   
   

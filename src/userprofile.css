@@ -74,8 +74,10 @@ hr {
     width: 85%;
 }
 
+
 .sidebar a {
 
+  
   display: block;
   color: white;
   padding: 16px;
@@ -547,7 +549,7 @@ margin-bottom: 1rem;
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   position: relative;
-  left: 310px;
+  left: 290px;
 }
 
 .boo-btn:hover {
