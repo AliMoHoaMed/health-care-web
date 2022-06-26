@@ -11,26 +11,31 @@ const Ssignup = () => {
     const [ userlastname , setuserlastname]=useState('');
     const [ userdate , setuserdate]=useState([]);
     const [ userno , setuserno]=useState([]);
+
+    const [ userdes , setuserdes]=useState([]);
     const [ userarea , setuserarea]=useState([]);
     const [ useremail , setuseremail]=useState('');
     const [ userpass , setuserpass]=useState('');
-    const [ useravatar , setuseravatar]=useState([]);
+    const [ usergendre , setusergendre]=useState([]);
     const [ govid , setgovid]=useState('');
     const [loading ,setloading] =useState(false);
-    const [ et1 , setet1]=useState([]);
-    const [ et2 , setet2]=useState([]);
+    const [ gender , setgender]=useState([]);
+    const [ expiredate , setexpiredata]=useState([]);
+    const [ insno , setinsno]=useState([]);
     const [choosestatespec,setchooosestatespec] =useState('');
     const [choossestatespec,setchooossestatespec] =useState('');
     
-    const [insuurancetypeid,setincurancetypeid] =useState([]);
+    const [insuurancetypeid,setincurancetypeid] =useState('62b716f4ddd9d8bf515bdec1');
     const [insuurancetype,setincurancetype] =useState([]);
     const [incuranceid,setincuranceid] =useState([]);
 
-    const [chooseinstype,setinstype] =useState('');
+    const [chooseinstype,setinstype] =useState([]);
     const [chosaa,setchoosa] =useState('');
 
     const [ areaa , setareaa]=useState([]);
 
+    const [show1 ,setshow1] =useState(true);
+    const [show2 ,setshow2] =useState(false);
     const [ govv , setgovv]=useState([]);
     const [ base64code , setbasecode65]=useState([]);
 
@@ -47,11 +52,19 @@ const Ssignup = () => {
        setgovv(resgov.data);
        const resinc = await axios.get('https://health-care-app-final.herokuapp.com/insuranceTypes')
        setincurancetype(resinc.data);
-       console.log(base64code)
+      
+       const insid = await axios.get('https://health-care-app-final.herokuapp.com/insuranceType/'+insuurancetypeid)
+       setinstype(insid.data);
+       console.log(insid.data)
+
+       const gen = await axios.get('https://health-care-app-final.herokuapp.com/users/gender')
+       setgender(gen.data);
+       console.log(gen.data)
+
        setloading(false);
         }
         loadposts();
-      },[govid]);
+      },[govid , insuurancetypeid]);
 
 
 const onhaga =(e) => {
@@ -89,23 +102,57 @@ reader.onload =() => {
       }
 
 
+      function handleinsid(e) {
+        setincuranceid( e.target.value);
+      }
+
+      function handlegender(e) {
+        setusergendre( e.target.value);
+      }
+
+      function inssssss(e) {
+     setshow1(false);
+     setshow2(true);
+      }
+
+      function insnooo(e) {
+        setshow1(true);
+        setshow2(false);
+         }
+
+
+
     const handleSubmit=(e) => {
         e.preventDefault();
        
-        const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea , avatar : base64code } ;
+        const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea ,genderId:usergendre,diseases:userdes, avatar : base64code ,InsuranceId: incuranceid ,insuranceExpireDate:expiredate,insuranceNo:insno } ;
       axios.post('https://health-care-app-final.herokuapp.com/users/signUp',dataaa
-      ).then(ress=>{console.log("ress",ress)
+      ).then(ress=>{console.log("ress",ress); alert('sign up is completed ');
       }
       ).catch(error =>{
-        console.log('error >>>',error);
+        console.log('error >>>',error);alert('sign up is not completed .. check the photo size or the data is filled ');
         })  
       }
+
+      const handleSubmit2=(e) => {
+        e.preventDefault();
+       
+        const dataaa = {firstName:userfirstname,LastName:userlastname,birthDate:userdate,phoneNumber:userno,email:useremail,password:userpass ,AreaId :userarea ,genderId:usergendre,diseases:userdes, avatar : base64code  } ;
+      axios.post('https://health-care-app-final.herokuapp.com/users/signUp',dataaa
+      ).then(ress=>{console.log("ress",ress); alert('sign up is completed ');
+      }
+      ).catch(error =>{
+        console.log('error >>>',error);alert('sign up is not completed .. check the photo size or the data is filled ');
+        })  
+      }
+
+
 
     return (
         <>
 <body className='signup'>
     <div class="signupFrm">
-        <form onSubmit={handleSubmit} class="form">
+        <form onSubmit={handleSubmit2} class="form">
 <h1 class="title">Sign Up</h1>
 
 <div class="inputContainer">
@@ -172,6 +219,20 @@ reader.onload =() => {
   <label  class="label">Phone Number</label>
 </div>
 
+
+<div class="inputContainer">
+<br/>
+  <br/>
+  <input type="textarea"
+   required
+   class="input"
+   
+   value={userdes}
+   onChange={(e)=>setuserdes(e.target.value)} />
+  <label  class="label">History disease</label>
+</div>
+
+
 <div class="inputContainer"> 
 
 <label  class="label">Governorate</label>
@@ -220,12 +281,14 @@ reader.onload =() => {
 <br/>
 <div class="inputContainer">
 
-  <label  class="label">Gender</label>
- 
-  <select required name="gen" id="genders">
-    <option value="Male">Male</option>
-    <option value="female">Female</option>
-  </select>
+ <label  class="label">Gender</label>
+ <br/> <br/>
+ <select value={chosaa}
+  onChange={handlegender} >
+  {
+  gender.map(({_id,gender})=>(
+<option key={_id} value={_id} >{gender}   </option>
+ ))}</select>
 </div>
 
 <div class="inputContainer">
@@ -236,28 +299,69 @@ reader.onload =() => {
 
 <img  src={ base64code} width="250" height="250" />
 
-
+<br/>
+<button onClick={inssssss}>  click here to choose sign up with insurance </button>
+<button onClick={insnooo}>  click here to choose sign up without insurance </button>
 <div class="inputContainer">
 
-  <label  class="label">Insurance </label>
-<br/>
+  <label  class="label">Insurance type </label>
+  <br/><br/>
   <select value={chosaa}
   onChange={handleincid} >
   {
-  insuurancetype.map(({id,name})=>(
-<option key={id} value={id} >{name}   </option>
+  insuurancetype.map(({_id,name})=>(
+<option key={_id} value={_id} >{name}   </option>
  ))}</select>
 
-<h2> {insuurancetypeid} </h2>
-
 </div>
+<br/>
 <div class="inputContainer">
-  <label  class="label">Upload a photo of insurance
-    <input type="file" id="myFile" name="filename" class="fileBtn" />
-  </label>
+<label  class="label">Insurance name </label>
+<br/><br/>
+<select value={chosaa}
+  onChange={handleinsid} >
+  {
+  chooseinstype.map(({_id,name})=>(
+<option key={_id} value={_id} >{name}   </option>
+ ))}</select> 
+
+
+<br/><br/>
+<div class="inputContainer">
+ 
+  <input type='number'
+        required
+        name='firstname'
+        value={insno}
+        class="input"
+        onChange={(e)=>setinsno(e.target.value)}  />
+
+  <label for="" class="label">Insurance number </label>
 </div>
 
-<input type="submit" class="submitBtn" value="Sign Up" />
+<br/>
+<div class="inputContainer">
+ 
+  <input type='date'
+        required
+        name='firstname'
+        value={expiredate}
+        class="input"
+        onChange={(e)=>setexpiredata(e.target.value)}  />
+
+  <label for="" class="label">Insurance expire date </label>
+</div>
+
+
+
+</div>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+{show1?<input type="submit" class="submitBtn" value="Sign Up" />:null }
+
+{show2?<input onClick={handleSubmit} class="submitBtn" value="Sign Up with insurance" />:null }
 
 
 
