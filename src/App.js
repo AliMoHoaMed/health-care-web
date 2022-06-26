@@ -80,8 +80,7 @@ const docuss = getdoctor('doctor') ;
     setshowwwlog(false);
     console.log(docuss);}
    
-
-
+   
 
    setloading(false);
     }
@@ -122,7 +121,7 @@ const docuss = getdoctor('doctor') ;
 <li><NavLink activeClassName='active'to={'/docprofile'}> Doctor profile<small>  </small> </NavLink></li>
     :null}
  
-
+ 
 
 
  <li><NavLink activeClassName='active'to={'/choose'}> Choose<small>  </small> </NavLink></li>

@@ -142,7 +142,7 @@ reader.onload =() => {
       ).then(ress=>{console.log("ress",ress); alert('sign up is completed ');
       }
       ).catch(error =>{
-        console.log('error >>>',error);alert('sign up is not completed .. check the photo size or the data is filled ');
+        console.log('error >>>',error); console.log(error); alert('sign up is not completed .. check the photo size or the data is filled ');
         })  
       }
 

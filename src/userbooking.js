@@ -13,7 +13,7 @@ const Userbook = () => {
     
 const us=getuser('user');
 const usid=us;
-
+const [userbookinglab,setuserbookinlab] = useState([]);
     const [doctorarrival,setdoctorarrival] =useState([]);
     const [userbookin,setuserbooking] = useState([]);
     const authAxios =axios.create({
@@ -26,14 +26,15 @@ const usid=us;
     useEffect(()=>{
         const loadposts=async() => {
          
-          const res = await authAxios.get('https://health-care-app-final.herokuapp.com/book/all' )
+          const res = await authAxios.get('https://health-care-app-final.herokuapp.com/bookHC/all' )
           setuserbooking(res.data);
+           console.log(res.data);
+          const rees = await authAxios.get('https://health-care-app-final.herokuapp.com/bookXL/all' )
+          setuserbookinlab(rees.data);
+          console.log(rees.data);
+         
           
-          setdoctorarrival(res.data.drAvailTimeId);
-     
-          console.log(res.data);
-          
-          console.log(res.data.wattingTime);
+      
        
           }
           loadposts();
@@ -44,7 +45,7 @@ const usid=us;
     <div>
       <div className='grid-containerr'>
 
-      {[userbookin].map(({_id,wattingTime,info,drAvailTimeId}) => 
+      {userbookin.map(({_id,wattingTime,info,drAvailTimeId}) => 
 (
         <div key={_id} className='grid-itemr'>
  <div class="bcard-container" >
@@ -52,15 +53,15 @@ const usid=us;
 
        <div class="bcard-text-1">
        
-           <p><label class="ega">Doctor Name</label>  {drAvailTimeId}</p>
+           <p><label class="ega">Doctor Name</label> {drAvailTimeId.doctorId.firstName}..{drAvailTimeId.doctorId.LastName} </p>
            <p><label class="ega">Waiting Time</label>{wattingTime}</p>
 
            <div class="tables">
            
 
-    <div ><p class="time"><label class="ega">Time </label> to  </p></div>
-
-<div ><p class="day"><label class="ega">Price </label> {info}  </p></div>
+    <div ><p class="time"><label class="ega">Time </label> {drAvailTimeId.timeFrom} to {drAvailTimeId.timeTo} &nbsp;&nbsp;   </p></div>
+    <div ><p class="time">  <label class="ega">Day </label> {drAvailTimeId.day}  </p></div>
+<div ><p class="time">  <label class="ega">Price </label>{drAvailTimeId.vezeeta}   </p></div>
 
                  </div> 
            

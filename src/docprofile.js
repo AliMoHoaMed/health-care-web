@@ -34,9 +34,9 @@ console.log(doctor);
         <div class="ucard-text-1">
             <p><label class="uega">Doctor Email </label> {doctor.email}</p>
             <br/>
-            <p><label class="uega">Doctor Name </label> {doctor.firstName}  </p>
+            <p><label class="uega">Doctor Name </label> {doctor.firstName} &nbsp;{doctor.LastName}  </p>
             <br/>
-            <p> <label class="uega">Doctor Title </label> {doctor.Title}   </p>
+            <p> <label class="uega">Doctor avgRating </label> {doctor.avgRating}   </p>
             </div>
           </div>
           </div>

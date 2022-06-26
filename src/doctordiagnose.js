@@ -36,10 +36,10 @@ useEffect((e)=>{
         e.preventDefault();
         const dataaa = {Diagnosis : diagnosee , medicines :medicane , userId:useridddd } ;
       authAxios.post('https://health-care-app-final.herokuapp.com/doctors/diagnosis',dataaa
-      ).then(ress=>{console.log("ress",ress)
+      ).then(ress=>{console.log("ress",ress);alert('everything is great');
       }
       ).catch(error =>{
-        console.log('error >>>',error);
+        console.log('error >>>',error);alert('something wronge');
         })}
 
 
@@ -49,6 +49,7 @@ useEffect((e)=>{
 
     <div>
 <h1> name:  {userdataa.firstName} __ {userdataa.LastName} </h1>
+
 
 
 <form onSubmit={handleSubmit}>  
@@ -78,7 +79,7 @@ useEffect((e)=>{
       </div>
      <br/><br/><br/>
      <div class="editANDGo">
-      <a class="editButtonTOGo" type='submit' > Confirm </a>
+      <button class="editButtonTOGo" type='submit' > Confirm </button>
      </div>
   </div>
 
