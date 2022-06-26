@@ -14,12 +14,12 @@
   height: 160px;
   border-radius: 50%;
   position: relative;
-  left: 75px;
+  left: 12px;
 }
 
 .avatar-name {
   position: relative;
-  left: 63px;
+  left: 0px;
 }
 
 .user-name {

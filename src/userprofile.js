@@ -62,7 +62,7 @@ console.log();
         
         <img src={us.avatar} alt="Avatar" class="avatar"/>
     
-     
+     <br/>
     
         <div class="user-name">
 {[userdata].map(({ email ,_id,__v  })  => 
