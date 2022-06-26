@@ -26,8 +26,10 @@ const Labstypepage = (props) => {
 
     return (
     <div>
-        {aviab.map(({_id , timeFrom , timeTo ,vezeeta }) =>( <div key={_id}> 
-
+        {aviab.map(({_id , timeFrom , timeTo ,vezeeta ,branchId , day}) =>( <div key={_id}> 
+<h2> {branchId.name}  </h2>
+<h2> {branchId.areaId.name} </h2>
+<h2> {day} </h2>
 <h2> time from :  {timeFrom}</h2>
 <h2>time to :  {timeTo } </h2>
 <h3>price :  {vezeeta} </h3>
