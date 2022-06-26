@@ -39,29 +39,25 @@ import'./css/hospage.css' ;
 <body>
 
 
-<div class="demo">
-{users.name}
-</div>
+<br/>
 
-<br/>
-<br/>
-<br/>
 
 <div class="demoII">
-    <img className='c' src={"data:image/jpg;base64," + users.image}  alt="" />  
- 
-    <p className='k'>Address: {users.areaId.name}
-    
-    
+  <div class="demoii-img">
+     <img  src={"data:image/jpg;base64," + users.image}  alt="" />  
 
-    </p>
+  </div>
+    {/* <img  src={"data:image/jpg;base64," + users.image}  alt="" />   */}
+    <div class="demoii-title"><h1>{users.name}</h1></div>   
+      <div class="demoii-des"> <h3 >{users.areaId.name}</h3></div>
+   
 
 </div>
 
 <br/>
-<h1> Doctors : </h1>
+<br/>
 
-   <div className='grid-container'>
+   <div className='grid-container hos-crid-car'>
 {doctorz.map(({_id, firstName , Title,avatar})=>(
  
     <div className='grid-item'>
