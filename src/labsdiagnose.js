@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './booking.css';
 import axios from 'axios';
 import { useState , useEffect } from 'react';
 import { ggettokken } from './utlis/Common3';
@@ -77,18 +77,21 @@ useEffect((e)=>{
 
 
     <div>
+      <br/>
+      <br/>
 <h1 class="mas"> {userdataa.firstName} {userdataa.LastName} </h1>
 
 
 <form onSubmit={handleSubmit}>  
 
-<div class="diagnosInputCard dia-lablab ">
+<div class="diagnosInputCard dalabdalab ">
 
 <br/>
        <br/>
        <div class="daattttaaa">
           
 <label  >Upload the result
+  <br/>
     <input type="file" id="myFile" name="filename"  onChange={onhaga} />
 </label>
 <br/>

@@ -81,9 +81,9 @@ useEffect((e)=>{
         onChange={(e)=>setmedicane(e.target.value)}  />
       </div>
      <br/><br/><br/>
-     <div class="editANDGo">
-      <button class="editButtonTOGo" type='submit' > Confirm </button>
-     </div>
+   
+      <button class=" boo-btn mmmssssaaa" type='submit' > Confirm </button>
+     
   </div>
 
 </form>
