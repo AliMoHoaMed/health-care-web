@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import'./userprofile.css' ;
 const Labstypepage = (props) => {
   const xtypeid = props.match.params._id;
   const [loading ,setloading] =useState(false);
@@ -26,17 +27,24 @@ const Labstypepage = (props) => {
 
     return (
     <div>
+       <div class="ucard-container lab-con">
         {aviab.map(({_id , timeFrom , timeTo ,vezeeta ,branchId , day}) =>( <div key={_id}> 
-<h2> {branchId.name}  </h2>
-<h2> {branchId.areaId.name} </h2>
-<h2> {day} </h2>
-<h2> time from :  {timeFrom}</h2>
-<h2>time to :  {timeTo } </h2>
-<h3>price :  {vezeeta} </h3>
+<div class="ucard-1 lab-op-text-1">
+<div class="ucard-text-1 ">
+<p><label class="uega lab-op">Lab Name</label>{branchId.name}  </p>
+<p><label class="uega lab-op">Branch Name</label>{branchId.areaId.name} </p>
+<p><label class="uega lab-op">Day</label>{day} </p>
+<p><label class="uega lab-op"> Time From  </label>{timeFrom}</p>
+<p><label class="uega lab-op">Time To  </label>{timeTo } </p>
+<p><label class="uega lab-op">Price  </label>{vezeeta} EGP </p>
+<br/>
+<a href={'/booking_for_labs/'+_id} class="boo-btn">  Booking    </a>
 
-<a href={'/booking_for_labs/'+_id} >  booking    </a>
 
+        </div>
+        </div>
         </div>) )}
+        </div>
         </div>
   )
 }
