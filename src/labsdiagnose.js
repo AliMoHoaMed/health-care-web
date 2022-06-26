@@ -77,7 +77,7 @@ useEffect((e)=>{
 
 
     <div>
-<h1> name:  {userdataa.firstName} __ {userdataa.LastName} </h1>
+<h1> name:  {userdataa.firstName} {userdataa.LastName} </h1>
 
 
 <form onSubmit={handleSubmit}>  
