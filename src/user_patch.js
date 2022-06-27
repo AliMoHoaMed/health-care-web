@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import'./userprofile.css' ;
 import { useState } from 'react';import { useEffect } from 'react';
 import { gettokken, getuser, removeusersession } from './utlis/Common'
 const User_patch = () => {
@@ -71,7 +72,7 @@ const User_patch = () => {
 
   const handleSubmit=(e) => {
     e.preventDefault();
-    const dataaa = {   avatar : base64code , firstName :firstttt , LastName : lasttttt ,AreaId :userarea} ;
+    const dataaa = {   avatar : base64code , firstName :firstttt , LastName : lasttttt   ,insuranceExpireDate:expiredate ,insuranceNo:insno} ;
   authAxios.patch('https://health-care-app-final.herokuapp.com/users/profile',dataaa
   ).then(ress=>{console.log("ress",ress);alert('your data is updated');
   }
@@ -101,18 +102,18 @@ const User_patch = () => {
 
 
     return (
-    <div>
-<form onSubmit={handleSubmit}>   
+    <div className='login-box'>
+<form className='formmm' onSubmit={handleSubmit}>   
 
-<a> firsname</a>
+<label> firsname</label>
 <input type='text'
         required
         name='firstname'
         value={firstttt}
     
         onChange={(e)=>setuserfirst(e.target.value)}  />
-
-<a> lastname</a>
+<br/><br/>
+<label> lastname</label>
 <input type='text'
         required
         name='firstname'
@@ -120,17 +121,16 @@ const User_patch = () => {
        
         onChange={(e)=>setuserlasttt(e.target.value)}  />
 
-
+<br/><br/>
 <label  >Upload a photo of you 
     <input type="file" id="myFile" name="filename"  onChange={onhaga} />
 </label>
 
-<a> area</a>
-<div class="inputContainer"> 
+<br/><br/>
+<div > 
 
-<label  class="label">Governorate</label>
-<br/>
-<br/>
+<label  >Governorate</label>
+
 <select 
   onChange={handlearea} >
   {
@@ -140,11 +140,10 @@ const User_patch = () => {
 </div>
 
 
+<br/>
+<div > 
+<label  >Area</label>
 
-<div class="inputContainer"> 
-<label  class="label">Area</label>
-<br/>
-<br/>
 <select 
   onChange={handleareaid} 
   
@@ -155,11 +154,11 @@ const User_patch = () => {
  ))}</select>
 
 </div>
+<br/>
+<div >
 
-<div class="inputContainer">
-
-  <label  class="label">Insurance type </label>
-  <br/><br/>
+  <label  >Insurance type </label>
+  
   <select value={chosaa}
   onChange={handleincid} >
   {
@@ -169,9 +168,9 @@ const User_patch = () => {
 
 </div>
 <br/>
-<div class="inputContainer">
-<label  class="label">Insurance name </label>
-<br/><br/>
+<div >
+<label  >Insurance name </label>
+
 <select value={chosaa}
   onChange={handleinsid} >
   {
@@ -181,38 +180,38 @@ const User_patch = () => {
 
 
 <br/><br/>
-<div class="inputContainer">
- 
+<div >
+  <label  >Insurance number </label>
   <input type='number'
         required
         name='firstname'
         value={insno}
-        class="input"
+
         onChange={(e)=>setinsno(e.target.value)}  />
 
-  <label for="" class="label">Insurance number </label>
+ 
 </div>
 
 <br/>
-<div class="inputContainer">
- 
+<div >
+  <label  >Insurance expire date </label>
   <input type='date'
         required
         name='firstname'
         value={expiredate}
-        class="input"
+      
         onChange={(e)=>setexpiredata(e.target.value)}  />
 
-  <label for="" class="label">Insurance expire date </label>
+ 
 </div>
 
 
 
 </div>
 
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<input type="submit"  value="edit" />
+<br/>
+<button onClick={handleSubmit} class="buutton buutton2">Done</button>
+
 </form>
 
 
