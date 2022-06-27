@@ -90,14 +90,15 @@ const usid=us;
     
      <div class="abooking-card-1">
        <div class="abooking-card-text-1">
-{arr.map(({_id,date,timeFrom,timeTo,vezeeta,branchId ,areaId})=>(
+{arr.map(({_id,date,timeFrom,timeTo,vezeeta,branchId ,day,areaId})=>(
 
          
          
   <div class="atables" key={_id}>
  <div class="atable1">
  <div class="ahos-name"><h3 class="ahospital-name"> {branchId.name}   </h3> </div>
-     <div class="atim"> <h3 class="atime">from  {timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
+ 
+     <div class="atim"> <h3 class="atime"> <a>{day}</a> <br/> from {timeFrom}  &nbsp; to  &nbsp; {timeTo}</h3></div>
      <div class="ada"> vezeeta<h3 class="aday">{vezeeta}</h3></div>
      <a class="boo-btn doc-btn-tn-n" href={'/booking/'+ _id}> Register</a>
  </div>
