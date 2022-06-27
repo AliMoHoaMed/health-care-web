@@ -205,8 +205,8 @@ function handleshowoffline (){
                   
                 </div>
             </div>    
-        </div>     <a className='ar' href=" ">Proceed and Confirm</a>
-          <input type='submit' />
+        </div>    
+          <button onClick={handlepayment} >  <a className='ar' href=" ">Proceed and Confirm</a></button> 
    
     </div>
 

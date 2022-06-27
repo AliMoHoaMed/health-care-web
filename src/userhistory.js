@@ -49,15 +49,17 @@ const Userhistory = () => {
 
 <div>
 
-{userdignose.map(({_id,Diagnosis,medicines,doctorId})=>(
+{userdignose.map(({_id,Diagnosis,medicines,doctorId,AnalysisNeeded})=>(
 <div key={_id}>
 
 <div>
 <div class="CardDaataa">
+  <h2>Doctor :  </h2>
 <div class="CardDaataa-text">
 <h3> <label class="uh">DR Name</label> {doctorId.firstName} </h3>
-<h3> <label class="uh">Diagnose</label>  {Diagnosis} </h3>
+<h3> <label class="uh">Diagnose</label>  {Diagnosis}  </h3>
 <h3> <label class="uh">Medicine</label>  {medicines} </h3>
+<h3> <label class="uh">AnalysisNeeded</label>  {AnalysisNeeded} </h3>
 </div>
 </div>
     </div>
