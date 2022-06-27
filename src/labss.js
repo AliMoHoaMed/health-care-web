@@ -95,7 +95,7 @@ function handlesearch(){
       <br/>
       <h1 class="hos-ser"> By Using Filter </h1> 
       <br/>
-    
+    Area
     <select class="using-filter"  value={choossestatespec}
   onChange={handlearea} >
   {
@@ -159,7 +159,7 @@ insurance
     
 <div  key={_id} >   
 <br/>
-<h2> naem: {labId.name}</h2>
+<h2> name: {labId.name}</h2>
  <h2> discount :  {Discount}</h2>
  <h2> type: {typeId.type} </h2>
  <br/>
