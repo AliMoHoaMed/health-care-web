@@ -104,7 +104,8 @@ const User_patch = () => {
     return (
     <div className='login-box'>
 <form className='formmm' onSubmit={handleSubmit}>   
-
+<br/>
+<br/>
 <label> firsname</label>
 <input type='text'
         required
@@ -210,7 +211,7 @@ const User_patch = () => {
 </div>
 
 <br/>
-<button onClick={handleSubmit} class="buutton buutton2">Done</button>
+<button onClick={handleSubmit} class="boo-btn eee-dddd">Done</button>
 
 </form>
 

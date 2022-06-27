@@ -300,14 +300,14 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
 border-radius:14px ;
 padding: 1rem;
 margin-bottom: 1rem;
-width: 670px;
+width: 680px;
 position: relative;
 left: 500px;
 
 }
 
 .CardDaataa-text {
-  width: 500px;
+  width: 550px;
   height: auto;
   padding: 10px;
   position: relative;
@@ -319,7 +319,7 @@ left: 500px;
   color: #000000;
   font-family:Arial, Helvetica, sans-serif;
   text-transform: capitalize;
-  width: 500px;
+  width: 550px;
   background:rgb(255, 255, 255);
   padding: 20px;
   margin: 20px auto;
@@ -647,4 +647,9 @@ formmm input {
 
 .buutton2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.eee-dddd{
+  position: relative;
+ bottom: 40px; 
 }
