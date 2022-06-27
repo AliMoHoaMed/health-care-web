@@ -239,8 +239,8 @@ function handleshowoffline (){
 
 
 
-{showww ?  <div> <form onSubmit={handleoffline}> 
-           <button  type="submit" > click to finish </button>
+{showww ?  <div> <form onSubmit={handleoffline} className='nis' > 
+           <button className='buttton' type="submit" >finish </button>
             </form></div> : null
  }
    
