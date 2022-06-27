@@ -74,7 +74,8 @@
   }
   
 .mas {
-  text-align: center;
+  position:relative;
+  left: 725px;
 }
 
 
@@ -266,13 +267,11 @@ height: 500px;
 .diagnosInputCard {
   background-color: #f0f0f0b5;
   width: 800px;
-  height: 430px;
-  border-top-right-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  height: auto;
   margin-top: 315px;
   margin-left: 490px;
+  position: relative;
+  bottom: 60px;
 
 }
 

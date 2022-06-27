@@ -581,7 +581,13 @@ bottom: 384px;
 
 .log-dia {
   position: relative;
-  bottom:15px;
+  bottom:200px;
+}
+
+.log-diaaaaa {
+  position: relative;
+  top: 170px;
+ left: 450px;
 }
 
 

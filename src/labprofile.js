@@ -74,7 +74,7 @@ const tok = ggettokken('token');
       <br/>
       <br/>
       <div class="log-dia" >
-      <div class="lab-log-bt-bt"><input type="button" value="logout" class="dia-btn log-dia "
+      <div class="lab-log-bt-bt"><input type="button" value="logout" class="dia-btn log-diaaaaa "
 onClick={handlelogout}/> </div></div> 
     </div>
   

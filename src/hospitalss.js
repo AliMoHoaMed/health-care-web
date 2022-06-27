@@ -149,7 +149,7 @@ specialties
   {
   sepcc.map(({ id,specialties})=>(
     
-<option className='buttton' key={id} value={id} >{specialties}   </option>
+<option key={id} value={id} >{specialties}   </option>
  ))}</select>
 
 insurance 
@@ -158,7 +158,7 @@ insurance
   {
   insu.map(({ _id,name})=>(
     
-<option className='buttton' key={_id} value={_id} >{name}   </option>
+<option  key={_id} value={_id} >{name}   </option>
  ))}</select>  
  </div>
  
@@ -168,11 +168,14 @@ insurance
 <div  key={_id} >   
 
 <br/>
-  <h2> name:  {hospitalId.name}</h2>
- <h2> discount :  {Discount}</h2>
- <h2> specialties : {specialtiesId.specialties}  </h2>
+<div class="CardDaataa">
+<div class="CardDaataa-text cacacaca">
+  <h3> <label class="uh hu">Name</label>{hospitalId.name}</h3>
+ <h3> <label class="uh hu">Discount</label> {Discount}</h3>
+ <h3> <label class="uh hu">Type</label>{specialtiesId.specialties}  </h3>
  <br/>
-
+ </div>
+ </div>
  </div>
  ))}
   
