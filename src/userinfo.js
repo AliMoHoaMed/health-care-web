@@ -110,7 +110,7 @@ const Userinfo = () => {
           
            <p><label class="uega"> Location </label> {userareaa.name}- {usergov.name}  </p>
            <p><label class="uega">phone </label>{phoneNumber}   </p>
-           <p><label class="uega">disease </label> <br/><br/><br/>{diseases}   </p>
+           <p><label class="uega">disease </label> {diseases}   </p>
        </div>  
      </div>))}
  </div>   
