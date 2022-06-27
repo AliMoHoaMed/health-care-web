@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import './item.css'
+import './item.css';
+import'./userprofile.css' ;
 import axios from 'axios';
 import Doccard from './doccard'
 import Hospitalscard from './hospitalscard';
@@ -159,11 +160,14 @@ insurance
     
 <div  key={_id} >   
 <br/>
-<h2> naem: {labId.name}</h2>
- <h2> discount :  {Discount}</h2>
- <h2> type: {typeId.type} </h2>
+<div class="CardDaataa">
+<div class="CardDaataa-text cacacaca">
+<h3> <label class="uh hu">Name</label> {labId.name}</h3>
+ <h3> <label class="uh hu">Discount</label> {Discount}</h3>
+ <h3> <label class="uh hu">Type</label>{typeId.type} </h3>
  <br/>
-
+ </div>
+ </div>
  </div>
  ))}
 

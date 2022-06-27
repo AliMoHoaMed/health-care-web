@@ -288,6 +288,7 @@ box-shadow: 0 1px 5px 0 rgb(14, 14, 17);
   margin: auto;
   position: relative;
   top:50px;
+  right: 430px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -577,6 +578,10 @@ left: 230px;
 bottom: 384px;
 }
 
+.log-dia {
+  position: relative;
+  bottom:15px;
+}
 
 
 
