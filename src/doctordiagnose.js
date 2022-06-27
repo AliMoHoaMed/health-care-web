@@ -80,7 +80,8 @@ useEffect((e)=>{
         class="inputEditMedicine" name="w3review" rows="1" cols="50"   value={medicane}
 
         onChange={(e)=>setmedicane(e.target.value)}  />
-
+<br/>
+<br/>
 AnalysisNeeded: 
           <br/>
           <textarea id="w3review" 
