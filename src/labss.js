@@ -135,7 +135,7 @@ else if(value.name.toLowerCase().includes(searchtitle.toLocaleLowerCase())){
 
 
 {showi ?  <>
-
+<div className='k'> 
 type required 
  <select value={choossestatespec}
   onChange={handlespecid} >
@@ -153,7 +153,7 @@ insurance
     
 <option className='buttton' key={_id} value={_id} >{name}   </option>
  ))}</select>  
- 
+ </div>
  
  {
   insuhos.map(({_id,Discount,labId,typeId})=>(
