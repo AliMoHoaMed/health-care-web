@@ -39,7 +39,7 @@ const Choose = () => {
         <figure class="containerd">
             <img class="lab" src="istock-949947192_1-1100x520.jpg" alt=""/>
             <figcaption>
-                <h3>Labs</h3>  
+                <h3>Labs and Xray</h3>  
             </figcaption>
             </figure>
         </a>

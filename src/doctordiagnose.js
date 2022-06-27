@@ -11,6 +11,7 @@ const [userdataa ,setuserdataa] =useState([]);
 const [diagnosee ,setdiagnose] =useState('');
 const [medicane ,setmedicane] =useState('');
 
+const [serach ,setreserach] =useState('');
 const tok = sessionStorage.getItem('token') ; 
 const authAxios =axios.create({
   headers : {
@@ -34,7 +35,7 @@ useEffect((e)=>{
 
     const handleSubmit=(e) => {
         e.preventDefault();
-        const dataaa = {Diagnosis : diagnosee , medicines :medicane , userId:useridddd } ;
+        const dataaa = {Diagnosis : diagnosee , medicines :medicane , userId:useridddd ,AnalysisNeeded:serach } ;
       authAxios.post('https://health-care-app-final.herokuapp.com/doctors/diagnosis',dataaa
       ).then(ress=>{console.log("ress",ress);alert('everything is great');
       }
@@ -79,6 +80,14 @@ useEffect((e)=>{
         class="inputEditMedicine" name="w3review" rows="1" cols="50"   value={medicane}
 
         onChange={(e)=>setmedicane(e.target.value)}  />
+
+AnalysisNeeded: 
+          <br/>
+          <textarea id="w3review" 
+        class="inputEditMedicine" name="w3review" rows="1" cols="50"   value={serach}
+
+        onChange={(e)=>setreserach(e.target.value)}  />
+
       </div>
      <br/><br/><br/>
    
