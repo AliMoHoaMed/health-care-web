@@ -70,7 +70,7 @@ const tok = ggettokken('token');
 </div>))}
           </div>
          
-      <a href="/Diagnoselabs" class="dia-btn lab-dia-bt"> Diagnose</a>
+      <a href="/Diagnoselabs" class="dia-btn lab-dia-bt"> Send Result </a>
       <br/>
       <br/>
       <div class="log-dia" >
