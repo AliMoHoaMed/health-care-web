@@ -172,7 +172,7 @@ insurance
 <div class="CardDaataa-text cacacaca">
   <h3> <label class="uh hu">Name</label>{hospitalId.name}</h3>
  <h3> <label class="uh hu">Discount</label> {Discount}</h3>
- <h3> <label class="uh hu">Type</label>{specialtiesId.specialties}  </h3>
+ <h3> <label class="uh hu">specialties</label>{specialtiesId.specialties}  </h3>
  <br/>
  </div>
  </div>

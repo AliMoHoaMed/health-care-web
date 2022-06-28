@@ -213,7 +213,7 @@ function handleshowoffline (){
  </form>
 
    
-    <a> {paymentid}</a>
+    
 
 
         <h1 class="af-fi-cl-he"> after finish click here </h1>
